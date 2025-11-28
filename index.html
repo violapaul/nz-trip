@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Zealand Cycling & Sailing Adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-ocean: #0a1628;
+            --twilight: #1a2f4a;
+            --pacific-blue: #2563eb;
+            --sky-light: #60a5fa;
+            --sand: #fef3c7;
+            --warm-white: #fefefe;
+            --forest: #166534;
+            --volcanic: #dc2626;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--warm-white);
+            color: #1f2937;
+            line-height: 1.7;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--twilight) 50%, var(--pacific-blue) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://imgc.allpostersimages.com/img/posters/ian-viaduct-harbour-and-sky-tower-at-sunset-auckland-north-island-new-zealand-pacific_u-l-pxxetc0.jpg?artHeight=550&artPerspective=n&artWidth=550&background=ffffff') center/cover;
+            opacity: 0.2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--sand);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+        }
+        
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-intro {
+            background: linear-gradient(180deg, #f8fafc 0%, white 100%);
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            color: var(--deep-ocean);
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.75rem;
+            color: var(--twilight);
+            margin: 2rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.1rem;
+            color: #374151;
+        }
+        
+        strong {
+            color: var(--deep-ocean);
+        }
+        
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .feature-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .feature-card .content {
+            padding: 1.5rem;
+        }
+        
+        .feature-card h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            color: var(--deep-ocean);
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-card p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: #6b7280;
+        }
+        
+        /* Day Sections */
+        .day-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .day-section:last-child {
+            border-bottom: none;
+        }
+        
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .day-number {
+            background: linear-gradient(135deg, var(--pacific-blue), var(--sky-light));
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .day-number span {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .day-number strong {
+            font-size: 2rem;
+            color: white;
+            line-height: 1;
+        }
+        
+        .day-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.75rem;
+            color: var(--deep-ocean);
+        }
+        
+        .day-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        @media (max-width: 768px) {
+            .day-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .day-description ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .day-description li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .day-description li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--pacific-blue);
+            font-weight: 600;
+        }
+        
+        .day-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        
+        .day-images img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .day-images img:first-child {
+            grid-column: span 2;
+            height: 200px;
+        }
+        
+        .day-images img:hover {
+            transform: scale(1.02);
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--sand) 0%, #fef9e7 100%);
+            border-left: 4px solid var(--pacific-blue);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--deep-ocean);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        footer p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>New Zealand Cycling & Sailing Adventure</h1>
+            <p class="subtitle">A 9-Day Journey Through the North Island's Greatest Treasures</p>
+            <p class="tagline">Where world-class sailing meets ancient forests, volcanic landscapes, and award-winning vineyards</p>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Why This Trip Section -->
+    <section class="section-intro">
+        <div class="container">
+            <h2>Why This Trip Will Be Unforgettable</h2>
+            <p>We are heading to a true world-class playground that perfectly matches our passions. New Zealand's North Island offers a rare combination of experiences we simply cannot get anywhere else on Earth.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="https://www.exploregroup.co.nz/media/bthdhfyq/02-sail-up-city-in-background.jpg?width=440&height=440" alt="America's Cup Sailing" onerror="this.style.display='none'">
+                    <div class="content">
+                        <h4>Sailing Capital of the World</h4>
+                        <p>Take the helm of an actual America's Cup yacht in Auckland, the "City of Sails"—where sailing isn't a hobby but a way of life.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <img src="https://www.newzealand.com/assets/Tourism-NZ/Rotorua/img-1536141677-2728-25534-p-20DECDBD-FB94-BEA7-199A4A2855BE093D-2544003__aWxvdmVrZWxseQo_CropResizeWzUwMCwzNzUsODAsImpwZyJd.jpg" alt="Cycling in Redwoods" onerror="this.style.display='none'">
+                    <div class="content">
+                        <h4>Cycling Paradise</h4>
+                        <p>Ride the famous "Great Rides"—purpose-built trails through ancient redwood forests and along volcanic lakeshores.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <img src="https://media.cntraveler.com/photos/5d39cc4bd0ab850008c1c9b2/16:9/w_2560%2Cc_limit/IMG_3449.jpg" alt="Waiheke Vineyards" onerror="this.style.display='none'">
+                    <div class="content">
+                        <h4>Island Wine Country</h4>
+                        <p>Cycle between award-winning vineyards on Waiheke Island—a Mediterranean paradise in the South Pacific.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Priroda_Aotearoe.jpg/1200px-Priroda_Aotearoe.jpg" alt="Geothermal Wonders" onerror="this.style.display='none'">
+                    <div class="content">
+                        <h4>Geothermal Wonders</h4>
+                        <p>Experience Rotorua's bubbling mud pools, erupting geysers, and natural hot springs heated by the earth itself.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>The Sailing Capital of the World</h3>
+            <p>Auckland isn't just <em>a</em> sailing city—it's <em>the</em> sailing city. Known as the "City of Sails," Auckland has more boats per capita than anywhere else on the planet. This is where the America's Cup has been defended multiple times, where sailing isn't a hobby but a way of life. We won't just watch from the sidelines; we'll take the helm of an <strong>actual America's Cup racing yacht</strong>, grinding winches and trimming sails on the very waters where legends have raced.</p>
+
+            <h3>Cycling Paradise: The Great Rides</h3>
+            <p>New Zealand has invested heavily in creating the <strong>Ngā Haerenga Great Rides</strong>—a network of 23 purpose-built cycling trails that traverse the country's most spectacular landscapes. We'll ride through ancient redwood forests where towering California redwoods meet native New Zealand ferns, volcanic lakeshores with views of steaming geothermal vents and snow-capped peaks, and coastal vineyard roads on Waiheke Island, often called "the island of wine."</p>
+
+            <h3>Waiheke Island: Wine Country Meets the Pacific</h3>
+            <p>Just a 40-minute ferry ride from downtown Auckland lies Waiheke Island—a Mediterranean-style paradise in the South Pacific. The island has earned international acclaim for its <strong>Bordeaux-style reds</strong>, particularly Syrah and Cabernet blends that rival the world's best. We'll cycle between award-winning vineyards, stopping for tastings with ocean views that stretch to the horizon.</p>
+
+            <h3>Geothermal Wonders: Where the Earth Breathes</h3>
+            <p>Rotorua sits on the Pacific Ring of Fire, and the earth here is alive in ways that feel almost alien. <strong>Pohutu Geyser</strong> erupts up to 30 meters high, multiple times per hour. Bubbling mud pools pop and hiss with primordial energy. Hot springs heated by the earth itself offer the ultimate post-ride recovery. The Māori have called this place home for over 600 years, and their culture is woven into every aspect of the region.</p>
+
+            <h3>Tongariro: The Volcanic Heart</h3>
+            <p>Tongariro National Park is New Zealand's oldest national park and a dual UNESCO World Heritage Site. The three volcanic peaks—<strong>Ruapehu, Ngauruhoe, and Tongariro</strong>—dominate the landscape with their dramatic profiles. Mount Ngauruhoe famously doubled as Mount Doom in the Lord of the Rings films. We'll hike through alpine tussock with these giants as our backdrop, or take to the skies for a scenic flight over crater lakes and lava flows.</p>
+
+            <div class="highlight-box">
+                <p>This itinerary is designed for <em>us</em>: high on engagement, deep on scenery, and low on logistical stress, with comfortable base camps and fantastic food waiting at the end of every adventure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Section -->
+    <section>
+        <div class="container">
+            <h2>The 9-Day Itinerary</h2>
+            
+            <!-- Day 1 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>1</strong>
+                    </div>
+                    <h3 class="day-title">Arrive in Auckland</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>Touch down in the City of Sails and settle into our waterfront accommodation. The Viaduct Harbour area pulses with energy—restaurants, bars, and superyachts line the marina.</p>
+                        <ul>
+                            <li>SAN → LAX → Auckland (arrive evening)</li>
+                            <li>Check into hotel near Viaduct Harbour</li>
+                            <li>Short harbour walk to stretch legs</li>
+                            <li>Early dinner at Wynyard Quarter</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://imgc.allpostersimages.com/img/posters/ian-viaduct-harbour-and-sky-tower-at-sunset-auckland-north-island-new-zealand-pacific_u-l-pxxetc0.jpg?artHeight=550&artPerspective=n&artWidth=550&background=ffffff" alt="Auckland Viaduct Harbour sunset" onerror="this.style.display='none'">
+                        <img src="https://media.istockphoto.com/id/535431037/photo/night-view-at-sky-tower-auckland.jpg?s=612x612&w=0&k=20&c=Kh0a8kic9EPu7qhe0Z6-SJs-1z9RRToSSsEp9M7u6Mw=" alt="Sky Tower evening" onerror="this.style.display='none'">
+                        <img src="https://imgix.theurbanlist.com/content/article/Wynyard-Quarter-Auckland-Waterfront-Restaurants.jpg?format=auto,compress&w=728%20728w" alt="Wynyard Quarter dining" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>2</strong>
+                    </div>
+                    <h3 class="day-title">Auckland City + America's Cup Sail</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>The highlight of the trip: sailing an actual America's Cup yacht on Waitematā Harbour. We'll hoist, grind, trim, and helm—this is real sailing, not a passive cruise.</p>
+                        <ul>
+                            <li>Morning: Auckland War Memorial Museum or Art Gallery</li>
+                            <li>Explore Ponsonby Road cafés and boutiques</li>
+                            <li><strong>Afternoon: 2–3 hour America's Cup sailing experience</strong></li>
+                            <li>Evening: Dinner in Wynyard Quarter</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/activities/r0k0tzxckxhjl03bxdth/AmericasCupSailingExperienceinAuckland-KlookUnitedStates.jpg" alt="America's Cup sailing" onerror="this.style.display='none'">
+                        <img src="https://www.exploregroup.co.nz/media/w4qpxz1a/10-hoisting-the-gennaker.jpg" alt="Hoisting sails" onerror="this.style.display='none'">
+                        <img src="https://cdn.boatinternational.com/convert/bi_prd/bi/library_images/UPPLR4lWQteUcw1xFgJq_Ben-ainslie-diary-Americas-cup-grinding.jpg/r%5Bwidth%5D=1920/UPPLR4lWQteUcw1xFgJq_Ben-ainslie-diary-Americas-cup-grinding.jpg" alt="Grinding" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>3</strong>
+                    </div>
+                    <h3 class="day-title">Waiheke Island E-Bike & Wine Day</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>A 40-minute ferry delivers us to paradise. On e-bikes, we'll loop through vineyards and bays, stopping for tastings at world-class wineries like Mudbrick and Cable Bay.</p>
+                        <ul>
+                            <li>Morning ferry to Waiheke Island</li>
+                            <li>Pick up e-bikes at Matiatia terminal</li>
+                            <li><strong>25–30 km bays-and-vineyards loop</strong></li>
+                            <li>Wine tastings with ocean views</li>
+                            <li>Dinner on the island or late ferry back</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://media.cntraveler.com/photos/5d39cc4bd0ab850008c1c9b2/16:9/w_2560%2Cc_limit/IMG_3449.jpg" alt="Waiheke vineyards" onerror="this.style.display='none'">
+                        <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0f/69/ed/60.jpg" alt="E-biking Waiheke" onerror="this.style.display='none'">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/6c/ef/95/guests-dining-outdoors.jpg?w=900&h=500&s=1" alt="Mudbrick Vineyard" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>4</strong>
+                    </div>
+                    <h3 class="day-title">Transit to Rotorua, Geothermal & Hot Pools</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>Drive south into the geothermal heartland. Rotorua greets us with the smell of sulfur and the sight of steam rising from the earth. End the day soaking in hot pools.</p>
+                        <ul>
+                            <li>Scenic drive Auckland → Rotorua (~3 hours)</li>
+                            <li>Afternoon: Te Puia or Wai-O-Tapu geothermal walk</li>
+                            <li>Watch Pohutu Geyser erupt</li>
+                            <li><strong>Evening: Polynesian Spa hot pools</strong></li>
+                            <li>Dinner in Rotorua lakefront area</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Priroda_Aotearoe.jpg/1200px-Priroda_Aotearoe.jpg" alt="Pohutu Geyser" onerror="this.style.display='none'">
+                        <img src="https://i.ytimg.com/vi/dDY4NN-Fqgw/maxresdefault.jpg" alt="Mud pools" onerror="this.style.display='none'">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/bd/ba/d5/relax-and-rejuvenate.jpg?w=1200&h=-1&s=1" alt="Polynesian Spa" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>5</strong>
+                    </div>
+                    <h3 class="day-title">Rotorua Great Ride: Whakarewarewa Forest</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>One of New Zealand's premier cycling experiences: the Whakarewarewa Forest Loop. Towering redwoods, native ferns, and smooth singletrack through an enchanted landscape.</p>
+                        <ul>
+                            <li><strong>Full day: 33 km forest loop on e-bikes</strong></li>
+                            <li>Ride through redwoods and native bush</li>
+                            <li>Café stops and photo opportunities</li>
+                            <li>Evening: Secret Spot Hot Tubs or Redwoods Treewalk</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://www.newzealand.com/assets/Tourism-NZ/Rotorua/img-1536141677-2728-25534-p-20DECDBD-FB94-BEA7-199A4A2855BE093D-2544003__aWxvdmVrZWxseQo_CropResizeWzUwMCwzNzUsODAsImpwZyJd.jpg" alt="Mountain biking Whakarewarewa" onerror="this.style.display='none'">
+                        <img src="https://c8.alamy.com/comp/2ABHWGJ/forest-of-tree-ferns-and-giant-redwoods-in-whakarewarewa-forest-near-rotorua-new-zealand-2ABHWGJ.jpg" alt="Ferns and redwoods" onerror="this.style.display='none'">
+                        <img src="https://www.treewalk.co.nz/wp-content/uploads/2019/06/nightlights-redwoods.jpg" alt="Redwoods Treewalk" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>6</strong>
+                    </div>
+                    <h3 class="day-title">Easy Rotorua Day, Then to Taupō</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>A gentler morning with options for a short ride or lake walk. Then we head south to Taupō, stopping at the spectacular Huka Falls along the way.</p>
+                        <ul>
+                            <li>Morning: Blue Lake loop or Lake Ōkāreka walk</li>
+                            <li>Drive Rotorua → Taupō (~1 hour)</li>
+                            <li><strong>Stop at Huka Falls</strong> (turquoise water thundering through a gorge)</li>
+                            <li>Check into lakeside accommodation</li>
+                            <li>Evening stroll along Lake Taupō waterfront</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://www.datocms-assets.com/6737/1542308993-huka-falls-river-pixabay.jpg?auto=compress%2Cformat&fm=jpg" alt="Huka Falls" onerror="this.style.display='none'">
+                        <img src="https://www.doc.govt.nz/thumbs/hero/contentassets/644f7059a5a243338c0898e8909ed67a/blue-lake-1920.jpg" alt="Blue Lake" onerror="this.style.display='none'">
+                        <img src="https://images.squarespace-cdn.com/content/v1/52cddca9e4b0739fe8b5e722/1425368320829-CTLD9VLP1EURG8F3E8DA/image-asset.jpeg" alt="Lake Taupō sunset" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>7</strong>
+                    </div>
+                    <h3 class="day-title">Taupō Great Lake Trail Ride</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>The Great Lake Trail is one of New Zealand's finest cycling experiences: lakeside singletrack with volcano views, boat transfers, and remote bays.</p>
+                        <ul>
+                            <li><strong>Full day: 40–70 km on the Great Lake Trail</strong></li>
+                            <li>Boat transfer to trail start</li>
+                            <li>W2K and Waihaha sections</li>
+                            <li>Big lake and volcano views throughout</li>
+                            <li>Evening: dinner in Taupō town</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://www.lovetaupo.com/media/2958670/great-lake-trail-mountain-biking-nz-bike-view-of-lake-from-codgers-rock-waihaha.jpg?anchor=center&mode=crop&width=1200&height=800&rnd=132300517383270000" alt="Great Lake Trail views" onerror="this.style.display='none'">
+                        <img src="https://www.newzealand.com.au/assets/uploads/images/Waikato/Taupo/Operators/FourB/Great-Lake-Trail/great-lake-trail-bike-boat-transfer-taupo.jpg" alt="Boat transfer" onerror="this.style.display='none'">
+                        <img src="https://www.lovetaupo.com/media/zsdnhazu/supervolcanic-waihaha-section-lookout.jpg?width=1920&format=jpg&quality=70" alt="Waihaha section" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 8 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>8</strong>
+                    </div>
+                    <h3 class="day-title">Tongariro Volcano Day</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>Our mountain day: hiking to Taranaki Falls with Mount Ngauruhoe (Mount Doom) as our backdrop. Or soar over the volcanoes on a scenic flight for an unforgettable perspective.</p>
+                        <ul>
+                            <li>Drive to Whakapapa Village (~1 hour)</li>
+                            <li><strong>Hike: Taranaki Falls Loop (6 km)</strong></li>
+                            <li>Optional extension to Tama Lakes</li>
+                            <li><strong>Alternative: Scenic flight over volcanoes</strong></li>
+                            <li>Last night in Taupō</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://www.doc.govt.nz/thumbs/hero/contentassets/79b3f6c62da64ae0b5ae78a4de06d7c4/taranaki-falls-1920.jpg" alt="Taranaki Falls" onerror="this.style.display='none'">
+                        <img src="https://static.wixstatic.com/media/c3a105_3750748e77c34302b008845bc2bc8250~mv2.jpg/v1/fill/w_707,h_1000,al_c,q_85,enc_avif,quality_auto/c3a105_3750748e77c34302b008845bc2bc8250~mv2.jpg" alt="Mount Ngauruhoe" onerror="this.style.display='none'">
+                        <img src="https://www.tauposfloatplane.co.nz/wp-content/uploads/2018/09/hero-mountains.jpg" alt="Scenic flight" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 9 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <div class="day-number">
+                        <span>Day</span>
+                        <strong>9</strong>
+                    </div>
+                    <h3 class="day-title">Return to Auckland & Fly Home</h3>
+                </div>
+                <div class="day-content">
+                    <div class="day-description">
+                        <p>A leisurely drive back to Auckland with time for one last coffee, some shopping, or a final harbour walk before our flight home.</p>
+                        <ul>
+                            <li>Morning: coffee by Lake Taupō</li>
+                            <li>Scenic drive Taupō → Auckland (~4 hours)</li>
+                            <li>Buffer time in Auckland</li>
+                            <li>Fly Auckland → LAX → SAN</li>
+                        </ul>
+                    </div>
+                    <div class="day-images">
+                        <img src="https://c8.alamy.com/comp/2DA99YE/lake-taupo-new-zealand-with-morning-mist-rising-from-the-water-on-the-horizon-are-the-mountains-of-the-tongariro-national-park-2DA99YE.jpg" alt="Lake Taupō morning" onerror="this.style.display='none'">
+                        <img src="https://www.travellers-autobarn.co.nz/wp-content/uploads/2023/10/Taupo.jpeg" alt="Scenic drive" onerror="this.style.display='none'">
+                        <img src="https://thumbs.dreamstime.com/b/mountain-landscape-new-zealand-viewed-air-new-zealand-plane-auckland-new-zealand-march-mountain-landscape-new-384998024.jpg" alt="View from plane" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>New Zealand Cycling & Sailing Adventure • December–March</p>
+            <p>San Diego → Auckland → Waiheke → Rotorua → Taupō → Tongariro → Home</p>
+        </div>
+    </footer>
+</body>
+</html>
+
