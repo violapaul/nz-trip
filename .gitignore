@@ -22,12 +22,12 @@ env/
 .DS_Store
 
 # Project-specific: Personal trip data (keep examples only)
-aus_nz.md
-aus_nz.analysis.yaml
+# aus_nz.md
+# aus_nz.analysis.yaml
 aus_nz.html
 
 # Image cache (can be regenerated)
-query_cache.yaml
+# query_cache.yaml
 
 # Local images folder (scraped images)
 images/

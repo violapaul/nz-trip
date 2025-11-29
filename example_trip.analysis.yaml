@@ -1,50 +1,119 @@
 metadata:
   title: Weekend in Paris
+  subtitle: A quick guide to exploring the City of Light in just three days
+  destination: Paris, France
+  duration: 3 days
   generated: '2023-10-27T12:00:00Z'
 sections:
-- id: hero-weekend-in-paris
+- id: weekend-in-paris
   title: Weekend in Paris
   level: 1
   style: hero
+  content: A quick guide to exploring the City of Light in just three days.
+  needs_images: true
   queries:
-  - Paris Eiffel Tower sunrise aerial view
-  - Seine river Paris golden hour landscape
-- id: why-paris-is-perfect
+  - Paris Eiffel Tower sunset Seine river aerial
+  - Paris Haussmann architecture golden hour
+- id: why-paris
   title: Why Paris is Perfect for a Weekend
   level: 2
-  style: cards
+  style: content
+  content: 'Paris offers an unmatched combination of art, cuisine, and romance. In
+    just a weekend, you can experience world-class museums, stunning architecture,
+    and some of the finest food on earth.
+
+    '
+  needs_images: true
   queries:
-  - Louvre Museum interior art gallery
-  - Parisian bistro food croissants and coffee
-  - Seine river cruise sunset romantic couple
-- id: day-1-arrival-classic-paris
+  - Parisian street scene cafe terrace sunny
+  subsections:
+  - id: art-culture
+    title: Art & Culture
+    style: card
+    content: "The Louvre and Mus\xE9e d'Orsay house masterpieces from centuries of\
+      \ artistic achievement. From the Mona Lisa to Monet's water lilies, Paris is\
+      \ an art lover's paradise.\n"
+    queries:
+    - Louvre museum glass pyramid courtyard Paris
+  - id: culinary-excellence
+    title: Culinary Excellence
+    style: card
+    content: 'From Michelin-starred restaurants to charming bistros and corner bakeries,
+      every meal in Paris is an experience. Don''t miss the croissants.
+
+      '
+    queries:
+    - Paris bakery croissants display window
+  - id: romantic-atmosphere
+    title: Romantic Atmosphere
+    style: card
+    content: 'The Seine at sunset, cobblestone streets in Le Marais, and hidden gardens
+      create an atmosphere unlike anywhere else.
+
+      '
+    queries:
+    - Seine river Paris sunset romance bridge
+- id: day-1
   title: 'Day 1: Arrival & Classic Paris'
   level: 2
   style: day-section
+  content: 'Arrive at Charles de Gaulle and head straight to your hotel in the Marais
+    district. After settling in:'
+  needs_images: true
   queries:
-  - Le Marais district Paris cobblestone streets
-  - Notre-Dame Cathedral exterior view
-  - Eiffel Tower sparkling at night from Trocadero
-- id: day-2-museums-montmartre
+  - Notre Dame Cathedral Seine river view
+  - Eiffel Tower sparkling night view
+  itinerary:
+  - day: 1
+    title: Arrival & Classic Paris
+    location: Le Marais / Central Paris
+    activities:
+    - Walk along the Seine to Notre-Dame
+    - "Explore \xCEle de la Cit\xE9"
+    - Dinner at a traditional bistro
+    - Evening stroll past the Eiffel Tower
+- id: day-2
   title: 'Day 2: Museums & Montmartre'
   level: 2
   style: day-section
+  content: 'Start early at the Louvre before the crowds arrive. Spend the morning
+    with the masters, then:'
+  needs_images: true
   queries:
-  - Louvre Pyramid courtyard daytime
-  - Tuileries Garden Paris fountain chairs
-  - Sacre-Coeur Basilica Montmartre sunset view
-- id: day-3-markets-departure
+  - Sacre Coeur Basilica Montmartre sunset
+  - "Mus\xE9e d'Orsay clock window view"
+  itinerary:
+  - day: 2
+    title: Museums & Montmartre
+    location: Louvre / Montmartre
+    activities:
+    - Lunch in the Tuileries Garden
+    - "Afternoon at Mus\xE9e d'Orsay"
+    - "Climb to Sacr\xE9-C\u0153ur for sunset"
+    - Dinner in Montmartre
+- id: day-3
   title: 'Day 3: Markets & Departure'
   level: 2
   style: day-section
+  content: 'Your last morning in Paris:'
+  needs_images: true
   queries:
-  - Marche d'Aligre Paris food market stalls
-  - Parisian street cafe outdoor seating pastries
-  - Rue de Rivoli Paris architecture shopping arcades
-- id: trip-conclusion
-  title: Farewell to Paris
+  - Marche d'Aligre Paris market stalls fruit vegetables
+  - Rue de Rivoli shopping arcades Paris
+  itinerary:
+  - day: 3
+    title: Markets & Departure
+    location: Paris
+    activities:
+    - "Browse the March\xE9 d'Aligre"
+    - "Coffee and pastries at a local caf\xE9"
+    - Last-minute shopping on Rue de Rivoli
+    - Farewell to Paris
+- id: conclusion
+  title: Conclusion
   level: 2
-  style: highlight
-  queries:
-  - Paris skyline panoramic view dusk
-  - Love locks bridge Paris Seine
+  style: footer
+  content: A weekend in Paris is never enough, but it's a perfect start to falling
+    in love with this incredible city.
+  needs_images: false
+  queries: []

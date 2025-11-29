@@ -6,18 +6,40 @@
     <title>Weekend in Paris</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+/*
+ * Travel Document Styles
+ * Design: "Expedition Journal" aesthetic
+ * - Warm, earthy tones with dramatic accent colors
+ * - Cormorant Garamond for headings (elegant serif)
+ * - Nunito Sans for body (clean, readable)
+ */
 
 :root {
-    --deep-ocean: #0a1628;
-    --twilight: #1a2f4a;
-    --pacific-blue: #2563eb;
-    --sky-light: #60a5fa;
-    --sand: #fef3c7;
-    --warm-white: #fefefe;
-    --forest: #166534;
-    --volcanic: #dc2626;
+    /* Expedition Earth Palette */
+    --obsidian: #1a1a2e;
+    --deep-earth: #16213e;
+    --mountain-slate: #2d3a4f;
+    --alpine-blue: #0f4c75;
+    --glacier: #3282b8;
+    --sunlit-peak: #bbe1fa;
+    
+    /* Warm accents */
+    --sunset-gold: #e8a838;
+    --campfire: #d35400;
+    --terracotta: #c0392b;
+    
+    /* Neutrals */
+    --parchment: #faf7f2;
+    --aged-paper: #f5f0e6;
+    --parchment-light: #fdfcfa;
+    --warm-grey: #6b6b6b;
+    --charcoal: #2c2c2c;
+    
+    /* Greens for nature */
+    --forest-deep: #1e5631;
+    --fern: #4a7c59;
 }
 
 * { 
@@ -26,409 +48,801 @@
     box-sizing: border-box; 
 }
 
-body {
-    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--warm-white);
-    color: #1f2937;
-    line-height: 1.7;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Hero Section */
+body {
+    font-family: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+    background: var(--parchment);
+    color: var(--charcoal);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Page wrapper for wide screens - centers content with margins */
+.page-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+@media (max-width: 1000px) {
+    .page-wrapper {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-wrapper {
+        padding: 0 1rem;
+    }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--twilight) 50%, var(--pacific-blue) 100%);
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 2rem;
-    position: relative;
     overflow: hidden;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(26, 26, 46, 0.7) 0%, 
+        rgba(22, 33, 62, 0.5) 40%,
+        rgba(15, 76, 117, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
     background-size: cover;
     background-position: center;
-    opacity: 0.2;
+    filter: saturate(1.1);
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 900px;
+    animation: fadeInUp 1.2s ease-out;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 700;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 600;
     color: white;
-    margin-bottom: 1rem;
-    text-shadow: 2px 4px 20px rgba(0,0,0,0.3);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
-.hero h2 {
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    color: var(--sand);
-    font-weight: 300;
-    letter-spacing: 0.05em;
+.hero-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--sunlit-peak);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     margin-bottom: 2rem;
 }
 
-.hero p {
+.hero-intro {
     font-size: 1.1rem;
-    color: rgba(255,255,255,0.8);
-    max-width: 600px;
+    color: rgba(255,255,255,0.9);
+    max-width: 650px;
     margin: 0 auto;
+    line-height: 1.7;
 }
 
-/* Container */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255,255,255,0.6);
+    animation: bounce 2s infinite;
 }
 
-/* Content Section */
-.content {
-    padding: 3rem 0;
-}
-
-.content h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2.25rem;
-    color: var(--deep-ocean);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #e5e7eb;
-}
-
-.content h3 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.5rem;
-    color: var(--twilight);
-    margin: 2rem 0 1rem;
-}
-
-.content p {
-    margin-bottom: 1.25rem;
-    font-size: 1.1rem;
-    color: #374151;
-}
-
-.content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
+/* ============================================
+   SECTION GROUPS & HIERARCHY
+   ============================================ */
+.section-group {
     margin: 1.5rem 0;
+    border-left: 3px solid var(--aged-paper);
+    background: var(--parchment-light);
 }
 
-/* Cards Grid */
+.section-group > .section-header {
+    padding: 1.25rem 1.5rem;
+    background: white;
+    border-bottom: 1px solid var(--aged-paper);
+}
+
+.section-group > .section-header h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin: 0;
+}
+
+.section-group > .section-header h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    border-radius: 2px;
+    margin-top: 0.5rem;
+}
+
+.section-group > .section-content {
+    padding: 1rem 1.5rem;
+}
+
+.section-group > .section-content > p {
+    margin-bottom: 0.6rem;
+}
+
+/* Subsections - indented within parent */
+.subsections {
+    margin-top: 0.5rem;
+    padding-left: 0;
+}
+
+.subsection {
+    background: white;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--glacier);
+}
+
+.subsection h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--mountain-slate);
+    margin-bottom: 0.6rem;
+}
+
+.subsection p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.subsection ul, .subsection ol {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.subsection li {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   CONTAINERS & LAYOUT
+   ============================================ */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+.container-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+/* Ensure all container h2 elements use consistent font */
+.container h2,
+.container-wide h2,
+section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+}
+
+/* ============================================
+   CONTENT SECTIONS (flat)
+   ============================================ */
+.content-section {
+    padding: 1rem 0;
+    position: relative;
+}
+
+.content-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.75rem;
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    border-radius: 2px;
+    margin-top: 0.4rem;
+}
+
+.content-section h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--mountain-slate);
+    margin: 1rem 0 0.5rem;
+}
+
+.content-section p {
+    margin-bottom: 0.6rem;
+}
+
+.content-section ul, .content-section ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.content-section li {
+    margin-bottom: 0.35rem;
+}
+
+/* Images */
+.content-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.content-images img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.content-images img:hover {
+    transform: scale(1.02);
+}
+
+/* ============================================
+   GALLERY SECTIONS
+   ============================================ */
+.gallery-section {
+    padding: 1rem 0;
+}
+
+.gallery-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    color: var(--deep-earth);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-grid img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid img:first-child {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 200px;
+    }
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.cards-section {
+    padding: 1rem 0;
+}
+
+.cards-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--deep-earth);
+    margin-bottom: 0.75rem;
+}
+
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
 }
 
 .card {
     background: white;
-    border-radius: 16px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 140px;
     object-fit: cover;
 }
 
 .card-content {
-    padding: 1.5rem;
+    padding: 0.9rem 1rem;
 }
 
 .card h4 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.25rem;
-    color: var(--deep-ocean);
-    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
 }
 
 .card p {
-    font-size: 1rem;
-    color: #6b7280;
+    font-size: 0.88rem;
+    color: var(--warm-grey);
+    line-height: 1.5;
 }
 
-/* Gallery */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+.card-meta {
+    font-size: 0.78rem;
+    color: var(--warm-grey);
+    margin-bottom: 0.35rem;
 }
 
-.gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+.card-highlights {
+    margin: 0.4rem 0 0 0;
+    padding-left: 1rem;
+    font-size: 0.85rem;
 }
 
-.gallery img:hover {
-    transform: scale(1.02);
+.card-highlights li {
+    margin-bottom: 0.2rem;
+    color: var(--charcoal);
 }
 
-/* Highlight Box */
-.highlight {
-    background: linear-gradient(135deg, var(--sand) 0%, #fef9e7 100%);
-    border-left: 4px solid var(--pacific-blue);
-    padding: 1.5rem 2rem;
-    margin: 2rem 0;
-    border-radius: 0 12px 12px 0;
-}
-
-.highlight p {
-    margin-bottom: 0;
+.card-highlights .more-items {
+    color: var(--warm-grey);
     font-style: italic;
+    list-style: none;
+    margin-left: -1rem;
 }
 
-/* Day Section */
-.day-section {
-    padding: 3rem 0;
-    border-bottom: 1px solid #e5e7eb;
+.card-dietary-note {
+    background: #fff9e6;
+    border-radius: 4px;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.78rem;
+    color: var(--campfire);
+    margin-top: 0.4rem;
 }
 
-.day-section:last-child {
+/* Day cards */
+.itinerary-cards {
+    margin-top: 0.75rem;
+}
+
+.day-card {
+    position: relative;
+    padding-top: 0 !important;
+}
+
+.day-badge-inline {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: linear-gradient(135deg, var(--alpine-blue), var(--glacier));
+    color: white;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.day-card img {
+    border-radius: 10px 10px 0 0;
+}
+
+/* ============================================
+   SECTION META BAR
+   ============================================ */
+.section-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--aged-paper);
+    border-radius: 5px;
+    margin: 0.4rem 0 0.75rem 0;
+    font-size: 0.82rem;
+}
+
+.meta-item {
+    color: var(--mountain-slate);
+}
+
+.section-intro {
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   HIGHLIGHT BOXES
+   ============================================ */
+.highlight-section {
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, var(--aged-paper) 0%, #fff9f0 100%);
+    border-left: 3px solid var(--sunset-gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.highlight-box::before {
+    content: '!';
+    position: absolute;
+    top: -8px;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    background: var(--sunset-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(232, 168, 56, 0.4);
+}
+
+.highlight-box h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-box p {
+    color: var(--charcoal);
+    margin-bottom: 0.4rem;
+    font-size: 0.92rem;
+}
+
+.highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 0.75rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.88rem;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--deep-earth), var(--alpine-blue));
+}
+
+th {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: var(--aged-paper);
+}
+
+tbody tr:last-child td {
     border-bottom: none;
 }
 
-.day-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.day-number {
-    background: linear-gradient(135deg, var(--pacific-blue), var(--sky-light));
-    color: white;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    flex-shrink: 0;
-}
-
-.day-number span {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.day-number strong {
-    font-size: 1.75rem;
-    color: white;
-    line-height: 1;
-}
-
-.day-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.5rem;
-    color: var(--deep-ocean);
-    margin: 0;
-}
-
-.day-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .day-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-.day-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-}
-
-.day-images img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.day-images img:first-child {
-    grid-column: span 2;
-    height: 180px;
-}
-
-/* Footer */
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
-    background: var(--deep-ocean);
+    background: linear-gradient(135deg, var(--obsidian), var(--deep-earth));
     color: white;
-    text-align: center;
-    padding: 3rem 2rem;
-    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    margin-top: 1.5rem;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire), var(--terracotta));
+    margin: -1.5rem -2rem 1.5rem -2rem;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
 }
 
 footer p {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.4rem;
+    font-size: 0.88rem;
 }
+
+footer a {
+    color: var(--sunlit-peak);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* Text styling */
+strong {
+    color: var(--deep-earth);
+    font-weight: 600;
+}
+
+a {
+    color: var(--alpine-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--glacier);
+    text-decoration: underline;
+}
+
+/* Print */
+@media print {
+    .hero { min-height: auto; page-break-after: always; }
+    .gallery-grid, .cards-grid { break-inside: avoid; }
+}
+
 
     </style>
 </head>
 <body>
 
-<section class="hero" style="background-image: url("https://media.istockphoto.com/id/968479052/photo/aerial-view-on-eiffel-tower.jpg?s\u003d612x612\u0026w\u003d0\u0026k\u003d20\u0026c\u003dTAjAF7y26EOoXPivCAlXNphMt9I4JeW9qFx1SCT28M0\u003d");">
+<section class="hero">
+    <div class="hero-bg" style="background-image: url('https://www.shutterstock.com/image-photo/paris-aerial-panorama-river-seine-260nw-2045498015.jpg');"></div>
     <div class="hero-content">
         <h1>Weekend in Paris</h1>
-        <h2></h2>
-        <p></p>
+        <p class="hero-subtitle"></p>
+        <p class="hero-intro">A quick guide to exploring the City of Light in just three days.</p>
+    </div>
+    <div class="hero-scroll-hint">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
     </div>
 </section>
 
-<section class="container"><h2>Why Paris is Perfect for a Weekend</h2><div class="cards-grid">
-<div class="card">
-    <img src="https://cdn-imgix.headout.com/media/images/d690f772fb1741dfb49ec6a9b4985907-25141-paris-direct-entry-tickets-to-louvre-museum-with-optional-audio-guide---disneyland--paris-1-day-tickets-05.jpg" alt="Art & Culture" onerror="this.style.display='none'">
-    <div class="card-content">
-        <h4>Art & Culture</h4>
-        <p>The Louvre and Musée d'Orsay house masterpieces from centuries of artistic achievement. From the Mona Lisa to Monet's water lilies, Paris is an art lover's paradise.</p>
-    </div>
+<div class="page-wrapper">
+<div class="section-group" id="why-paris">
+<div class="section-header"><h2>Why Paris is Perfect for a Weekend</h2></div>
+<div class="section-content">
+<div class="content-images">
+<img src="https://thumbs.dreamstime.com/b/charming-paris-street-scene-eiffel-tower-cafe-terrace-picturesque-showcasing-above-vibrant-colors-sunny-ambiance-348908694.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://c8.alamy.com/comp/A6ETFC/paris-france-french-sharing-drinks-busy-parisian-street-caf-scene-A6ETFC.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://images.pexels.com/photos/28179772/pexels-photo-28179772/free-photo-of-paris-restaurant.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1" alt="" onerror="this.style.display='none'">
 </div>
-<div class="card">
-    <img src="https://api-www.louvre.fr/sites/default/files/2021-12/DSC5740.jpg" alt="Culinary Excellence" onerror="this.style.display='none'">
-    <div class="card-content">
-        <h4>Culinary Excellence</h4>
-        <p>From Michelin-starred restaurants to charming bistros and corner bakeries, every meal in Paris is an experience. Don't miss the croissants.</p>
-    </div>
+<p>Paris offers an unmatched combination of art, cuisine, and romance. In just a weekend, you can experience world-class museums, stunning architecture, and some of the finest food on earth.</p>
 </div>
-<div class="card">
-    <img src="https://api-www.louvre.fr/sites/default/files/2021-03/la-grande-galerie.jpg" alt="Romantic Atmosphere" onerror="this.style.display='none'">
-    <div class="card-content">
-        <h4>Romantic Atmosphere</h4>
-        <p>The Seine at sunset, cobblestone streets in Le Marais, and hidden gardens create an atmosphere unlike anywhere else.</p>
-    </div>
+<div class="subsections">
+
+<section class="container content-section">
+    <h2>Art & Culture</h2>
+    <div class="content-images">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Louvre_Pyramid.jpg/1200px-Louvre_Pyramid.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://www.parisinsidersguide.com/image-files/louvre-pyramid-courtyard-day-viator-688-2x1.jpg" alt="" onerror="this.style.display='none'">
 </div>
-</div></section>
+
+    <p>The Louvre and Musée d'Orsay house masterpieces from centuries of artistic achievement. From the Mona Lisa to Monet's water lilies, Paris is an art lover's paradise.</p>
+</section>
 
 
-<div class="day-section">
-    <div class="day-header">
-        <div class="day-number">
-            <span>Day</span>
-            <strong>1</strong>
-        </div>
-        <h3 class="day-title">Day 1: Arrival & Classic Paris</h3>
-    </div>
-    <div class="day-content">
-        <div class="day-description">
-            <p>Arrive at Charles de Gaulle and head straight to your hotel in the Marais district. After settling in:</p>
-<ul>
+<section class="container content-section">
+    <h2>Culinary Excellence</h2>
+    <div class="content-images">
+<img src="https://c8.alamy.com/comp/J4PDAA/france-paris-bakers-shop-window-croissants-J4PDAA.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://thumbs.dreamstime.com/b/quaint-patisserie-heart-paris-freshly-baked-croissants-displayed-window-363709705.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    <p>From Michelin-starred restaurants to charming bistros and corner bakeries, every meal in Paris is an experience. Don't miss the croissants.</p>
+</section>
+
+
+<section class="container content-section">
+    <h2>Romantic Atmosphere</h2>
+    <div class="content-images">
+<img src="https://parisjetaime.com/data/layout_image/6048_Couple-bords-de-Seine-nuit-l-630x405-l-%C2%A9-Fred-via-Unsplash_square_1-1_xl.jpg?ver=1700702505" alt="" onerror="this.style.display='none'">
+<img src="https://delveintoeurope.com/wp-content/uploads/2023/05/pont-des-arts-paris-bridge.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    <p>The Seine at sunset, cobblestone streets in Le Marais, and hidden gardens create an atmosphere unlike anywhere else.</p>
+</section>
+
+</div>
+</div>
+<section class="container"><h2>Day 1: Arrival & Classic Paris</h2>
+<p class="section-intro">Arrive at Charles de Gaulle and head straight to your hotel in the Marais district. After settling in:</p>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 1</div>
+    
+    <div class="card-content">
+        <h4>Arrival & Classic Paris</h4>
+        <div class="card-meta">📍 Le Marais / Central Paris</div>
+<ul class="card-highlights">
 <li>Walk along the Seine to Notre-Dame</li>
 <li>Explore Île de la Cité</li>
 <li>Dinner at a traditional bistro</li>
 <li>Evening stroll past the Eiffel Tower</li>
 </ul>
-        </div>
-        <div class="day-images">
-    <img src="https://www.hertraveledit.com/wp-content/uploads/2018/09/Her_Travel_Edit_fairytale_Le_Marais.jpg" alt="" onerror="this.style.display='none'">
-    <img src="https://everydayparisian.com/wp-content/uploads/2023/03/rue-des-rosiers-Paris-Marais--1024x682.webp" alt="" onerror="this.style.display='none'">
-    <img src="https://www.aparisguide.com/lemarais/ru-de-tresor.jpg" alt="" onerror="this.style.display='none'">
-</div>
 
     </div>
 </div>
+</div>
 
-
-<div class="day-section">
-    <div class="day-header">
-        <div class="day-number">
-            <span>Day</span>
-            <strong>2</strong>
-        </div>
-        <h3 class="day-title">Day 2: Museums & Montmartre</h3>
-    </div>
-    <div class="day-content">
-        <div class="day-description">
-            <p>Start early at the Louvre before the crowds arrive. Spend the morning with the masters, then:</p>
-<ul>
+<section class="container"><h2>Day 2: Museums & Montmartre</h2>
+<p class="section-intro">Start early at the Louvre before the crowds arrive. Spend the morning with the masters, then:</p>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 2</div>
+    
+    <div class="card-content">
+        <h4>Museums & Montmartre</h4>
+        <div class="card-meta">📍 Louvre / Montmartre</div>
+<ul class="card-highlights">
 <li>Lunch in the Tuileries Garden</li>
 <li>Afternoon at Musée d'Orsay</li>
 <li>Climb to Sacré-Cœur for sunset</li>
 <li>Dinner in Montmartre</li>
 </ul>
-        </div>
-        <div class="day-images">
-    <img src="https://media.istockphoto.com/id/1925976217/photo/tourist-visit-at-the-courtyard-of-the-louvre-museum-outside-during-day-time-by-after-raining.jpg?s\u003d612x612\u0026w\u003d0\u0026k\u003d20\u0026c\u003dUhY3TBAGp_hKeFdtf1Ss3kl2iJVXYkkESk8Y5xzWWW0\u003d" alt="" onerror="this.style.display='none'">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Louvre_Courtyard%2C_Looking_West.jpg/2560px-Louvre_Courtyard%2C_Looking_West.jpg" alt="" onerror="this.style.display='none'">
-    <img src="https://i0.wp.com/www.theroadtoanywhere.com/wp-content/uploads/2015/08/The-Louvre.jpg?resize\u003d1080%2C717" alt="" onerror="this.style.display='none'">
-</div>
 
     </div>
 </div>
+</div>
 
-
-<div class="day-section">
-    <div class="day-header">
-        <div class="day-number">
-            <span>Day</span>
-            <strong>3</strong>
-        </div>
-        <h3 class="day-title">Day 3: Markets & Departure</h3>
-    </div>
-    <div class="day-content">
-        <div class="day-description">
-            <p>Your last morning in Paris:</p>
-<ul>
+<section class="container"><h2>Day 3: Markets & Departure</h2>
+<p class="section-intro">Your last morning in Paris:</p>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 3</div>
+    
+    <div class="card-content">
+        <h4>Markets & Departure</h4>
+        <div class="card-meta">📍 Paris</div>
+<ul class="card-highlights">
 <li>Browse the Marché d'Aligre</li>
 <li>Coffee and pastries at a local café</li>
 <li>Last-minute shopping on Rue de Rivoli</li>
 <li>Farewell to Paris</li>
 </ul>
-<hr>
-<p><em>A weekend in Paris is never enough, but it's a perfect start to falling in love with this incredible city.</em></p>
-        </div>
-        <div class="day-images">
-    <img src="https://www.davidlebovitz.com/wp-content/uploads/2016/07/Marche-dAligre-Paris-Outdoor-Market-27-640x960.jpg" alt="" onerror="this.style.display='none'">
-    <img src="https://www.parisinsidersguide.com/image-files/aligre-market-produce-stalls-2012-03-20-mc-2020-800-2x1.jpg" alt="" onerror="this.style.display='none'">
-    <img src="https://letseattheworld.com/wp-content/uploads/2024/01/D75_0713-HD.jpg" alt="" onerror="this.style.display='none'">
-</div>
 
     </div>
 </div>
+</div>
 
 
-<section class="container">
-    <div class="highlight">
-        <h3>Farewell to Paris</h3>
-        
+<footer>
+    <div class="container">
+        <h2>Journey Complete</h2>
+        <p>A weekend in Paris is never enough, but it's a perfect start to falling in love with this incredible city.</p>
     </div>
-</section>
+</footer>
 
+</div>
 </body>
 </html>
