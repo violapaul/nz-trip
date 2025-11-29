@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Zealand Trip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+    --deep-ocean: #0a1628;
+    --twilight: #1a2f4a;
+    --pacific-blue: #2563eb;
+    --sky-light: #60a5fa;
+    --sand: #fef3c7;
+    --warm-white: #fefefe;
+    --forest: #166534;
+    --volcanic: #dc2626;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--warm-white);
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--twilight) 50%, var(--pacific-blue) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://imgc.allpostersimages.com/img/posters/ian-viaduct-harbour-and-sky-tower-at-sunset-auckland-north-island-new-zealand-pacific_u-l-pxxetc0.jpg') center/cover;
+    opacity: 0.2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 4px 20px rgba(0,0,0,0.3);
+}
+
+.hero h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--sand);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    border: none;
+    padding: 0;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* Main Content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.25rem;
+    color: var(--deep-ocean);
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--twilight);
+    margin: 2rem 0 1rem;
+}
+
+h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    color: var(--deep-ocean);
+    margin: 1.5rem 0 0.75rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+strong { color: var(--deep-ocean); }
+em { font-style: italic; }
+
+ul, ol {
+    margin: 1rem 0 1.5rem 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 3rem 0;
+}
+
+/* Feature Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .card-content {
+    padding: 1.5rem;
+}
+
+.card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: #6b7280;
+}
+
+/* Highlight Box */
+.highlight {
+    background: linear-gradient(135deg, var(--sand) 0%, #fef9e7 100%);
+    border-left: 4px solid var(--pacific-blue);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 12px 12px 0;
+}
+
+.highlight p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.02);
+}
+
+.image-gallery.large img:first-child {
+    grid-column: span 2;
+    height: 280px;
+}
+
+/* Day Sections */
+.day-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.day-section:last-child {
+    border-bottom: none;
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.day-number {
+    background: linear-gradient(135deg, var(--pacific-blue), var(--sky-light));
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.day-number span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.day-number strong {
+    font-size: 1.75rem;
+    color: white;
+    line-height: 1;
+}
+
+.day-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--deep-ocean);
+    margin: 0;
+}
+
+.day-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .day-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.day-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.day-images img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.day-images img:first-child {
+    grid-column: span 2;
+    height: 180px;
+}
+
+/* Footer */
+footer {
+    background: var(--deep-ocean);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>New Zealand Cycling & Sailing Adventure</h1>
+        <h2>A 9-Day Journey Through the North Island's Greatest Treasures</h2>
+        <p>Where world-class sailing meets ancient forests, volcanic landscapes, and award-winning vineyards</p>
+    </div>
+    <div class="scroll-indicator">↓</div>
+</section>
+<section><div class="container">
+
+<h2>Why This Trip Will Be Unforgettable</h2>
+<p>We are heading to a true world-class playground that perfectly matches our passions. New Zealand's North Island offers a rare combination of experiences we simply cannot get anywhere else on Earth.</p>
+<div class="cards-grid">
+<div class="card">
+    <img src="https://www.exploregroup.co.nz/media/bthdhfyq/02-sail-up-city-in-background.jpg?width=440&height=440" alt="Sailing Capital of the World" onerror="this.style.display='none'">
+    <div class="card-content">
+        <h4>Sailing Capital of the World</h4>
+        <p>Take the helm of an actual America's Cup yacht in Auckland, the "City of Sails"—where sailing isn't a hobby but a way of life.</p>
+    </div>
+</div>
+<div class="card">
+    <img src="https://www.newzealand.com/assets/Tourism-NZ/Rotorua/img-1536141677-2728-25534-p-20DECDBD-FB94-BEA7-199A4A2855BE093D-2544003__aWxvdmVrZWxseQo_CropResizeWzUwMCwzNzUsODAsImpwZyJd.jpg" alt="Cycling Paradise" onerror="this.style.display='none'">
+    <div class="card-content">
+        <h4>Cycling Paradise</h4>
+        <p>Ride the famous "Great Rides"—purpose-built trails through ancient redwood forests and along volcanic lakeshores.</p>
+    </div>
+</div>
+<div class="card">
+    <img src="https://media.cntraveler.com/photos/5d39cc4bd0ab850008c1c9b2/16:9/w_2560%2Cc_limit/IMG_3449.jpg" alt="Island Wine Country" onerror="this.style.display='none'">
+    <div class="card-content">
+        <h4>Island Wine Country</h4>
+        <p>Cycle between award-winning vineyards on Waiheke Island—a Mediterranean paradise in the South Pacific.</p>
+    </div>
+</div>
+<div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Priroda_Aotearoe.jpg/1200px-Priroda_Aotearoe.jpg" alt="Geothermal Wonders" onerror="this.style.display='none'">
+    <div class="card-content">
+        <h4>Geothermal Wonders</h4>
+        <p>Experience Rotorua's bubbling mud pools, erupting geysers, and natural hot springs heated by the earth itself.</p>
+    </div>
+</div>
+</div>
+
+<h3>The Sailing Capital of the World</h3>
+<p>Auckland isn't just <em>a</em> sailing city—it's <em>the</em> sailing city. Known as the "City of Sails," Auckland has more boats per capita than anywhere else on the planet. This is where the America's Cup has been defended multiple times, where sailing isn't a hobby but a way of life. We won't just watch from the sidelines; we'll take the helm of an <strong>actual America's Cup racing yacht</strong>, grinding winches and trimming sails on the very waters where legends have raced. For sailors like us who live for the feel of a loaded sheet and the thrill of a perfectly executed tack, this is a pilgrimage.</p>
+<h3>Cycling Paradise: The Great Rides</h3>
+<p>New Zealand has invested heavily in creating the <strong>Ngā Haerenga Great Rides</strong>—a network of 23 purpose-built cycling trails that traverse the country's most spectacular landscapes. We'll ride through:</p>
+<ul>
+<li><strong>Ancient redwood forests</strong> where towering California redwoods meet native New Zealand ferns</li>
+<li><strong>Volcanic lakeshores</strong> with views of steaming geothermal vents and snow-capped peaks</li>
+<li><strong>Coastal vineyard roads</strong> on Waiheke Island, often called "the island of wine"</li>
+</ul>
+<p>With e-bikes, we get all the breathtaking scenery of a multi-day expedition with none of the grueling climbs—just pure joy on two wheels.</p>
+<h3>Waiheke Island: Wine Country Meets the Pacific</h3>
+<p>Just a 40-minute ferry ride from downtown Auckland lies Waiheke Island—a Mediterranean-style paradise in the South Pacific. The island has earned international acclaim for its <strong>Bordeaux-style reds</strong>, particularly Syrah and Cabernet blends that rival the world's best. We'll cycle between award-winning vineyards, stopping for tastings with ocean views that stretch to the horizon. Think Riva del Garda, but warmer, wilder, and with better wine.</p>
+<h3>Geothermal Wonders: Where the Earth Breathes</h3>
+<p>Rotorua sits on the Pacific Ring of Fire, and the earth here is alive in ways that feel almost alien:</p>
+<ul>
+<li><strong>Pohutu Geyser</strong> erupts up to 30 meters high, multiple times per hour</li>
+<li><strong>Bubbling mud pools</strong> pop and hiss with primordial energy</li>
+<li><strong>Hot springs</strong> heated by the earth itself offer the ultimate post-ride recovery</li>
+<li><strong>Steaming vents</strong> rise from suburban backyards—this is normal here</li>
+</ul>
+<p>The Māori have called this place home for over 600 years, and their culture is woven into every aspect of the region.</p>
+<h3>Tongariro: The Volcanic Heart</h3>
+<p>Tongariro National Park is New Zealand's oldest national park and a dual UNESCO World Heritage Site (for both natural and cultural significance). The three volcanic peaks—<strong>Ruapehu, Ngauruhoe, and Tongariro</strong>—dominate the landscape with their dramatic profiles. Mount Ngauruhoe famously doubled as Mount Doom in the Lord of the Rings films. We'll hike through alpine tussock with these giants as our backdrop, or take to the skies for a scenic flight over crater lakes and lava flows.</p>
+<div class="highlight"><p>This itinerary is designed for <em>us</em>: high on engagement, deep on scenery, and low on logistical stress, with comfortable base camps and fantastic food waiting at the end of every adventure.</p></div>
+<hr>
+<h2>The 9-Day Itinerary</h2>
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>1</strong>
+        </div>
+        <h3 class="day-title">Day 1</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>Touch down in the City of Sails and settle into our waterfront accommodation. The Viaduct Harbour area pulses with energy—restaurants, bars, and superyachts line the marina.</p>
+<ul>
+<li>SAN → LAX → Auckland (arrive evening)</li>
+<li>Check into hotel near Viaduct Harbour</li>
+<li>Short harbour walk to stretch legs</li>
+<li>Early dinner at Wynyard Quarter</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://media.istockphoto.com/id/535431037/photo/night-view-at-sky-tower-auckland.jpg?s\u003d612x612\u0026w\u003d0\u0026k\u003d20\u0026c\u003dKh0a8kic9EPu7qhe0Z6-SJs-1z9RRToSSsEp9M7u6Mw\u003d" alt="" onerror="this.style.display='none'">
+    <img src="https://yakei.jp/en/nightphoto/skytower1.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://imgc.allpostersimages.com/img/posters/ian-viaduct-harbour-and-sky-tower-at-sunset-auckland-north-island-new-zealand-pacific_u-l-pxxetc0.jpg?artHeight\u003d550\u0026artPerspective\u003dn\u0026artWidth\u003d550\u0026background\u003dffffff" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>2</strong>
+        </div>
+        <h3 class="day-title">Day 2</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>The highlight of the trip: sailing an actual America's Cup yacht on Waitematā Harbour. We'll hoist, grind, trim, and helm—this is real sailing, not a passive cruise.</p>
+<ul>
+<li>Morning: Auckland War Memorial Museum or Art Gallery</li>
+<li>Explore Ponsonby Road cafés and boutiques</li>
+<li><strong>Afternoon: 2–3 hour America's Cup sailing experience</strong></li>
+<li>Evening: Dinner in Wynyard Quarter</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/activities/r0k0tzxckxhjl03bxdth/AmericasCupSailingExperienceinAuckland-KlookUnitedStates.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/85/b5/30.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://images.adsttc.com/media/images/5284/3214/e8e4/4e22/2500/00eb/large_jpg/20110901_MG_2794cmyk-John_Gollings.jpg?1384395279" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>3</strong>
+        </div>
+        <h3 class="day-title">Day 3</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>A 40-minute ferry delivers us to paradise. On e-bikes, we'll loop through vineyards and bays, stopping for tastings at world-class wineries like Mudbrick and Cable Bay.</p>
+<ul>
+<li>Morning ferry to Waiheke Island</li>
+<li>Pick up e-bikes at Matiatia terminal</li>
+<li><strong>25–30 km bays-and-vineyards loop</strong></li>
+<li>Wine tastings with ocean views</li>
+<li>Dinner on the island or late ferry back</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/bc/9b/c6/cable-bay-is-nestled.jpg?w\u003d900\u0026h\u003d-1\u0026s\u003d1" alt="" onerror="this.style.display='none'">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/30/57/d7/the-wine-on-waiheke-island.jpg?w\u003d900\u0026h\u003d-1\u0026s\u003d1" alt="" onerror="this.style.display='none'">
+    <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0f/69/ed/60.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>4</strong>
+        </div>
+        <h3 class="day-title">Day 4</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>Drive south into the geothermal heartland. Rotorua greets us with the smell of sulfur and the sight of steam rising from the earth. End the day soaking in hot pools.</p>
+<ul>
+<li>Scenic drive Auckland → Rotorua (~3 hours)</li>
+<li>Afternoon: <strong>Te Puia</strong> or <strong>Wai-O-Tapu</strong> geothermal walk</li>
+</ul>
+<p>  !<a href="https://upload.wikimedia.org/wikipedia/commons/a/ab/ChampagnePool-Wai-O-Tapu<em>rotated</em>MC.jpg">Champagne Pool</a></p>
+<ul>
+<li>Watch Pohutu Geyser erupt</li>
+<li><strong>Evening: Polynesian Spa hot pools</strong></li>
+<li>Dinner in Rotorua lakefront area</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://i.ytimg.com/vi/dDY4NN-Fqgw/maxresdefault.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://images.myguide-cdn.com/content/2/large/rotorua-mud-pools-613232.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://www.bachcare.co.nz/blog/wp-content/uploads/sites/23/2021/08/Auckland-to-Rotorua-road-trip-scaled.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>5</strong>
+        </div>
+        <h3 class="day-title">Day 5</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>One of New Zealand's premier cycling experiences: the Whakarewarewa Forest Loop. Towering redwoods, native ferns, and smooth singletrack through an enchanted landscape.</p>
+<ul>
+<li><strong>Full day: 33 km forest loop on e-bikes</strong></li>
+<li>Ride through redwoods and native bush</li>
+<li>Café stops and photo opportunities</li>
+<li>Evening: Secret Spot Hot Tubs or <strong>Redwoods Treewalk</strong></li>
+</ul>
+<p>  !<a href="https://www.treewalk.co.nz/wp-content/uploads/2019/06/nightlights-redwoods.jpg">Redwoods Treewalk Night</a></p>
+        </div>
+        <div class="day-images">
+    <img src="https://as2.ftcdn.net/jpg/01/97/59/43/1000_F_197594343_99bXsGw939PjtrisXuDKI2jQPSLVnyjn.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://www.shutterstock.com/image-photo/aerial-view-on-redwood-whakarewarewa-260nw-1020099235.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/f1/fa.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>6</strong>
+        </div>
+        <h3 class="day-title">Day 6</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>A gentler morning with options for a short ride or lake walk. Then we head south to Taupō, stopping at the spectacular Huka Falls along the way.</p>
+<ul>
+<li>Morning: Blue Lake loop or Lake Ōkāreka walk</li>
+<li>Drive Rotorua → Taupō (~1 hour)</li>
+<li><strong>Stop at Huka Falls</strong> (turquoise water thundering through a gorge)</li>
+<li>Check into lakeside accommodation</li>
+<li>Evening stroll along Lake Taupō waterfront</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/3e/f9/de/aratiatia-rapids.jpg?w\u003d1200\u0026h\u003d-1\u0026s\u003d1" alt="" onerror="this.style.display='none'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Aratiatia_Rapids_with_opened_spill_gates.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://myqueenstowndiary.com/wp-content/uploads/2022/12/View-of-the-beautiful-road-between-Taupo-and-Rotorua.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>7</strong>
+        </div>
+        <h3 class="day-title">Day 7</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>The Great Lake Trail is one of New Zealand's finest cycling experiences: lakeside singletrack with volcano views, boat transfers, and remote bays.</p>
+<ul>
+<li><strong>Full day: 40–70 km on the Great Lake Trail</strong></li>
+<li>Boat transfer to trail start</li>
+<li>W2K and Waihaha sections</li>
+<li>Big lake and volcano views throughout</li>
+<li>Evening: dinner in Taupō town</li>
+</ul>
+<p>!<a href="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/44/6c/8e/the-main-face-with-smaller.jpg?w=1200&h=-1&s=1">Mine Bay Maori Carvings</a></p>
+<p><em>Accessible by boat or kayak near the trail end</em></p>
+        </div>
+        <div class="day-images">
+    <img src="https://www.newzealand.com.au/assets/uploads/images/Waikato/Taupo/Operators/FourB/Great-Lake-Trail/great-lake-trail-bike-boat-transfer-taupo.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://external-preview.redd.it/VhuXNua0qnNDC2njuA2iHoWIcdv6tE2cXry5wMMYDsU.jpg?auto\u003dwebp\u0026s\u003d6a3d2b4a8bee21f8401a38c3be95fe7540cbf9f7" alt="" onerror="this.style.display='none'">
+    <img src="https://www.newzealand.com/assets/Tourism-NZ/Other/img-1536165162-8484-14251-p-10404A75-9EE6-4436-B0CD03EA6531CE47-2544003__aWxvdmVrZWxseQo_FocalPointCropWzM1MiwxMDI0LDUwLDUwLDc1LCJqcGciLDY1LDIuNV0.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>8</strong>
+        </div>
+        <h3 class="day-title">Day 8</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>Our mountain day: hiking to Taranaki Falls with Mount Ngauruhoe (Mount Doom) as our backdrop. Or soar over the volcanoes on a scenic flight for an unforgettable perspective.</p>
+<ul>
+<li>Drive to Whakapapa Village (~1 hour)</li>
+<li><strong>Hike: Taranaki Falls Loop (6 km)</strong></li>
+<li>Optional extension to Tama Lakes</li>
+<li><strong>Alternative: Scenic flight over volcanoes</strong></li>
+<li>Last night in Taupō</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/f5/a4/8c/take-off.jpg?w\u003d1200\u0026h\u003d900\u0026s\u003d1" alt="" onerror="this.style.display='none'">
+    <img src="https://superpasses.co.nz/wp-content/uploads/P1040733-scaled.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://www.discoverynz.com/hubfs/Discovery%20Website%202020/Helicopter%20Flights/35066204_1025098470982335_4647193028459495424_n%20945%20x%20630.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>9</strong>
+        </div>
+        <h3 class="day-title">Day 9</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>A leisurely drive back to Auckland with time for one last coffee, some shopping, or a final harbour walk before our flight home.</p>
+<ul>
+<li>Morning: coffee by Lake Taupō</li>
+<li>Scenic drive Taupō → Auckland (~4 hours)</li>
+<li>Buffer time in Auckland</li>
+<li>Fly Auckland → LAX → SAN</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://www.airport-suppliers.com/wp-content/uploads/2017/11/Airport-news-1.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://c8.alamy.com/comp/H8WEGN/auckland-airport-departure-lounge-H8WEGN.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://c8.alamy.com/comp/2M6WG8K/morning-fog-covering-shores-around-lake-taupo-location-taupo-new-zealand-2M6WG8K.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+<hr>
+<h2>Trip Details</h2>
+<h3>Destinations</h3>
+<ol>
+<li><strong>Auckland & Waiheke Island</strong> – harbour city + wine island + serious sailing</li>
+<li><strong>Rotorua</strong> – forests, lakes, geothermal areas, Māori culture, and Great Rides</li>
+<li><strong>Taupō / Tongariro region</strong> – lake town, Great Lake Trail, and volcano scenery</li>
+</ol>
+<h3>What's Included</h3>
+<ul>
+<li>Strong focus on <strong>cycling and scenery</strong> (lake, forest, coast, volcano views)</li>
+<li>A couple of <strong>high-quality, hands-on sailing sessions</strong> (not touristy cruises)</li>
+<li><strong>Moderate hiking only</strong>, to protect knees but still see spectacular landscapes</li>
+<li>Good <strong>food, wine, and cultural experiences</strong> in a few well-chosen hubs</li>
+</ul>
+<h2>Our Requirements & Preferences</h2>
+<h3>Travel style</h3>
+<ul>
+<li>Prefer <strong>1–3 base camps</strong>, not moving every night.</li>
+<li>Want towns or small cities that are:</li>
+<li>Walkable and pleasant</li>
+<li>With <strong>good restaurants</strong> and some culture (museums, local history, Māori culture, wine).</li>
+<li>Not trying to tick off every sight; we’d rather have <strong>fewer places, deeper experience</strong>.</li>
+</ul>
+<h3>Activity mix</h3>
+<h4>Cycling (big strength)</h4>
+<ul>
+<li>Both of us ride a lot; comfortable with <strong>50–70 miles / 80–110 km</strong> in a day, especially on <strong>e-bikes</strong>.</li>
+<li>Primary goal is <strong>scenery and experience</strong>, not racing or technical skills.</li>
+<li>Happy on:</li>
+<li>Sealed cycle paths</li>
+<li>Gravel roads and easy singletrack</li>
+<li>Want to <strong>avoid</strong>:</li>
+<li>Downhill bike parks</li>
+<li>Very technical, high-consequence MTB terrain (rock gardens, drops, exposure)</li>
+</ul>
+<h4>Hiking (knee-limited)</h4>
+<ul>
+<li>Comfortable range: roughly <strong>5–7 miles (8–11 km)</strong> with <strong>up to 1500–2000 ft (450–600 m) of elevation gain</strong>.</li>
+<li>OK with a solid workout, but:</li>
+<li>No 10–12 mile epics</li>
+<li>No sketchy scree, heavy exposure, or “don’t trip here” sections</li>
+</ul>
+<h4>Sailing (high experience)</h4>
+<ul>
+<li>We both own dinghies and race them frequently.</li>
+<li>We own and race a <strong>35-foot keelboat</strong> about <strong>100 days per year</strong>.</li>
+<li>We are <strong>aggressive, hands-on sailors</strong>, comfortable with loads, line-handling, and helming.</li>
+<li>We want:</li>
+<li><strong>1–2 sailing sessions total</strong>, but</li>
+<li>They should be <strong>real sailing</strong> where we work the boat.</li>
+<li>We do <strong>not</strong> want:</li>
+<li>Big 30–person sightseeing cruises</li>
+<li>Trips where the crew does everything while everyone else drinks Prosecco</li>
+</ul>
+<hr>
+<h2>Detailed Activity Plans</h2>
+<h3>Sailing Plan (Hands-On Only)</h3>
+<p>We only schedule <strong>two sailing sessions</strong>, both in the Auckland / Hauraki Gulf area, where the boats and conditions are most interesting.</p>
+<h4>Session #1 – America’s Cup–style race yacht (Auckland)</h4>
+<ul>
+<li><strong>Operator example:</strong> Explore Group’s <strong>America’s Cup Sailing Experience</strong>.</li>
+<li><strong>Boat:</strong> Retired America’s Cup monohull on Waitematā Harbour.</li>
+<li><strong>Duration:</strong> ~2 hours on the water (plus check-in).</li>
+<li><strong>Style:</strong></li>
+<li>Professional crew runs safety and big-picture decisions.</li>
+<li>Guests are invited to <strong>hoist, grind, trim, and helm</strong>.</li>
+<li>Designed as an interactive “be part of the crew” experience, not just a harbour tour.</li>
+<li>Why this is worth it for us:</li>
+<li>We get to play with a much bigger/faster rig than our own 35-footer.</li>
+<li>Loads and grinders are real; it’s physically engaging and fun.</li>
+<li>Short enough to fit into an Auckland city day without dominating the schedule.</li>
+</ul>
+<p>This is our <strong>primary must-do sail</strong>.</p>
+<h4>Session #2 – Private Hauraki Gulf day charter <em>or</em> twilight race</h4>
+<p>We can choose one of two paths depending on how much time we want to allocate to sailing vs. cycling:</p>
+<p><strong>Option A – Private Hauraki Gulf day charter</strong></p>
+<ul>
+<li><strong>Boat:</strong> 35–45 foot monohull or catamaran, chartered just for us plus one skipper.</li>
+<li><strong>Example providers:</strong> Classic Boat Charter, Terra & Tide, or similar outfits running private day sails in the Hauraki Gulf.</li>
+<li><strong>Duration:</strong> 1 full day (roughly 6–8 hours on the water).</li>
+<li><strong>Style:</strong></li>
+<li>We explicitly tell the operator:</li>
+<li>“We race a 35’ keelboat 100 days/year; we’re happy with all the work. We’d like you for local knowledge and safety, but we want to <strong>sail the boat</strong>.”</li>
+<li>The skipper can then focus on routing, traffic, and Gulf-specific quirks while we helm and trim.</li>
+<li>Easy to incorporate:</li>
+<li>A lunch stop at an island</li>
+<li>A short beach walk or swim</li>
+</ul>
+<p>This feels closest to our “Riva del Garda with instructor” experience, but at sea.</p>
+<p><strong>Option B – Twilight or club race night</strong></p>
+<ul>
+<li>Alternative if we want to <strong>protect daytime for riding</strong>:</li>
+<li>Use local crew lists / yacht clubs to join a <strong>midweek twilight race</strong> as visiting crew.</li>
+<li>Expect a 2–3 hour evening race around the cans and a drink at the club afterward.</li>
+<li>This gives us:</li>
+<li>A true “local racing” flavor.</li>
+<li>Minimal interruption to the daytime cycling schedule.</li>
+</ul>
+<p>For planning purposes, we can treat Option A as the <strong>default</strong> and Option B as a <strong>maybe</strong>, depending on how we feel once we see the overall calendar.</p>
+<hr>
+<h3>Cycling Plan – Key Rides</h3>
+<h4>Waiheke Island – e-bike wine-and-bays loop</h4>
+<ul>
+<li><strong>Core idea:</strong> Use <strong>eRide Waiheke</strong> or similar hire shop right at the Matiatia ferry terminal, and ride their curated <strong>“5 Bays Ride”</strong> on the northern side of the island.</li>
+<li><strong>Distance:</strong> ~25–30 km (15–20 mi), adjustable with extra detours.</li>
+<li><strong>Surface:</strong> Mostly sealed roads and some cycle lanes, with hills flattened by e-bikes.</li>
+<li><strong>Highlights:</strong></li>
+<li>Series of bays and beaches</li>
+<li>Vineyards and tasting rooms</li>
+<li>Coastal viewpoints and cafés</li>
+<li>Style: very similar in spirit to <strong>Riva del Garda “scenic loop + good food”</strong>, just with ocean instead of alpine lake.</li>
+</ul>
+<h4>Rotorua – Whakarewarewa Forest Loop (Great Ride)</h4>
+<ul>
+<li><strong>Route:</strong> The <strong>Whakarewarewa Forest Loop</strong>, an official Ngā Haerenga New Zealand Cycle Trail <strong>Great Ride</strong>.</li>
+<li><strong>Distance:</strong> ~33 km (20 mi) loop.</li>
+<li><strong>Grade:</strong> Mostly Grade 2 (easy) with some Grade 3 (intermediate) sections.</li>
+<li><strong>Surface:</strong> Gravel and pumice singletrack, undulating but not extreme.</li>
+<li><strong>Bike hire:</strong> E-mountain bikes widely available from multiple rental outfits in Rotorua.</li>
+<li><strong>Designed for:</strong> Confident riders of most abilities; very popular on <strong>e-bikes</strong>.</li>
+<li><strong>Highlights:</strong></li>
+<li>Native forest and redwoods</li>
+<li>Lakes and lookouts</li>
+<li>Māori carvings and interpretation panels</li>
+<li>Cafés and optional hot tubs nearby</li>
+</ul>
+<p>With our cycling base fitness and e-bikes, this should feel like a <strong>fun 3–4 hour ride</strong>, not a sufferfest.</p>
+<h4>Taupō – Great Lake Trail (Great Ride)</h4>
+<ul>
+<li><strong>Route:</strong> The <strong>Great Lake Trail</strong>, another official Great Ride on the western shores of Lake Taupō.</li>
+<li><strong>Structure:</strong> A series of sections (Orakau, K2K, W2K, Waihaha/Waihora) along Lake Taupō’s western shore.</li>
+<li><strong>Distance:</strong> We can choose sections to hit <strong>40–70 km (25–45 mi)</strong> in a day, supported by shuttles and water taxi transfers.</li>
+<li><strong>Grade:</strong> Generally Grade 3 (intermediate) – more about length and rolling terrain than technical stunts.</li>
+<li><strong>Surface:</strong> Lakeside singletrack and gravel, with short climbs and descents.</li>
+<li><strong>Logistics:</strong> Local operators in Taupō (e.g. Great Lake Trail shuttles and boat services) run transport and can help with route planning and bike hire.</li>
+<li><strong>Highlights:</strong></li>
+<li>Big lake and volcano views</li>
+<li>Bush, cliffs, and inlets</li>
+<li>Quiet feel compared with busier tourist areas</li>
+</ul>
+<p>With e-bikes and our background, this is an ideal long scenic day ride. We can decide on exact sections once we see current shuttle timetables.</p>
+<h4>Easy/bonus rides</h4>
+<p>To fill shorter windows or “active recovery” days, there are easier rides:</p>
+<ul>
+<li><strong>Taupō – Great Lake Pathway (Lion’s Walk):</strong></li>
+<li>Lakeside shared path of ~10–13 km along Lake Taupō’s waterfront.</li>
+<li>Grade 1 (very easy), mostly flat, with lots of spots to stop for coffee, ice cream, or a swim.</li>
+<li>Perfect for an evening spin or a short, scenery-first ride.</li>
+</ul>
+<ul>
+<li><strong>Rotorua – family-friendly lake loops:</strong></li>
+<li>Short 5–6 km loops around lakes like Blue Lake (Lake Tikitapu) or the Lake Ōkāreka walkway.</li>
+<li>Very low risk, very scenic; good options if we want to walk or ride gently without committing to a big Great Ride day.</li>
+</ul>
+<hr>
+<h3>Hiking & Scenic Add-Ons</h3>
+<p>We’ll keep hiking modest but still get a “wow” factor day in the mountains.</p>
+<h4>Tongariro National Park – moderate day from Taupō</h4>
+<p><strong>Target:</strong> One moderate volcano day without doing the full 12-mile Alpine Crossing.</p>
+<ul>
+<li><strong>Base:</strong> Taupō (day trip to Tongariro National Park).</li>
+<li><strong>Core hike:</strong> Taranaki Falls Loop from Whakapapa Village</li>
+<li>Distance: ~6 km (about 3.5–4 mi)</li>
+<li>Elevation gain: modest (well under our 1500–2000 ft limit)</li>
+<li>Scenery: waterfall, gorge, open tussock with big views of Ruapehu/Ngauruhoe on a clear day.</li>
+<li><strong>Optional extension:</strong></li>
+<li>Continue up the Tama Lakes track for additional distance and elevation.</li>
+<li>Out-and-back — we can turn around whenever we’re at our comfort limit.</li>
+<li>Aim to keep the total around <strong>5–7 miles / 8–11 km</strong>, and within our elevation budget.</li>
+</ul>
+<p>This gives us a <strong>legitimate mountain day</strong> that still respects the knee and doesn’t blow up the rest of the trip.</p>
+<h4>Tongariro / Taupō scenic flight (minimum effort, maximum views)</h4>
+<p>If we want the full volcanic drama <strong>without</strong> extra knee load:</p>
+<ul>
+<li><strong>Short scenic flights</strong> (small plane, helicopter, or floatplane) from Taupō:</li>
+<li>Typically 30–50 minutes.</li>
+<li>Fly over Lake Taupō, Tongariro volcanoes, craters, and alpine lakes.</li>
+<li>We can pair this with either:</li>
+<li>A shorter walk that day, or</li>
+<li>A full rest day for legs.</li>
+</ul>
+<p>This is a strong candidate for a “splurge” scenic experience, especially if weather cooperates.</p>
+<hr>
+<h3>Timing</h3>
+<p><strong>Southern hemisphere summer (December–March)</strong> — warm days, long evenings, perfect for cycling and sailing.</p>
+
+</div></section>
+<footer>
+    <div class="container">
+        <p>New Zealand Cycling & Sailing Adventure • December–March</p><p>San Diego → Auckland → Waiheke → Rotorua → Taupō → Tongariro → Home</p>
+    </div>
+</footer>
+
+</body>
+</html>

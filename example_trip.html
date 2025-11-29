@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend in Paris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+
+:root {
+    --deep-ocean: #0a1628;
+    --twilight: #1a2f4a;
+    --pacific-blue: #2563eb;
+    --sky-light: #60a5fa;
+    --sand: #fef3c7;
+    --warm-white: #fefefe;
+    --forest: #166534;
+    --volcanic: #dc2626;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--warm-white);
+    color: #1f2937;
+    line-height: 1.7;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--twilight) 50%, var(--pacific-blue) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 4px 20px rgba(0,0,0,0.3);
+}
+
+.hero h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--sand);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+/* Content Section */
+.content {
+    padding: 3rem 0;
+}
+
+.content h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.25rem;
+    color: var(--deep-ocean);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.content h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--twilight);
+    margin: 2rem 0 1rem;
+}
+
+.content p {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    color: var(--deep-ocean);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+/* Highlight Box */
+.highlight {
+    background: linear-gradient(135deg, var(--sand) 0%, #fef9e7 100%);
+    border-left: 4px solid var(--pacific-blue);
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 0 12px 12px 0;
+}
+
+.highlight p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Day Section */
+.day-section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.day-section:last-child {
+    border-bottom: none;
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.day-number {
+    background: linear-gradient(135deg, var(--pacific-blue), var(--sky-light));
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.day-number span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.day-number strong {
+    font-size: 1.75rem;
+    color: white;
+    line-height: 1;
+}
+
+.day-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--deep-ocean);
+    margin: 0;
+}
+
+.day-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .day-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.day-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.day-images img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.day-images img:first-child {
+    grid-column: span 2;
+    height: 180px;
+}
+
+/* Footer */
+footer {
+    background: var(--deep-ocean);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+    </style>
+</head>
+<body>
+
+<section class="hero" style="background-image: url("https://media.istockphoto.com/id/968479052/photo/aerial-view-on-eiffel-tower.jpg?s\u003d612x612\u0026w\u003d0\u0026k\u003d20\u0026c\u003dTAjAF7y26EOoXPivCAlXNphMt9I4JeW9qFx1SCT28M0\u003d");">
+    <div class="hero-content">
+        <h1>Weekend in Paris</h1>
+        <h2></h2>
+        <p></p>
+    </div>
+</section>
+
+<section class="container"><h2>Why Paris is Perfect for a Weekend</h2><div class="cards-grid">
+<div class="card">
+    <img src="https://cdn-imgix.headout.com/media/images/d690f772fb1741dfb49ec6a9b4985907-25141-paris-direct-entry-tickets-to-louvre-museum-with-optional-audio-guide---disneyland--paris-1-day-tickets-05.jpg" alt="Art & Culture" onerror="this.style.display='none'">
+    <div class="card-content">
+        <h4>Art & Culture</h4>
+        <p>The Louvre and Musée d'Orsay house masterpieces from centuries of artistic achievement. From the Mona Lisa to Monet's water lilies, Paris is an art lover's paradise.</p>
+    </div>
+</div>
+<div class="card">
+    <img src="https://api-www.louvre.fr/sites/default/files/2021-12/DSC5740.jpg" alt="Culinary Excellence" onerror="this.style.display='none'">
+    <div class="card-content">
+        <h4>Culinary Excellence</h4>
+        <p>From Michelin-starred restaurants to charming bistros and corner bakeries, every meal in Paris is an experience. Don't miss the croissants.</p>
+    </div>
+</div>
+<div class="card">
+    <img src="https://api-www.louvre.fr/sites/default/files/2021-03/la-grande-galerie.jpg" alt="Romantic Atmosphere" onerror="this.style.display='none'">
+    <div class="card-content">
+        <h4>Romantic Atmosphere</h4>
+        <p>The Seine at sunset, cobblestone streets in Le Marais, and hidden gardens create an atmosphere unlike anywhere else.</p>
+    </div>
+</div>
+</div></section>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>1</strong>
+        </div>
+        <h3 class="day-title">Day 1: Arrival & Classic Paris</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>Arrive at Charles de Gaulle and head straight to your hotel in the Marais district. After settling in:</p>
+<ul>
+<li>Walk along the Seine to Notre-Dame</li>
+<li>Explore Île de la Cité</li>
+<li>Dinner at a traditional bistro</li>
+<li>Evening stroll past the Eiffel Tower</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://www.hertraveledit.com/wp-content/uploads/2018/09/Her_Travel_Edit_fairytale_Le_Marais.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://everydayparisian.com/wp-content/uploads/2023/03/rue-des-rosiers-Paris-Marais--1024x682.webp" alt="" onerror="this.style.display='none'">
+    <img src="https://www.aparisguide.com/lemarais/ru-de-tresor.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>2</strong>
+        </div>
+        <h3 class="day-title">Day 2: Museums & Montmartre</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>Start early at the Louvre before the crowds arrive. Spend the morning with the masters, then:</p>
+<ul>
+<li>Lunch in the Tuileries Garden</li>
+<li>Afternoon at Musée d'Orsay</li>
+<li>Climb to Sacré-Cœur for sunset</li>
+<li>Dinner in Montmartre</li>
+</ul>
+        </div>
+        <div class="day-images">
+    <img src="https://media.istockphoto.com/id/1925976217/photo/tourist-visit-at-the-courtyard-of-the-louvre-museum-outside-during-day-time-by-after-raining.jpg?s\u003d612x612\u0026w\u003d0\u0026k\u003d20\u0026c\u003dUhY3TBAGp_hKeFdtf1Ss3kl2iJVXYkkESk8Y5xzWWW0\u003d" alt="" onerror="this.style.display='none'">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Louvre_Courtyard%2C_Looking_West.jpg/2560px-Louvre_Courtyard%2C_Looking_West.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://i0.wp.com/www.theroadtoanywhere.com/wp-content/uploads/2015/08/The-Louvre.jpg?resize\u003d1080%2C717" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<div class="day-section">
+    <div class="day-header">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>3</strong>
+        </div>
+        <h3 class="day-title">Day 3: Markets & Departure</h3>
+    </div>
+    <div class="day-content">
+        <div class="day-description">
+            <p>Your last morning in Paris:</p>
+<ul>
+<li>Browse the Marché d'Aligre</li>
+<li>Coffee and pastries at a local café</li>
+<li>Last-minute shopping on Rue de Rivoli</li>
+<li>Farewell to Paris</li>
+</ul>
+<hr>
+<p><em>A weekend in Paris is never enough, but it's a perfect start to falling in love with this incredible city.</em></p>
+        </div>
+        <div class="day-images">
+    <img src="https://www.davidlebovitz.com/wp-content/uploads/2016/07/Marche-dAligre-Paris-Outdoor-Market-27-640x960.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://www.parisinsidersguide.com/image-files/aligre-market-produce-stalls-2012-03-20-mc-2020-800-2x1.jpg" alt="" onerror="this.style.display='none'">
+    <img src="https://letseattheworld.com/wp-content/uploads/2024/01/D75_0713-HD.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    </div>
+</div>
+
+
+<section class="container">
+    <div class="highlight">
+        <h3>Farewell to Paris</h3>
+        
+    </div>
+</section>
+
+</body>
+</html>

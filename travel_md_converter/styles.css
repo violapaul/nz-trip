@@ -1,0 +1,698 @@
+/*
+ * Travel Document Styles
+ * Design: "Expedition Journal" aesthetic
+ * - Warm, earthy tones with dramatic accent colors
+ * - Cormorant Garamond for headings (elegant serif)
+ * - Nunito Sans for body (clean, readable)
+ */
+
+:root {
+    /* Expedition Earth Palette */
+    --obsidian: #1a1a2e;
+    --deep-earth: #16213e;
+    --mountain-slate: #2d3a4f;
+    --alpine-blue: #0f4c75;
+    --glacier: #3282b8;
+    --sunlit-peak: #bbe1fa;
+    
+    /* Warm accents */
+    --sunset-gold: #e8a838;
+    --campfire: #d35400;
+    --terracotta: #c0392b;
+    
+    /* Neutrals */
+    --parchment: #faf7f2;
+    --aged-paper: #f5f0e6;
+    --parchment-light: #fdfcfa;
+    --warm-grey: #6b6b6b;
+    --charcoal: #2c2c2c;
+    
+    /* Greens for nature */
+    --forest-deep: #1e5631;
+    --fern: #4a7c59;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+    background: var(--parchment);
+    color: var(--charcoal);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Page wrapper for wide screens - centers content with margins */
+.page-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+@media (max-width: 1000px) {
+    .page-wrapper {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-wrapper {
+        padding: 0 1rem;
+    }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(26, 26, 46, 0.7) 0%, 
+        rgba(22, 33, 62, 0.5) 40%,
+        rgba(15, 76, 117, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(1.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--sunlit-peak);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.hero-intro {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255,255,255,0.6);
+    animation: bounce 2s infinite;
+}
+
+/* ============================================
+   SECTION GROUPS & HIERARCHY
+   ============================================ */
+.section-group {
+    margin: 1.5rem 0;
+    border-left: 3px solid var(--aged-paper);
+    background: var(--parchment-light);
+}
+
+.section-group > .section-header {
+    padding: 1.25rem 1.5rem;
+    background: white;
+    border-bottom: 1px solid var(--aged-paper);
+}
+
+.section-group > .section-header h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin: 0;
+}
+
+.section-group > .section-header h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    border-radius: 2px;
+    margin-top: 0.5rem;
+}
+
+.section-group > .section-content {
+    padding: 1rem 1.5rem;
+}
+
+.section-group > .section-content > p {
+    margin-bottom: 0.6rem;
+}
+
+/* Subsections - indented within parent */
+.subsections {
+    margin-top: 0.5rem;
+    padding-left: 0;
+}
+
+.subsection {
+    background: white;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--glacier);
+}
+
+.subsection h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--mountain-slate);
+    margin-bottom: 0.6rem;
+}
+
+.subsection p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.subsection ul, .subsection ol {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.subsection li {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   CONTAINERS & LAYOUT
+   ============================================ */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+.container-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+/* Ensure all container h2 elements use consistent font */
+.container h2,
+.container-wide h2,
+section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+}
+
+/* ============================================
+   CONTENT SECTIONS (flat)
+   ============================================ */
+.content-section {
+    padding: 1rem 0;
+    position: relative;
+}
+
+.content-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.75rem;
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    border-radius: 2px;
+    margin-top: 0.4rem;
+}
+
+.content-section h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--mountain-slate);
+    margin: 1rem 0 0.5rem;
+}
+
+.content-section p {
+    margin-bottom: 0.6rem;
+}
+
+.content-section ul, .content-section ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.content-section li {
+    margin-bottom: 0.35rem;
+}
+
+/* Images */
+.content-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.content-images img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.content-images img:hover {
+    transform: scale(1.02);
+}
+
+/* ============================================
+   GALLERY SECTIONS
+   ============================================ */
+.gallery-section {
+    padding: 1rem 0;
+}
+
+.gallery-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    color: var(--deep-earth);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-grid img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid img:first-child {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 200px;
+    }
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.cards-section {
+    padding: 1rem 0;
+}
+
+.cards-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--deep-earth);
+    margin-bottom: 0.75rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 0.9rem 1rem;
+}
+
+.card h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+.card p {
+    font-size: 0.88rem;
+    color: var(--warm-grey);
+    line-height: 1.5;
+}
+
+.card-meta {
+    font-size: 0.78rem;
+    color: var(--warm-grey);
+    margin-bottom: 0.35rem;
+}
+
+.card-highlights {
+    margin: 0.4rem 0 0 0;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+}
+
+.card-highlights li {
+    margin-bottom: 0.2rem;
+    color: var(--charcoal);
+}
+
+.card-highlights .more-items {
+    color: var(--warm-grey);
+    font-style: italic;
+    list-style: none;
+    margin-left: -1rem;
+}
+
+.card-dietary-note {
+    background: #fff9e6;
+    border-radius: 4px;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.78rem;
+    color: var(--campfire);
+    margin-top: 0.4rem;
+}
+
+/* Day cards */
+.itinerary-cards {
+    margin-top: 0.75rem;
+}
+
+.day-card {
+    position: relative;
+    padding-top: 0 !important;
+}
+
+.day-badge-inline {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: linear-gradient(135deg, var(--alpine-blue), var(--glacier));
+    color: white;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.day-card img {
+    border-radius: 10px 10px 0 0;
+}
+
+/* ============================================
+   SECTION META BAR
+   ============================================ */
+.section-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--aged-paper);
+    border-radius: 5px;
+    margin: 0.4rem 0 0.75rem 0;
+    font-size: 0.82rem;
+}
+
+.meta-item {
+    color: var(--mountain-slate);
+}
+
+.section-intro {
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   HIGHLIGHT BOXES
+   ============================================ */
+.highlight-section {
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, var(--aged-paper) 0%, #fff9f0 100%);
+    border-left: 3px solid var(--sunset-gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.highlight-box::before {
+    content: '!';
+    position: absolute;
+    top: -8px;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    background: var(--sunset-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(232, 168, 56, 0.4);
+}
+
+.highlight-box h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-box p {
+    color: var(--charcoal);
+    margin-bottom: 0.4rem;
+    font-size: 0.92rem;
+}
+
+.highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 0.75rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.88rem;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--deep-earth), var(--alpine-blue));
+}
+
+th {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: var(--aged-paper);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: linear-gradient(135deg, var(--obsidian), var(--deep-earth));
+    color: white;
+    padding: 1.5rem 2rem;
+    margin-top: 1.5rem;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire), var(--terracotta));
+    margin: -1.5rem -2rem 1.5rem -2rem;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+footer p {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.4rem;
+    font-size: 0.88rem;
+}
+
+footer a {
+    color: var(--sunlit-peak);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* Text styling */
+strong {
+    color: var(--deep-earth);
+    font-weight: 600;
+}
+
+a {
+    color: var(--alpine-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--glacier);
+    text-decoration: underline;
+}
+
+/* Print */
+@media print {
+    .hero { min-height: auto; page-break-after: always; }
+    .gallery-grid, .cards-grid { break-inside: avoid; }
+}
+

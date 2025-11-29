@@ -1,0 +1,50 @@
+metadata:
+  title: Weekend in Paris
+  generated: '2023-10-27T12:00:00Z'
+sections:
+- id: hero-weekend-in-paris
+  title: Weekend in Paris
+  level: 1
+  style: hero
+  queries:
+  - Paris Eiffel Tower sunrise aerial view
+  - Seine river Paris golden hour landscape
+- id: why-paris-is-perfect
+  title: Why Paris is Perfect for a Weekend
+  level: 2
+  style: cards
+  queries:
+  - Louvre Museum interior art gallery
+  - Parisian bistro food croissants and coffee
+  - Seine river cruise sunset romantic couple
+- id: day-1-arrival-classic-paris
+  title: 'Day 1: Arrival & Classic Paris'
+  level: 2
+  style: day-section
+  queries:
+  - Le Marais district Paris cobblestone streets
+  - Notre-Dame Cathedral exterior view
+  - Eiffel Tower sparkling at night from Trocadero
+- id: day-2-museums-montmartre
+  title: 'Day 2: Museums & Montmartre'
+  level: 2
+  style: day-section
+  queries:
+  - Louvre Pyramid courtyard daytime
+  - Tuileries Garden Paris fountain chairs
+  - Sacre-Coeur Basilica Montmartre sunset view
+- id: day-3-markets-departure
+  title: 'Day 3: Markets & Departure'
+  level: 2
+  style: day-section
+  queries:
+  - Marche d'Aligre Paris food market stalls
+  - Parisian street cafe outdoor seating pastries
+  - Rue de Rivoli Paris architecture shopping arcades
+- id: trip-conclusion
+  title: Farewell to Paris
+  level: 2
+  style: highlight
+  queries:
+  - Paris skyline panoramic view dusk
+  - Love locks bridge Paris Seine
