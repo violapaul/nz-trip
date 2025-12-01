@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southern Stars & Secret Trails</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+/*
+ * Travel Document Styles
+ * Design: "Expedition Journal" aesthetic
+ * - Warm, earthy tones with dramatic accent colors
+ * - Cormorant Garamond for headings (elegant serif)
+ * - Nunito Sans for body (clean, readable)
+ */
+
+:root {
+    /* Expedition Earth Palette */
+    --obsidian: #1a1a2e;
+    --deep-earth: #16213e;
+    --mountain-slate: #2d3a4f;
+    --alpine-blue: #0f4c75;
+    --glacier: #3282b8;
+    --sunlit-peak: #bbe1fa;
+    
+    /* Warm accents */
+    --sunset-gold: #e8a838;
+    --campfire: #d35400;
+    --terracotta: #c0392b;
+    
+    /* Neutrals */
+    --parchment: #faf7f2;
+    --aged-paper: #f5f0e6;
+    --parchment-light: #fdfcfa;
+    --warm-grey: #6b6b6b;
+    --charcoal: #2c2c2c;
+    
+    /* Greens for nature */
+    --forest-deep: #1e5631;
+    --fern: #4a7c59;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+    background: var(--parchment);
+    color: var(--charcoal);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Page wrapper for wide screens - centers content with margins */
+.page-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+@media (max-width: 1000px) {
+    .page-wrapper {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-wrapper {
+        padding: 0 1rem;
+    }
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, 
+        rgba(26, 26, 46, 0.7) 0%, 
+        rgba(22, 33, 62, 0.5) 40%,
+        rgba(15, 76, 117, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: saturate(1.1);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    color: var(--sunlit-peak);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.hero-intro {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.hero-scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255,255,255,0.6);
+    animation: bounce 2s infinite;
+}
+
+/* ============================================
+   SECTION GROUPS & HIERARCHY
+   ============================================ */
+.section-group {
+    margin: 1.5rem 0;
+    border-left: 3px solid var(--aged-paper);
+    background: var(--parchment-light);
+}
+
+.section-group > .section-header {
+    padding: 1.25rem 1.5rem;
+    background: white;
+    border-bottom: 1px solid var(--aged-paper);
+}
+
+.section-group > .section-header h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin: 0;
+}
+
+.section-group > .section-header h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    border-radius: 2px;
+    margin-top: 0.5rem;
+}
+
+.section-group > .section-content {
+    padding: 1rem 1.5rem;
+}
+
+.section-group > .section-content > p {
+    margin-bottom: 0.6rem;
+}
+
+/* Subsections - indented within parent */
+.subsections {
+    margin-top: 0.5rem;
+    padding-left: 0;
+}
+
+.subsection {
+    background: white;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--glacier);
+}
+
+.subsection h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--mountain-slate);
+    margin-bottom: 0.6rem;
+}
+
+.subsection p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.subsection ul, .subsection ol {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+.subsection li {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   CONTAINERS & LAYOUT
+   ============================================ */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+.container-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+/* Ensure all container h2 elements use consistent font */
+.container h2,
+.container-wide h2,
+section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+}
+
+/* ============================================
+   CONTENT SECTIONS (flat)
+   ============================================ */
+.content-section {
+    padding: 1rem 0;
+    position: relative;
+}
+
+.content-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.75rem;
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    border-radius: 2px;
+    margin-top: 0.4rem;
+}
+
+.content-section h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--mountain-slate);
+    margin: 1rem 0 0.5rem;
+}
+
+.content-section p {
+    margin-bottom: 0.6rem;
+}
+
+.content-section ul, .content-section ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.content-section li {
+    margin-bottom: 0.35rem;
+}
+
+/* Images */
+.content-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.content-images img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.content-images img:hover {
+    transform: scale(1.02);
+}
+
+/* ============================================
+   GALLERY SECTIONS
+   ============================================ */
+.gallery-section {
+    padding: 1rem 0;
+}
+
+.gallery-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.8rem;
+    color: var(--deep-earth);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-grid img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid img:first-child {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 200px;
+    }
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.cards-section {
+    padding: 1rem 0;
+}
+
+.cards-section h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--deep-earth);
+    margin-bottom: 0.75rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 0.9rem 1rem;
+}
+
+.card h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
+
+.card p {
+    font-size: 0.88rem;
+    color: var(--warm-grey);
+    line-height: 1.5;
+}
+
+.card-meta {
+    font-size: 0.78rem;
+    color: var(--warm-grey);
+    margin-bottom: 0.35rem;
+}
+
+.card-highlights {
+    margin: 0.4rem 0 0 0;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+}
+
+.card-highlights li {
+    margin-bottom: 0.2rem;
+    color: var(--charcoal);
+}
+
+.card-highlights .more-items {
+    color: var(--warm-grey);
+    font-style: italic;
+    list-style: none;
+    margin-left: -1rem;
+}
+
+.card-dietary-note {
+    background: #fff9e6;
+    border-radius: 4px;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.78rem;
+    color: var(--campfire);
+    margin-top: 0.4rem;
+}
+
+/* Day cards */
+.itinerary-cards {
+    margin-top: 0.75rem;
+}
+
+.day-card {
+    position: relative;
+    padding-top: 0 !important;
+}
+
+.day-badge-inline {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: linear-gradient(135deg, var(--alpine-blue), var(--glacier));
+    color: white;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.day-card img {
+    border-radius: 10px 10px 0 0;
+}
+
+/* ============================================
+   SECTION META BAR
+   ============================================ */
+.section-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--aged-paper);
+    border-radius: 5px;
+    margin: 0.4rem 0 0.75rem 0;
+    font-size: 0.82rem;
+}
+
+.meta-item {
+    color: var(--mountain-slate);
+}
+
+.section-intro {
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   HIGHLIGHT BOXES
+   ============================================ */
+.highlight-section {
+    margin: 1rem 0;
+    padding: 0 1.5rem;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, var(--aged-paper) 0%, #fff9f0 100%);
+    border-left: 3px solid var(--sunset-gold);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.highlight-box::before {
+    content: '!';
+    position: absolute;
+    top: -8px;
+    left: -12px;
+    width: 24px;
+    height: 24px;
+    background: var(--sunset-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(232, 168, 56, 0.4);
+}
+
+.highlight-box h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--deep-earth);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-box p {
+    color: var(--charcoal);
+    margin-bottom: 0.4rem;
+    font-size: 0.92rem;
+}
+
+.highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 0.75rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.88rem;
+}
+
+thead {
+    background: linear-gradient(135deg, var(--deep-earth), var(--alpine-blue));
+}
+
+th {
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    color: white;
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: var(--aged-paper);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background: linear-gradient(135deg, var(--obsidian), var(--deep-earth));
+    color: white;
+    padding: 1.5rem 2rem;
+    margin-top: 1.5rem;
+}
+
+footer::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, var(--sunset-gold), var(--campfire), var(--terracotta));
+    margin: -1.5rem -2rem 1.5rem -2rem;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+footer p {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 0.4rem;
+    font-size: 0.88rem;
+}
+
+footer a {
+    color: var(--sunlit-peak);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* Text styling */
+strong {
+    color: var(--deep-earth);
+    font-weight: 600;
+}
+
+a {
+    color: var(--alpine-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--glacier);
+    text-decoration: underline;
+}
+
+/* Print */
+@media print {
+    .hero { min-height: auto; page-break-after: always; }
+    .gallery-grid, .cards-grid { break-inside: avoid; }
+}
+
+
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-bg" style="background-image: url('https://greatoceanroadbrewhouse.b-cdn.net/wp-content/uploads/2022/02/12-apostles-sunset.jpeg');"></div>
+    <div class="hero-content">
+        <h1>Southern Stars & Secret Trails</h1>
+        <p class="hero-subtitle"></p>
+        <p class="hero-intro">Imagine waking up to kookaburras and the sound of surf, walking under eucalyptus trees full of wild koalas, sailing with locals on a sparkling bay, and finishing the trip with easy bike rides through autumn-coloured valleys and vineyards.</p>
+    </div>
+    <div class="hero-scroll-hint">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+    </div>
+</section>
+
+<div class="page-wrapper">
+
+<section class="container content-section">
+    <h2>Trip Snapshot</h2>
+    <div class="content-images">
+<img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/6f/6d/93.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://c8.alamy.com/comp/BJY3G4/sailing-yacht-on-port-phillip-bay-with-large-ship-in-background-melbourne-BJY3G4.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    <p><strong>What we’ll do:</strong></p>
+<ul>
+<li>3 days of the <strong>Great Ocean Walk</strong> through Great Otway National Park – cliffs, rainforest, and wild koalas</li>
+<li>A day <strong>sailing on Port Phillip</strong> with local crews from a Melbourne yacht club</li>
+<li>3 days of <strong>cycling</strong> the Murray to Mountains Rail Trail and Great Valley Trail – sealed trails through vineyards, gum trees and river valleys</li>
+<li>A <strong>short scenic flight</strong> over the Twelve Apostles and the Shipwreck Coast</li>
+<li>Evenings in <strong>Apollo Bay, Melbourne, Beechworth and Bright</strong> – great food, wine, and local stories</li>
+<li>Night walks to see the <strong>Southern Cross</strong> and the southern sky</li>
+</ul>
+</section>
+
+<div class="section-group" id="part-1-ocean">
+<div class="section-header"><h2>Part 1 – Ocean, Koalas & Shipwreck Coast</h2></div>
+<div class="section-content">
+<div class="content-images">
+<img src="https://i.natgeofe.com/n/6ebe6630-007d-4ecb-be22-1e605eef3cbf/australiaoceanwalk1resized.png" alt="" onerror="this.style.display='none'">
+<img src="https://i.natgeofe.com/n/6ebe6630-007d-4ecb-be22-1e605eef3cbf/australiaoceanwalk1resized.png" alt="" onerror="this.style.display='none'">
+<img src="https://www.switchbacktravel.com/sites/default/files/images/articles/Great%20Ocean%20Walk%20%28hiking%20along%20bluff%20above%20ocean%29.jpg" alt="" onerror="this.style.display='none'">
+</div>
+<p>Instead of just driving the Great Ocean Road, we walk the best parts of the <strong>Great Ocean Walk</strong> – a 100+ km track through <strong>Great Otway National Park</strong>.</p>
+<p>We’ll use a <strong>self-guided operator</strong>: they book small lodges and B&Bs, move our bags, and shuttle us to the trailheads. We just carry daypacks, enjoy the scenery, and take photos.</p>
+</div>
+<div class="subsections">
+
+<section class="container content-section">
+    <h2>What we’ll see</h2>
+    
+    <ul>
+<li><strong>Eucalyptus forests full of koalas</strong>: The Cape Otway area is famous for wild koalas sleeping in the manna gums along the track.</li>
+<li><strong>Wallabies and kangaroos</strong> browsing in open heath and at forest edges</li>
+<li>Coastal <strong>cliffs and surf beaches</strong>: Station Beach, Aire River mouth, Johanna and others</li>
+<li><strong>Cape Otway Lighthouse</strong>, where guides tell stories of shipwrecks, lighthouse keepers and the “Shipwreck Coast” history</li>
+<li>Tide pools and rock platforms with sea stars and other intertidal creatures (depending on tide)</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>A typical day on the Great Ocean Walk</h2>
+    
+    <p>Great Otway National Park has relatively dark skies once you step away from towns; in March, the <strong>Southern Cross (Crux)</strong> sits high in the southern sky after dark, easy to spot with a simple star chart or app.</p>
+<ul>
+<li>Breakfast at our B&B, then a shuttle to the trailhead</li>
+<li><strong>10–16 km (6–10 miles) of walking</strong> on good tracks: forest, clifftops, occasional beach sections</li>
+<li>Picnic lunch at a lookout or beach</li>
+<li>Mid-afternoon arrival at our next accommodation</li>
+<li>Hot shower, relaxed dinner, and maybe a short <strong>night walk to look for the Southern Cross</strong> if skies are clear</li>
+</ul>
+</section>
+
+</div>
+</div>
+<div class="section-group" id="part-2-sailing">
+<div class="section-header"><h2>Part 2 – Sailing & Southern Stars</h2></div>
+<div class="section-content">
+<div class="content-images">
+<img src="https://media.timeout.com/images/106208384/750/562/image.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://media.timeout.com/images/106208384/750/562/image.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ImIwZGUwYTNhLWE4NzktNDk2YS1hYTU2LTg0NzhjY2VhZjEyZiIsInB1ciI6ImJsb2JfaWQifX0=--d0b36369b7d2e03d53c3a4eb0c0fed5efa881c39/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlsxMDAwLDYwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--0d1dec94e96bf59e4e90ca4a7c11e516560ab297/14382a99-a8ef-438b-b361-91fdb5080d92.jpg" alt="" onerror="this.style.display='none'">
+</div>
+<p>After the coastal walk, we come back to Melbourne for a change of pace and some city comforts.</p>
+</div>
+<div class="subsections">
+
+<section class="container content-section">
+    <h2>Sailing day</h2>
+    
+    <p>We’ll spend a day on <strong>Port Phillip Bay</strong>, sailing from a local yacht club such as <strong>Sandringham</strong> or <strong>Royal Brighton</strong>. These clubs run regular keelboat racing and have crew registers where visiting sailors can join local boats.</p>
+<p>On the water we’ll:</p>
+<ul>
+<li>Trim sails and work with a local crew</li>
+<li>Get views back to the <strong>Melbourne skyline</strong> from the bay</li>
+<li>Hear first-hand what it’s like to grow up sailing here and why locals love this coastline</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Evenings in Melbourne</h2>
+    
+    <p>We’ll give ourselves a couple of proper dinners in the city – Melbourne is known for:</p>
+<ul>
+<li><strong>Neighbourhood wine bars and bistros</strong></li>
+<li>A big <strong>Italian and Asian food scene</strong></li>
+<li>Café culture and laneway bars</li>
+</ul>
+</section>
+
+</div>
+</div>
+<div class="section-group" id="part-3-vineyards">
+<div class="section-header"><h2>Part 3 – Vineyards, Valleys & Easy Bike Paths</h2></div>
+<div class="section-content">
+<div class="content-images">
+<img src="https://listings.rdp.tourismnortheast.com.au/wp-content/uploads/sites/6/RS36532_TNE-51-of-274-lpr.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://www.australiancycletours.com.au/croppedImages/Australasia/Victoria/Murray-to-Mountains-Cycle-1064234-1100px.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://offloadmedia.feverup.com/secretmelbourne.com/wp-content/uploads/2024/08/07163301/murray-to-mountains-rail-trail-feathertop-1024x683.jpg" alt="" onerror="this.style.display='none'">
+</div>
+<p>North-east of Melbourne, the <strong>Murray to Mountains Rail Trail</strong> is one of Australia’s premier rail trails: 137 km of sealed path linking Wangaratta, Beechworth, Myrtleford, Bright and more.</p>
+<p>We’ll add the newer <strong>Great Valley Trail</strong>, a 27 km sealed path from <strong>Bright to Harrietville</strong>, following the Ovens River beneath the Victorian Alps.</p>
+<p>We can ride regular bikes or e-bikes, and use a local operator for luggage transfers and shuttles.</p>
+</div>
+<div class="subsections">
+
+<section class="container content-section">
+    <h2>What we’ll see</h2>
+    
+    <ul>
+<li><strong>Long, car-free bike paths</strong> lined with tall <strong>river red gums and poplars</strong></li>
+<li>Views across fields to <strong>Mt Buffalo and Mt Feathertop</strong>, often with snow-gums and peaks visible in the distance</li>
+<li><strong>Vineyards and cellar doors</strong> right on the trail – this region is known for wineries, farm gates, and small producers</li>
+<li>Rivers and swimming spots where we can cool off after a ride</li>
+<li>Historic <strong>gold-rush towns</strong> like <strong>Beechworth</strong> and Bright, with preserved streetscapes, museums and local history tours</li>
+</ul>
+</section>
+
+<section class="container cards-section"><h2>Our likely riding days (flexible)</h2>
+<p class="section-intro">Evenings in Beechworth and Bright give us time to talk with <strong>winemakers, café owners and guides</strong> – people who love this region and are usually very happy to share local stories and wildlife tips.
+</p>
+<div class="cards-grid">
+<div class="card">
+    
+    <div class="card-content">
+        <div class="card-day-badge">Day 1</div>
+        <h4>Wangaratta → Milawa → Beechworth</h4>
+        <p class="card-meta">🚴 ~60 km</p><p>Ride through farmland and wine country to Milawa, then climb gradually on the rail trail to Beechworth – a satisfying “we earned dinner” day.</p>
+    </div>
+</div>
+<div class="card">
+    
+    <div class="card-content">
+        <div class="card-day-badge">Day 2</div>
+        <h4>Beechworth → Myrtleford → Bright</h4>
+        <p class="card-meta">🚴 ~70 km</p><p>Roll downhill to Everton, then follow the main trail through Myrtleford to Bright: gum-tree-lined paths, old stations, and wineries right on the track.</p>
+    </div>
+</div>
+<div class="card">
+    
+    <div class="card-content">
+        <div class="card-day-badge">Day 3</div>
+        <h4>Bright ↔ Harrietville (Great Valley Trail)</h4>
+        <p class="card-meta">🚴 54 km return</p><p>A mostly flat, sealed path along the **Ovens River**, under the foothills of the Victorian Alps. We can stop for lunch at a pub in Harrietville, then coast gently back to Bright.</p>
+    </div>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+<div class="section-group" id="part-4-stars-flight">
+<div class="section-header"><h2>Part 4 – Stars, Wildlife & a Scenic Flight</h2></div>
+<div class="section-content">
+<div class="content-images">
+<img src="https://www.abc.net.au/science/starhunt/images/slideshow/Southern-Cross/scross_02.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://astrotourismwa.com.au/wp-content/uploads/2020/12/Southern-Cross-diagram.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://www.abc.net.au/science/starhunt/images/slideshow/Southern-Cross/scross_04.jpg" alt="" onerror="this.style.display='none'">
+</div>
+<p>Details on the natural wonders and special activities included in the trip.</p>
+</div>
+<div class="subsections">
+
+<section class="container content-section">
+    <h2>Southern sky & Southern Cross</h2>
+    
+    <p>On clear nights along the coast and especially in the High Country, we’ll have access to relatively <strong>dark skies</strong> compared to home. In late summer/early autumn:</p>
+<ul>
+<li>The <strong>Southern Cross</strong> is high in the south after dark</li>
+<li>The <strong>Magellanic Clouds</strong> (small satellite galaxies) can often be seen as faint patches</li>
+<li>The Milky Way band arches across the sky away from city lights</li>
+</ul>
+<p>We can bring a simple southern-sky star chart or app and do a few short <strong>“star walks”</strong> after dinner.</p>
+</section>
+
+
+<section class="container content-section">
+    <h2>Wildlife highlights</h2>
+    
+    <p>Across the trip we have good chances to see:</p>
+<ul>
+<li><strong>Koalas</strong> in the eucalypts around Cape Otway</li>
+<li><strong>Wallabies and kangaroos</strong> in Otway heathlands and High Country paddocks</li>
+<li><strong>Birdlife</strong>: black cockatoos, kookaburras, rosellas, wedge-tailed eagles over the valleys</li>
+<li>Coastal species like <strong>fur seals</strong> and seabirds along the Great Ocean Walk, and possibly <strong>little penguins</strong> if we add an evening penguin-viewing side trip (e.g., near the Twelve Apostles or via a short extra excursion)</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Scenic flight over the coast</h2>
+    
+    <p>One day on the Great Ocean Road, we’ll add a <strong>short scenic flight</strong> in a small plane or helicopter over:</p>
+<ul>
+<li>The <strong>Twelve Apostles</strong> and limestone stacks</li>
+<li>The <strong>cliffs and arches</strong> of the Shipwreck Coast</li>
+<li>The surrounding farmland and forest from the air</li>
+</ul>
+<p>Local operators near the Twelve Apostles offer 15–30 minute flights that give a completely different view of the coastline compared to the lookouts on foot.</p>
+</section>
+
+</div>
+</div>
+
+<section class="container content-section">
+    <h2>Part 5 – Meeting People & Learning as We Go</h2>
+    <div class="content-images">
+<img src="https://www.explorebeechworth.com.au/wp-content/uploads/sites/33/atdw-AU0035184-673bcfe81290b4e2504fed59.jpg" alt="" onerror="this.style.display='none'">
+<img src="https://www.visitplacer.com/wp-content/uploads/2018/11/Gold-Rush-Museum-small.jpg" alt="" onerror="this.style.display='none'">
+</div>
+
+    <p>Throughout the trip, we’ll build in time to actually talk to people:</p>
+<ul>
+<li><strong>Lighthouse guides</strong> at Cape Otway sharing shipwreck stories and lighthouse history</li>
+<li><strong>Great Ocean Walk operators and hosts</strong> explaining how they manage the track, wildlife, and weather</li>
+<li><strong>Winemakers, brewers and café owners</strong> in Beechworth, Myrtleford and Bright, talking about climate, agriculture and life in the High Country</li>
+<li><strong>Sailors on Port Phillip</strong>, who are usually delighted to talk about local winds, sea life and Melbourne’s sailing culture</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Why This Trip Fits Us</h2>
+    
+    <ul>
+<li>It’s <strong>active</strong> but not extreme: daily walks and rides are well within our comfort zone, with options to shorten or lengthen days.</li>
+<li>We’re using <strong>national-park trails and well-known bike routes</strong>, not inventing our own logistics.</li>
+<li>It hits the “wish list”:</li>
+<li><strong>Zoology</strong> – koalas, wallabies, birds, marine life</li>
+<li><strong>Southern stars</strong> – Southern Cross and dark skies</li>
+<li><strong>Local connections</strong> – lighthouse guides, yacht club crews, wine-region hosts</li>
+<li><strong>On the water</strong> – a proper sailing day on the bay</li>
+<li><strong>In the air</strong> – a scenic flight over dramatic coastline</li>
+<li><strong>On foot and on bikes</strong> – Great Ocean Walk, Murray to Mountains and Great Valley Trail</li>
+</ul>
+<p>We get a mix of coast, city and mountains, all within one state and one easy hub (Melbourne), with enough structure that the trip feels smooth – but enough freedom that we can stop for koalas, wine tastings or a really good patch of stars whenever we like.</p>
+</section>
+
+
+<section class="container content-section">
+    <h2>Active Victoria: Day-by-Day Itinerary</h2>
+    
+    <p>Here’s a clean, editable <strong>day-by-day itinerary</strong> for the “no-Sydney, more-active” Victoria trip, with:</p>
+<ul>
+<li>Transfers</li>
+<li>Walk/ride plans</li>
+<li><strong>Restaurant reservations</strong> and other local recos</li>
+</ul>
+<p>> <strong>Assumptions:</strong></p>
+<p>> Day 0 = depart home (13th)</p>
+<p>> Day 1 = arrive Melbourne (~15th)</p>
+<p>> Day 10 = fly home from MEL (24th)</p>
+<p>Distances and times are approximate; you can slide exact dates as needed.</p>
+</section>
+
+
+<div class="day-section container-wide">
+    <div class="day-badge">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>0</strong>
+        </div>
+    </div>
+    <div class="day-content">
+        <h3 class="day-title">Day 0 – Fly to Australia</h3>
+        <div class="day-description">
+            <p>Long-haul flight from home → <strong>Melbourne (MEL)</strong>. Try to sleep as much as possible on the plane.</p>
+        </div>
+        
+    </div>
+</div>
+
+<section class="container"><h2>Day 1 – Arrive Melbourne, Stretch the Legs</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 1</div>
+    
+    <div class="card-content">
+        <h4>Arrive Melbourne, Stretch the Legs</h4>
+        <div class="card-meta">📍 Melbourne CBD</div>
+<p><strong>Evening – Dinner (loosely booked)</strong>
+<em> <strong>Option A – Etta (book if you’re up for a real meal):</strong> Modern bistro/wine bar in Brunswick East with inventive, vegetable-friendly plates and excellent wine. Open Tue–Sat from 5pm; reservations recommended.
+</em>...</p>
+<ul class="card-highlights">
+<li>Arrive MEL (morning if possible)</li>
+<li>Taxi / rideshare / SkyBus → CBD hotel</li>
+<li>Wander the Yarra River paths and botanic gardens</li>
+<li>Short ride using a shared bike along the river (10–20 km flat loop)</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 2 – Melbourne → Apollo Bay & Great Ocean Road Warm-Up</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 2</div>
+    
+    <div class="card-content">
+        <h4>Melbourne → Apollo Bay</h4>
+        <div class="card-meta">📍 Apollo Bay</div>
+<p><strong>Evening – Apollo Bay Dinner (BOOK)</strong>
+<em> <strong>Graze, Apollo Bay</strong>: Hidden-away modern Australian restaurant using local seasonal ingredients; strong regional wine list. Open Tue–Sat evenings from 5:30pm; <strong>book a table</strong>.
+</em> Alt: <strong>La Bimba</strong> (seafood-le...</p>
+<ul class="card-highlights">
+<li>Pick-up by Great Ocean Walk operator or self-drive hire car</li>
+<li>Drive Melbourne → Apollo Bay via Great Ocean Road (~3–3.5 h; very scenic)</li>
+<li>Check in with self-guided GOW operator (maps, safety notes, bag transfers)</li>
+<li>Warm-up Walk: Apollo Bay → Marengo and back, or shorter coastal + forest section (8–12 km)</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 3 – Blanket Bay → Cape Otway (Koalas & Lighthouse)</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 3</div>
+    
+    <div class="card-content">
+        <h4>Great Ocean Walk – Day 1</h4>
+        <div class="card-meta">📍 Blanket Bay → Cape Otway Lighthouse · 🚴 ~10–12 km, 2.5–4 h, easy-medium</div>
+<p><strong>Highlights:</strong> Increasing density of <strong>manna gums with wild koalas</strong> as you approach Cape Otway; this stretch is widely recommended as one of the best places in Australia to see koalas in the wild.
+
+<strong>Evening</strong>
+* Overnight at a lodge / B&B in the Ca...</p>
+<ul class="card-highlights">
+<li>Operator shuttle from Apollo Bay → Blanket Bay trailhead</li>
+<li>Walk through dry coastal shrub and forest opening to clifftop views</li>
+<li>Explore Secluded inlets and beaches</li>
+<li>Spot koalas in manna gums near Cape Otway</li>
+<li class="more-items">+1 more...</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 4 – Cape Otway → Aire River + Scenic Flight → Melbourne</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 4</div>
+    
+    <div class="card-content">
+        <h4>Great Ocean Walk Day 2 & Flight</h4>
+        <div class="card-meta">📍 Cape Otway → Aire River → Melbourne · 🚴 Walk: ~10 km, 3–4 h, easy-medium</div>
+<p><strong>Optional extra kilometres:</strong> If you’re feeling strong, you can add Aire River → Castle Cove (~6 km more) and have your shuttle pick you up there instead.
+
+<strong>Evening – Celebration Dinner (BOOK)</strong>
+* <strong>Etta, Brunswick East</strong>: One of Melbourne’s most t...</p>
+<ul class="card-highlights">
+<li>Walk Cape Otway → Aire River (Heathlands, coastal cliffs, wallabies)</li>
+<li>Shuttle or drive to the Twelve Apostles / Princetown helipad</li>
+<li>15–20 minute scenic helicopter flight (12 Apostles Helicopters)</li>
+<li>Drive back to Melbourne (~3.5–4 h)</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 5 – Sailing on Port Phillip + Easy Spin</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 5</div>
+    
+    <div class="card-content">
+        <h4>Sailing on Port Phillip</h4>
+        <div class="card-meta">📍 Port Phillip Bay, Melbourne</div>
+<p><strong>Evening – Casual City Dinner</strong>
+<em> Keep this one flexible in case the day runs long.
+</em> <strong>Embla (CBD)</strong> – great natural-leaning wines and share plates, easy to enjoy without a big production.
+* Or any nearby bistro/wine bar that catches your eye.
+</p>
+<ul class="card-highlights">
+<li>Head to Sandringham Yacht Club or Royal Brighton Yacht Club</li>
+<li>Crewed sailing day (~3–5 hours on the water)</li>
+<li>Optional: Short 10–25 km ride along the Bay Trail (Brighton, Sandringham, St Kilda)</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 6 – Melbourne → Wangaratta → Beechworth (Rail Trail Day 1)</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 6</div>
+    
+    <div class="card-content">
+        <h4>Rail Trail: Wangaratta → Beechworth</h4>
+        <div class="card-meta">📍 Wangaratta → Milawa → Beechworth · 🚴 ~60 km, easy-moderate</div>
+<p><strong>Afternoon / Early Evening – Beechworth</strong>
+<em> Check into accommodation in historic <strong>Beechworth</strong> – beautifully preserved gold-rush town now known for food, wine and history.
+
+<strong>Dinner (BOOK)</strong>
+</em> <strong>The Provenance, Beechworth</strong>: Destination fine-dining...</p>
+<ul class="card-highlights">
+<li>Train Melbourne Southern Cross → Wangaratta (~2.5–3 h)</li>
+<li>Meet rail-trail tour operator (Bike fit, luggage transfer)</li>
+<li>Ride Wangaratta → Milawa (cheese/winery stop)</li>
+<li>Ride Milawa → Everton → Beechworth (steady gradient climb)</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 7 – Beechworth → Myrtleford → Bright (Rail Trail Day 2)</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 7</div>
+    
+    <div class="card-content">
+        <h4>Big Valley Day</h4>
+        <div class="card-meta">📍 Beechworth → Myrtleford → Bright · 🚴 ~70–75 km</div>
+<p><strong>Afternoon – Arrive Bright</strong>
+<em> Check into accommodation in <strong>Bright</strong> – classic High Country town famous for autumn colours, cycling, and river swims.
+
+<strong>Dinner (BOOK)</strong>
+</em> <strong>Koji Bird (inside Reed & Co. Distillery)</strong>: Contemporary Japanese-inspired ...</p>
+<ul class="card-highlights">
+<li>Roll Beechworth → Everton on the rail-trail (fun long descent)</li>
+<li>Everton → Myrtleford (~26–30 km): sealed trail through farmland</li>
+<li>Myrtleford → Bright (~30–35 km): scenic valley section with views up to Mt Buffalo</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 8 – Great Valley Trail: Bright ↔ Harrietville</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 8</div>
+    
+    <div class="card-content">
+        <h4>Great Valley Trail</h4>
+        <div class="card-meta">📍 Bright ↔ Harrietville · 🚴 ≈54 km return</div>
+<p><strong>Dinner:</strong>
+<em> Second night at <strong>Koji Bird</strong> if you love it, or
+</em> Casual: Tomahawks, Bright Brewery, or another easy spot in town.
+
+<strong>Night – Stars</strong>
+* From Bright or a short drive outside town, do a dedicated <strong>Southern Cross stargazing session</strong> – t...</p>
+<ul class="card-highlights">
+<li>Ride Great Valley Trail along Ovens River</li>
+<li>Lunch at Harrietville Hotel Motel or Snowline Hotel</li>
+<li>Ride back to Bright (mostly very slight downhill)</li>
+<li>Optional river swim</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+<section class="container"><h2>Day 9 – Bright → Melbourne (Return)</h2>
+</section>
+<div class="cards-grid itinerary-cards">
+<div class="card day-card">
+    <div class="day-badge-inline">Day 9</div>
+    
+    <div class="card-content">
+        <h4>Return to Melbourne</h4>
+        <div class="card-meta">📍 Bright → Wangaratta → Melbourne</div>
+<p><strong>Evening – Last-Night Dinner (optional booking)</strong>
+<em> If you didn’t hit it on Day 1: <strong>Embla (CBD)</strong> or another central wine bar.
+</em> If you want one more “proper” meal and aren’t too tired: A second visit to <strong>Etta</strong> or any new-opening that catches you...</p>
+<ul class="card-highlights">
+<li>Lazy breakfast in Bright</li>
+<li>Optional short leg-loosening ride</li>
+<li>Shuttle with bike operator Bright → Wangaratta</li>
+<li>Train Wangaratta → Melbourne Southern Cross (~2.5–3 h)</li>
+</ul>
+
+    </div>
+</div>
+</div>
+
+
+<div class="day-section container-wide">
+    <div class="day-badge">
+        <div class="day-number">
+            <span>Day</span>
+            <strong>10</strong>
+        </div>
+    </div>
+    <div class="day-content">
+        <h3 class="day-title">Day 10 – Fly Home from Melbourne</h3>
+        <div class="day-description">
+            <p><strong>Transfers</strong></p>
+<ul>
+<li>Hotel → MEL airport (SkyBus or taxi)</li>
+<li>Flight <strong>MEL → home</strong></li>
+</ul>
+<p><strong>Activity</strong></p>
+<ul>
+<li>Duty-free Tim Tams and “remember that koala over our heads” reminiscing on the plane.</li>
+</ul>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="highlight-section container">
+    <div class="highlight-box">
+        <h3>Quick “Book These Early” List</h3>
+        <p>You can pull this out as a checklist:</p>
+<ol>
+<li><strong>Great Ocean Walk self-guided package</strong> (incl. shuttles & lodging) – Days 2–4.</li>
+<li><strong>Scenic flight</strong> over the Twelve Apostles – Day 4 afternoon with <strong>12 Apostles Helicopters</strong> or similar.</li>
+<li><strong>Sailing day</strong> with Sandringham or Royal Brighton YC – Day 5 (coordinate via their crew/visitor programs).</li>
+<li><strong>Rail-trail package</strong> (bikes + luggage + Bright/Wangaratta shuttles) – Days 6–9.</li>
+<li><strong>Restaurant bookings:</strong></li>
+<li>Graze, Apollo Bay – Day 2.</li>
+<li>Etta, Melbourne – Day 4 (and/or Day 1/9).</li>
+<li>The Provenance, Beechworth – Day 6.</li>
+<li>Koji Bird, Bright – Day 7 (and maybe Day 8).</li>
+</ol>
+    </div>
+</div>
+
+<div class="section-group" id="contact-sheet">
+<div class="section-header"><h2>Key operators (walks, bikes, flights, wildlife, sailing)</h2></div>
+<div class="section-content">
+<p>Totally — and I’m glad you asked, because this is exactly the stuff that’s annoying to look up by hand. Here’s a <strong>copy-paste-able contact sheet</strong>.</p>
+</div>
+<div class="subsections">
+
+<section class="container content-section">
+    <h2>Great Ocean Walk – self-guided</h2>
+    
+    <p><strong>Walk91 – Great Ocean Walk specialists (Apollo Bay)</strong></p>
+<ul>
+<li><strong>Use for:</strong> Custom 2–5 day Great Ocean Walk packages, bag transfers, shuttles, accommodation.</li>
+<li><strong>Website:</strong> https://walk91.com.au</li>
+<li><strong>Phone (Aus):</strong> (03) 5237 1189</li>
+<li><strong>Phone (Int’l):</strong> +61 3 5237 1189</li>
+<li><strong>Email:</strong> info@walk91.com.au</li>
+<li><strong>Address:</strong> 100 Great Ocean Road / 100 Collingwood St, Apollo Bay VIC 3233</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Scenic helicopter flight – 12 Apostles</h2>
+    
+    <p><strong>12 Apostles Helicopters (Princetown)</strong></p>
+<ul>
+<li><strong>Use for:</strong> 15–25 min scenic flights over the Twelve Apostles, Shipwreck Coast, Cape Otway.</li>
+<li><strong>Website:</strong> https://12apostleshelicopters.com.au</li>
+<li><strong>Phone (Aus):</strong> (03) 5598 8283</li>
+<li><strong>Phone (Int’l):</strong> +61 3 5598 8283</li>
+<li><strong>Address:</strong> Corner Great Ocean Road & Booringa Road, Princetown VIC, Australia</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Cycling – Murray to Mountains / Great Valley Trail</h2>
+    
+    <p><strong>Tour de Vines – Cycling Tours</strong> (Recommended)</p>
+<ul>
+<li><strong>Use for:</strong> Self-guided or small-group Murray to Mountains packages with bikes, luggage transfers, accommodation.</li>
+<li><strong>Website:</strong> https://tourdevines.com.au</li>
+<li><strong>Email:</strong> inquiry@tourdevines.com.au</li>
+<li><strong>Phone (Aus Freecall):</strong> 1300 665 330</li>
+<li><strong>Phone (Int’l):</strong> +61 3 7068 5000</li>
+<li><strong>Address:</strong> 6 Riddell Parade, Elsternwick VIC 3185</li>
+</ul>
+<p><strong>Australian Cycle Tours</strong> (Alternative)</p>
+<ul>
+<li><strong>Website:</strong> https://www.australiancycletours.com.au</li>
+<li><strong>Email:</strong> info@australiancycletours.com.au</li>
+<li><strong>Phone (Aus Freecall):</strong> 1300 114 966</li>
+<li><strong>Phone (Int’l):</strong> +61 2 8270 8410</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Sailing – Port Phillip</h2>
+    
+    <p><strong>Sandringham Yacht Club</strong></p>
+<ul>
+<li><strong>Use for:</strong> Racing / twilight sailing, visitor crew; beautiful bay location.</li>
+<li><strong>Website:</strong> https://syc.com.au</li>
+<li><strong>Email (office):</strong> office@syc.com.au</li>
+<li><strong>Phone:</strong> +61 3 9599 0999</li>
+<li><strong>Address:</strong> Jetty Road, Sandringham VIC 3191</li>
+</ul>
+<p><strong>Royal Brighton Yacht Club</strong></p>
+<ul>
+<li><strong>Use for:</strong> Saturday keelboat racing, dining with bay views, potential to crew as visitors.</li>
+<li><strong>Website:</strong> https://rbyc.org.au</li>
+<li><strong>Email (reception):</strong> via contact form / reception on website</li>
+<li><strong>Phone:</strong> +61 3 9592 3092</li>
+<li><strong>Address:</strong> 253 Esplanade, Middle Brighton VIC 3186</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Penguins – St Kilda</h2>
+    
+    <p><strong>St Kilda Penguin Viewing Experience (Phillip Island Nature Parks / Earthcare St Kilda)</strong></p>
+<ul>
+<li><strong>Use for:</strong> Free, ticketed penguin viewing sessions at the end of St Kilda Pier.</li>
+<li><strong>Info & booking:</strong> Parks Victoria penguin page (linked from penguins.org.au → St Kilda)</li>
+<li><strong>Bookings:</strong> via Phillip Island Nature Parks website (https://www.penguins.org.au → St Kilda Penguin Viewing Experience)</li>
+<li><strong>Local partner:</strong> Earthcare St Kilda (volunteer group) – info@earthcarestkilda.org.au</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Restaurants</h2>
+    
+    <p><strong>Etta Dining (Brunswick East)</strong></p>
+<ul>
+<li><strong>Style:</strong> Modern neighbourhood restaurant, lots of vegetable/seafood-forward dishes.</li>
+<li><strong>Website:</strong> https://ettadining.com.au</li>
+<li><strong>Phone:</strong> (03) 9448 8233</li>
+<li><strong>Email:</strong> hello@ettadining.com.au</li>
+<li><strong>Address:</strong> 60 Lygon Street, Brunswick East VIC 3057</li>
+</ul>
+<p><strong>Graze Apollo Bay</strong></p>
+<ul>
+<li><strong>Style:</strong> Modern Australian, regional produce, good wine list.</li>
+<li><strong>Website:</strong> https://grazeapollobay.au</li>
+<li><strong>Phone:</strong> (03) 5237 7303</li>
+<li><strong>Address:</strong> 14 Pascoe Street, Apollo Bay VIC 3233</li>
+</ul>
+<p><strong>The Provenance (Beechworth)</strong></p>
+<ul>
+<li><strong>Style:</strong> Fine dining, Japanese-influenced, in historic bank building.</li>
+<li><strong>Website:</strong> https://www.theprovenance.com.au</li>
+<li><strong>Phone:</strong> (03) 5728 1786</li>
+<li><strong>Email:</strong> info@theprovenance.com.au</li>
+<li><strong>Address:</strong> 86 Ford Street, Beechworth VIC 3747</li>
+</ul>
+<p><strong>Koji Bird @ Reed & Co Distillery (Bright)</strong></p>
+<ul>
+<li><strong>Style:</strong> Japanese-inspired izakaya inside a gin distillery; tasting menu and cocktails.</li>
+<li><strong>Website:</strong> https://www.reedandcodistillery.com (Koji Bird section)</li>
+<li><strong>Phone:</strong> +61 460 782 642</li>
+<li><strong>Email:</strong> hello@reedandcodistillery.com</li>
+<li><strong>Address:</strong> 15 Wills Street, Bright VIC 3741</li>
+</ul>
+</section>
+
+
+<section class="container content-section">
+    <h2>Accommodation (examples)</h2>
+    
+    <p><strong>YHA Apollo Bay Eco</strong></p>
+<ul>
+<li><strong>Style:</strong> Eco-hostel with private and multi-share rooms; good value and group-friendly.</li>
+<li><strong>Website:</strong> https://www.yha.com.au/hostels/vic/great-ocean-road/apollo-bay</li>
+<li><strong>Phone:</strong> (03) 5237 7899</li>
+<li><strong>Email:</strong> stay@yha.com.au</li>
+<li><strong>Address:</strong> 5 Pascoe Street, Apollo Bay VIC 3233</li>
+</ul>
+<p><strong>Beechworth on Bridge Motel</strong></p>
+<ul>
+<li><strong>Style:</strong> Comfortable, well-reviewed 4-star motel; good base for one night.</li>
+<li><strong>Website:</strong> https://www.beechworthonbridge.com.au</li>
+<li><strong>Phone:</strong> (03) 5728 2244 (Int’l: +61 3 5728 2244)</li>
+<li><strong>Address:</strong> 38 Bridge Road, Beechworth VIC 3747</li>
+</ul>
+<p><strong>Bright Velo</strong></p>
+<ul>
+<li><strong>Style:</strong> Bike-friendly hotel in central Bright; heritage building, secure bike storage.</li>
+<li><strong>Website:</strong> https://www.brightvelo.com.au</li>
+<li><strong>Phone:</strong> +61 3 5755 1074</li>
+<li><strong>Address:</strong> 2 Ireland Street, Bright VIC 3741</li>
+</ul>
+<p><strong>Melbourne</strong></p>
+<ul>
+<li>Examples: QT Melbourne, Lancemore Crossley Street, Adina Apartment Hotel on Flinders.</li>
+</ul>
+</section>
+
+</div>
+</div>
+
+<section class="container content-section">
+    <h2>How I’d actually book this (and sample emails)</h2>
+    
+    <p>I can’t press the “book” button for you, but here’s the order I’d do things plus templates you can paste-edit.</p>
+<p><strong>Recommended booking order</strong></p>
+<ol>
+<li><strong>International flights</strong> (into/out of MEL).</li>
+<li><strong>Walk91</strong> – lock in your Great Ocean Walk dates & custom 3-day plan.</li>
+<li><strong>Apollo Bay and Melbourne accommodation</strong> (if not included in Walk91).</li>
+<li><strong>12 Apostles helicopter flight</strong> – pick the exact day you’ll be near the Apostles.</li>
+<li><strong>Rail-trail operator</strong> (Tour de Vines or equivalent) – dates, bikes, luggage transfers.</li>
+<li><strong>Beechworth & Bright accommodation</strong> (often bundled by the cycling operator).</li>
+<li><strong>Sailing day</strong> – email Sandringham / Royal Brighton to ask about crewing.</li>
+<li><strong>Penguin viewing session</strong> at St Kilda (online booking via penguins.org.au).</li>
+<li><strong>Restaurant reservations</strong> – Graze, Etta, Provenance, Koji Bird on your targeted nights.</li>
+</ol>
+</section>
+
+
+<footer>
+    <div class="container">
+        <h2>Journey Complete</h2>
+        <p>[1]: https://walk91.com.au/contact-walk91/ "Contact Us"</p>
+<p>[2]: https://12apostleshelicopters.com.au/ "Home - 12 Apostles Helicopters"</p>
+<p>[3]: https://tourdevines.com.au/ "Tour de Vines"</p>
+<p>[4]: https://www.australiancycletours.com.au/contact-us "Contact Us"</p>
+<p>[5]: https://syc.com.au/ "Welcome to Sandringham Yacht Club"</p>
+<p>[6]: https://rbyc.org.au/contact-us/ "Contact us – Royal Brighton Yacht Club"</p>
+<p>[7]: https://www.parks.vic.gov.au/places-to-see/parks/st-kilda-pier-and-breakwater/attractions/little-penguins "Little Penguins"</p>
+<p>[8]: https://earthcarestkilda.org.au/calendar/ "Contact Us"</p>
+<p>[9]: https://ettadining.com.au/contact "Contact"</p>
+<p>[10]: https://grazeapollobay.au/contact "Contact — Graze Apollo bay"</p>
+<p>[11]: https://www.theprovenance.com.au/contact "Contact Us - Provenance"</p>
+<p>[12]: https://www.reedandcodistillery.com/koji-bird-restaurant "Koji Bird Restaurant in Bright"</p>
+<p>[13]: https://www.yha.com.au/hostels/vic/great-ocean-road/apollo-bay "YHA Apollo Bay"</p>
+<p>[14]: https://www.beechworthonbridge.com.au/contact-us/ "Contact Us – Beechworth on Bridge Motel"</p>
+<p>[15]: https://www.brightvelo.com.au/ "Bright Velo"</p>
+<p>[16]: https://www.theworlds50best.com/discovery/Establishments/Australia/Melbourne/Etta.html "Etta - Melbourne"</p>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>
