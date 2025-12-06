@@ -17,28 +17,38 @@ sections:
   queries:
   - Melbourne Yarra River skyline sunrise
   - New Zealand Southern Alps aerial view
+  selected_images:
+  - https://thumbs.dreamstime.com/b/melbourne-victoria-australia-january-sunset-over-city-skyline-melbourne-downtown-princess-bridge-yarra-river-long-exposure-102075659.jpg
+  - https://eoimages.gsfc.nasa.gov/images/imagerecords/148000/148290/iss064e044615.jpg
+  - https://upload.wikimedia.org/wikipedia/commons/f/f2/South_Island.jpg
 - id: executive-summary
   title: 1. Executive Summary and Strategic Alignment
   level: 2
   style: content
-  content: "This report outlines a comprehensive, logistical, and experiential framework\
-    \ for a 15-day high-performance itinerary to Australia and New Zealand, specifically\
-    \ calibrated for March 2026. The itinerary is engineered to satisfy the complex\
-    \ matrix of requirements: academic engagement in Melbourne, high-volume daily\
-    \ cycling (50\u201370 miles/day) on mixed terrain, hands-on maritime activities,\
-    \ and a rigorous dietary safety protocol (Low Carb, No Nuts/Sesame/Zucchini).\n\
-    \nThe proposed strategy utilizes a \"hub-and-spoke\" base camp model. Rather than\
-    \ the fatigue-inducing \"grand tour\" style of moving hotels daily, this itinerary\
-    \ establishes three strategic operational bases: **Melbourne** (Academic/Urban),\
-    \ **Bright** (Victorian Alpine Cycling), and **Arrowtown** (New Zealand Adventure/Cultural).\
-    \ This approach maximizes active time and minimizes logistical friction, utilizing\
-    \ self-guided tour operators to manage the heavy lifting of transfers and equipment\
-    \ while retaining the client's autonomy over daily scheduling.\n\nMarch is identified\
-    \ as the optimal transition month for this expedition. In Victoria and the South\
-    \ Island of New Zealand, mean maximum temperatures range from 18\xB0C to 24\xB0\
-    C (64\xB0F\u201375\xB0F), providing ideal thermal regulation for endurance cycling.\
-    \ Furthermore, the tourist density significantly decreases post-February, allowing\
-    \ for a more exclusive interaction with trail networks and cultural sites.\n"
+  content: 'This report outlines a comprehensive, logistical, and experiential framework
+    for a 15-day high-performance itinerary to Australia and New Zealand, specifically
+    calibrated for March 2026. The itinerary is engineered to satisfy the complex
+    matrix of requirements: academic engagement in Melbourne, high-volume daily cycling
+    (50–70 miles/day) on mixed terrain, hands-on maritime activities, and a rigorous
+    dietary safety protocol (Low Carb, No Nuts/Sesame/Zucchini).
+
+
+    The proposed strategy utilizes a "hub-and-spoke" base camp model. Rather than
+    the fatigue-inducing "grand tour" style of moving hotels daily, this itinerary
+    establishes three strategic operational bases: **Melbourne** (Academic/Urban),
+    **Bright** (Victorian Alpine Cycling), and **Arrowtown** (New Zealand Adventure/Cultural).
+    This approach maximizes active time and minimizes logistical friction, utilizing
+    self-guided tour operators to manage the heavy lifting of transfers and equipment
+    while retaining the client''s autonomy over daily scheduling.
+
+
+    March is identified as the optimal transition month for this expedition. In Victoria
+    and the South Island of New Zealand, mean maximum temperatures range from 18°C
+    to 24°C (64°F–75°F), providing ideal thermal regulation for endurance cycling.
+    Furthermore, the tourist density significantly decreases post-February, allowing
+    for a more exclusive interaction with trail networks and cultural sites.
+
+    '
   needs_images: true
   queries:
   - Bright Victoria autumn cycling path
@@ -47,30 +57,40 @@ sections:
   - id: zucchini-paradox
     title: 1.1 The 'Zucchini Paradox' and Dietary Security
     style: highlight
-    content: "A critical, recurring theme in this report is the management of the\
-      \ client\u2019s specific dietary profile. The combination of \"Low Carb\" and\
-      \ \"No Zucchini\" presents a unique challenge in modern wellness cuisine, where\
-      \ zucchini is the ubiquitous low-carb substitute (e.g., \"zoodles,\" fillers\
-      \ in keto breads). Furthermore, the prevalence of \"Asian Fusion\" in modern\
-      \ Australian/New Zealand dining elevates the risk of sesame contamination. This\
-      \ report integrates a dedicated dietary safety analysis for each location, recommending\
-      \ establishments with proven allergen matrices and high-protein, whole-food\
-      \ competencies.\n"
+    content: 'A critical, recurring theme in this report is the management of the
+      client’s specific dietary profile. The combination of "Low Carb" and "No Zucchini"
+      presents a unique challenge in modern wellness cuisine, where zucchini is the
+      ubiquitous low-carb substitute (e.g., "zoodles," fillers in keto breads). Furthermore,
+      the prevalence of "Asian Fusion" in modern Australian/New Zealand dining elevates
+      the risk of sesame contamination. This report integrates a dedicated dietary
+      safety analysis for each location, recommending establishments with proven allergen
+      matrices and high-protein, whole-food competencies.
+
+      '
+    selected_images: []
+  selected_images:
+  - https://tourdevines.com.au/wp-content/uploads/2025/04/Cycling-the-Murray-to-Mountains-in-Autumn-with-Tour-de-Vines.jpg
+  - https://images.squarespace-cdn.com/content/v1/614e8d93e491d90282a47c44/f47f8b4c-5304-439d-a982-3e20348f413d/Screen+Shot+2022-03-30+at+12.50.53+pm.png
+  - https://www.ashleapaige.com/wp-content/uploads/2024/05/Autumn-tree-path-1440x2160.jpg
 - id: aeronautical-logistics
   title: 2. Aeronautical Logistics and Premium Transit Strategy
   level: 2
   style: content
-  content: "The client\u2019s requirement for Delta Air Lines service with premium\
-    \ cabin continuity necessitates a routing strategy via Los Angeles (LAX), as Delta\u2019\
-    s direct connectivity to Melbourne (MEL) eliminates the friction of a Sydney transfer.\n"
+  content: 'The client’s requirement for Delta Air Lines service with premium cabin
+    continuity necessitates a routing strategy via Los Angeles (LAX), as Delta’s direct
+    connectivity to Melbourne (MEL) eliminates the friction of a Sydney transfer.
+
+    '
   needs_images: false
   queries: []
   subsections:
   - id: transpacific-trajectory
     title: '2.1 Transpacific Trajectory: Seattle to Melbourne'
     style: table
-    content: "The selected routing leverages Delta\u2019s flagship A350-900 hardware,\
-      \ ensuring the \"Delta One\" experience is maintained on the long-haul sector.\n"
+    content: 'The selected routing leverages Delta’s flagship A350-900 hardware, ensuring
+      the "Delta One" experience is maintained on the long-haul sector.
+
+      '
     table:
       headers:
       - Leg
@@ -101,6 +121,7 @@ sections:
         - ~15h 45m
         - Flagship suite with closing door. **Must pre-order special meal 30 days
           out.**
+    selected_images: []
   - id: delta-one-experience
     title: The Delta One Suite Experience
     style: content
@@ -118,6 +139,7 @@ sections:
       grilled fish (no sauce) to ensure a safe caloric base before boarding.
 
       '
+    selected_images: []
   - id: domestic-connectivity
     title: 2.2 Domestic and Trans-Tasman Connectivity
     style: content
@@ -136,6 +158,7 @@ sections:
     - '*Recommendation:* **Qantas Business Class** is preferred for the 737-800''s
       wider recliner seats and plated meals, which offer better low-carb control than
       the ''box meal'' service often found on other carriers.'
+    selected_images: []
   - id: risk-management
     title: '2.3 Risk Management: Insurance and Cancellation'
     style: highlight
@@ -152,12 +175,14 @@ sections:
       **21 days of the initial trip deposit** to be valid.
 
       '
+    selected_images: []
+  selected_images: []
 - id: module-1-melbourne
   title: '3. Module 1: The Urban Academic Base (Melbourne)'
   level: 2
   style: gallery
   meta:
-    Duration: "Days 1\u20133"
+    Duration: Days 1–3
     Base Location: Southbank/Arts Precinct
     Theme: Academic engagement paired with active maritime recovery.
   content: 'Melbourne is Australia''s cultural and intellectual capital. The University
@@ -187,6 +212,7 @@ sections:
         muesli/nuts).
 
         '
+    selected_images: []
   - id: melbourne-activities
     title: '3.2 Activity Profile: Active Sailing & Wildlife'
     style: day-section
@@ -203,11 +229,10 @@ sections:
       activities:
       - 'Operator: Victorian Yacht Charters or Alternative Sailing Charters (Docklands).'
       - 'Vessel: 40ft+ Sloop (e.g., Beneteau Oceanis 40).'
-      - "The Experience: A 4-hour private charter is necessary to guarantee the client\
-        \ takes the helm. Unlike 'ticketed' sails where passengers sit on the rail,\
-        \ a private 'Skippered Charter' allows the client to act as primary crew\u2014\
-        winching the genoa during tacks, managing the mainsheet, and helming under\
-        \ instruction."
+      - 'The Experience: A 4-hour private charter is necessary to guarantee the client
+        takes the helm. Unlike ''ticketed'' sails where passengers sit on the rail,
+        a private ''Skippered Charter'' allows the client to act as primary crew—winching
+        the genoa during tacks, managing the mainsheet, and helming under instruction.'
       dietary_note: 'Dietary Logistics: A private charter allows for a bespoke hamper.
         Menu Plan: Cold roast beef, vintage cheddar, cucumber sticks (specifically
         excluding zucchini), and olives. Ensure no "hummus" (tahini/sesame risk) is
@@ -216,6 +241,9 @@ sections:
         '
       queries:
       - Port Phillip Bay sailing yacht rough water
+      selected_images:
+      - https://i.ytimg.com/vi/t8qtN8ur71k/hqdefault.jpg
+      - https://i.ytimg.com/vi/BHlN_y5tpFY/hq720.jpg?sqp\u003d-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEwgVyhlMA8\u003d\u0026rs\u003dAOn4CLCjXz-GCAx307ugaTwJNElX2Sn2nA
     - day: 3
       title: Wildlife and Recovery (Phillip Island)
       location: Phillip Island
@@ -234,6 +262,13 @@ sections:
       queries:
       - Phillip Island penguin parade sunset
       - Koala Conservation Reserve boardwalk
+      selected_images:
+      - https://phillipislandtour.com.au/wp-content/uploads/2024/11/How-to-enjoy-the-Sunset-at-Phillip-Island.png
+      - https://localwaytours.com.au/wp-content/uploads/2024/07/local-way-tours-melbourne-the-nobbies-golden-hour.jpg
+    selected_images:
+    - https://i.ytimg.com/vi/t8qtN8ur71k/hqdefault.jpg
+    - https://i.ytimg.com/vi/BHlN_y5tpFY/hq720.jpg?sqp\u003d-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEwgVyhlMA8\u003d\u0026rs\u003dAOn4CLCjXz-GCAx307ugaTwJNElX2Sn2nA
+    - https://www.sail-world.com/photos/sailworld/photos/Alt_Mornington%20chaos.jpg
   - id: melbourne-media
     title: '3.3 Media Recommendations: Melbourne Context'
     style: cards
@@ -245,18 +280,25 @@ sections:
     - title: 'Film: The Castle (1997)'
       content: A quintessential Australian comedy that explains the local psyche and
         relationship with property/authority.
+    selected_images: []
+  selected_images:
+  - https://yarrariver.melbourne/video/homepage.jpg
+  - https://c8.alamy.com/comp/B79B0N/yarra-promenade-at-yarra-river-southbank-melbourne-australia-B79B0N.jpg
+  - https://as2.ftcdn.net/jpg/01/54/28/69/1000_F_154286939_0gD8FMsyRUElbsa7WKN9k5p2ZLhaDMO4.jpg
 - id: module-2-bright
   title: '4. Module 2: The Alpine Cycling Base Camp (Bright, Victoria)'
   level: 2
   style: gallery
   meta:
-    Duration: "Days 4\u20138"
+    Duration: Days 4–8
     Base Location: Bright, Ovens Valley
     Theme: High-volume cycling, alpine ascents, and gold-rush history
-  content: "Bright is arguably the cycling capital of Australia. Situated at the base\
-    \ of the Victorian Alps, it offers a \"hub\" for radial rides ranging from flat\
-    \ rail trails to Hors Cat\xE9gorie (HC) climbs. The town itself is vibrant, walkable,\
-    \ and filled with autumn foliage in March, providing a European village aesthetic.\n"
+  content: 'Bright is arguably the cycling capital of Australia. Situated at the base
+    of the Victorian Alps, it offers a "hub" for radial rides ranging from flat rail
+    trails to Hors Catégorie (HC) climbs. The town itself is vibrant, walkable, and
+    filled with autumn foliage in March, providing a European village aesthetic.
+
+    '
   needs_images: true
   queries:
   - Bright Victoria autumn avenue of trees
@@ -276,8 +318,9 @@ sections:
     - High-performance E-bike rental (Trek Rail or Specialized Turbo Levo).
     - On-call mechanical support and luggage transfers (if doing a point-to-point,
       though we prefer a base camp loops model).
+    selected_images: []
   - id: cycling-itinerary-bright
-    title: "4.3 Daily Cycling Itinerary (50\u201370 miles / 80\u2013110 km Target)"
+    title: 4.3 Daily Cycling Itinerary (50–70 miles / 80–110 km Target)
     style: day-section
     content: 'Achieving 50-70 miles daily in this region requires linking multiple
       routes, as standard rail trail segments are often 40-50km. E-bikes are essential
@@ -297,8 +340,8 @@ sections:
       - '**Route:** Bright -> Porepunkah -> Myrtleford -> Everton (and return).'
       - '**Terrain:** **Murray to Mountains Rail Trail**. Fully sealed, separated
         bike path. Gentle gradient (1-2%) following the Ovens River.'
-      - "**Distance:** The ride to Myrtleford is ~30km. Continuing to Everton and\
-        \ back creates a ~90\u2013100km (60-mile) day."
+      - '**Distance:** The ride to Myrtleford is ~30km. Continuing to Everton and
+        back creates a ~90–100km (60-mile) day.'
       dietary_note: 'Lunch at **Gapsted Wines** (near Myrtleford). *Dietary Alert:*
         Do not order the "Platter" (high cross-contamination risk with crackers/quince
         paste). Order a standalone grilled protein (Steak/Fish) with a green salad,
@@ -308,6 +351,9 @@ sections:
         '
       queries:
       - Murray to Mountains Rail Trail cycling
+      selected_images:
+      - https://tourdevines.com.au/wp-content/uploads/2025/01/murray-to-mountains-rail-trail-2024.webp
+      - https://www.australiancycletours.com.au/croppedImages/Australasia/Victoria/V41-357-Eurobin-2008-09-5371-979156-500px.jpg?
     - day: 5
       title: The 'Champagne Gravel' of Wandiligong
       location: Bright -> Wandiligong -> Buckland Valley Fire Roads
@@ -326,6 +372,9 @@ sections:
         acknowledging the massive Chinese contribution to the gold rush era.'
       queries:
       - Wandiligong autumn valley landscape
+      selected_images:
+      - https://images.squarespace-cdn.com/content/v1/5ad5516d12b13f72212bd2ee/1525244207302-PGRO7EY3THLRNEVR9XWH/_DSC6533-Edit.jpg
+      - https://l450v.alamy.com/450v/mebwam/autumn-colours-in-wandiligong-victoria-australia-mebwam.jpg
     - day: 6
       title: The Ascent of Mount Buffalo (The Horn)
       location: Bright -> Mt Buffalo National Park -> The Horn
@@ -346,6 +395,13 @@ sections:
       queries:
       - Mount Buffalo The Horn summit view
       - Mount Buffalo granite rock formations
+      selected_images:
+      - https://www.parks.vic.gov.au/-/media/project/pv/main/parks/images/places-to-see/mount-buffalo-national-park/2-hut-the-horn-mount-buffalo-national-park-1920x1124.jpg?rev\u003d9e5c88e876da4571ba8a886e99cbf369
+      - https://www.visitmyrtlefordvic.com.au/wp-content/uploads/sites/44/60054d06939df7372361b24925d639b09f644925.jpeg
+    selected_images:
+    - https://tourdevines.com.au/wp-content/uploads/2025/01/murray-to-mountains-rail-trail-2024.webp
+    - https://www.australiancycletours.com.au/croppedImages/Australasia/Victoria/V41-357-Eurobin-2008-09-5371-979156-500px.jpg?
+    - https://tourdevines.com.au/wp-content/uploads/2023/04/PXL_20220928_054404566-scaled.webp
   - id: accom-dining-bright
     title: Accommodation & Dining Strategy
     style: cards
@@ -377,6 +433,7 @@ sections:
         (lettuce wrap) to avoid sugary/seeded brioche buns.
 
         '
+    selected_images: []
   - id: bright-media
     title: '4.6 Media Recommendations: High Country Context'
     style: cards
@@ -388,12 +445,17 @@ sections:
     - title: 'Book: Robbery Under Arms'
       content: By Rolf Boldrewood. A classic bushranger novel that sets the scene
         for the colonial history the client will cycle through.
+    selected_images: []
+  selected_images:
+  - https://www.ashleapaige.com/wp-content/uploads/2024/05/Autumn-tree-path-1440x2160.jpg
+  - https://live.staticflickr.com/2274/2479589196_acdedc62bc_z.jpg
+  - https://www.holidayparkbright.com.au/wp-content/uploads/2022/03/Autumn-in-Bright-Festival-01.jpg
 - id: module-3-arrowtown
   title: '5. Module 3: The Adventure Capital Base Camp (Arrowtown, NZ)'
   level: 2
   style: gallery
   meta:
-    Duration: "Days 9\u201314"
+    Duration: Days 9–14
     Base Location: Arrowtown (20 mins from Queenstown)
     Theme: Trans-Tasman grandeur, historic trails, and Maori culture
   content: 'While Queenstown is the transit hub, **Arrowtown** is the superior base
@@ -415,6 +477,7 @@ sections:
       logistics for the one-way trails, E-bike fleet management, and recovery support.
 
       '
+    selected_images: []
   - id: cycling-itinerary-arrowtown
     title: '5.3 Daily Cycling Itinerary: The Queenstown Trail Network'
     style: day-section
@@ -430,7 +493,7 @@ sections:
       details:
       - '**Route:** Arrowtown -> Arrow River Bridges Trail -> Kawarau Suspension Bridge
         -> Gibbston River Trail.'
-      - "**Distance:** 35\u201350 miles (56\u201380 km)."
+      - '**Distance:** 35–50 miles (56–80 km).'
       - '**Terrain:** Grade 2-3 Hard-packed gravel. Features suspension bridges (Edgar
         Bridge, Southern Discoveries Bridge).'
       dietary_note: 'Lunch at **Kinross** or **Amisfield**. Amisfield is world-class
@@ -442,6 +505,9 @@ sections:
       queries:
       - Kawarau Suspension Bridge cycling
       - Gibbston Valley vineyards autumn
+      selected_images:
+      - https://www.trailjourneys.co.nz/croppedImages/Australasia/New-Zealand/Kawarau-Gorge-Suspension-Bridge-_credit_-Destination-Queenstown_-4866380-500px.jpg?20250218143608
+      - https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/59/5c/e8/photo0jpg.jpg?w\u003d1200\u0026h\u003d1200\u0026s\u003d1
     - day: 10
       title: The Engineering Marvel - Lake Dunstan Trail
       location: Cromwell -> Clyde
@@ -461,6 +527,9 @@ sections:
         '
       queries:
       - Lake Dunstan Trail cliff boardwalk cycling
+      selected_images:
+      - https://i0.wp.com/blogtheglobe.com/wp-content/uploads/2022/07/IMG_5240.jpg?resize\u003d1024%2C683\u0026ssl\u003d1
+      - https://www.neverendingvoyage.com/wp-content/uploads/2021/07/lake-dunstan-trail-nz-12-1100x733.jpg
     - day: 11
       title: Jack's Point & Kelvin Heights (The Scenic Grind)
       location: Queenstown Gardens -> Jack's Point
@@ -476,6 +545,13 @@ sections:
       queries:
       - Jacks Point golf course and mountains
       - Lake Wakatipu Kelvin Heights trail
+      selected_images:
+      - https://cloud9golfandtravel.com/wp-content/uploads/2019/01/8th-jacks-point.jpg
+      - https://images.squarespace-cdn.com/content/v1/5675d7b05a5668f86eba496c/47c6a8b5-9261-4490-8078-60d482ca5302/Jack%27s+Point+%2831%29.jpg
+    selected_images:
+    - https://www.trailjourneys.co.nz/croppedImages/Australasia/New-Zealand/Kawarau-Gorge-Suspension-Bridge-_credit_-Destination-Queenstown_-4866380-500px.jpg?20250218143608
+    - https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/59/5c/e8/photo0jpg.jpg?w\u003d1200\u0026h\u003d1200\u0026s\u003d1
+    - https://coinventmediastorage.blob.core.windows.net/media-storage-container/instagram_thumbnail_3377421797414185486.jpg
   - id: active-sailing-nz
     title: '5.4 Active Component: Hands-On Sailing (Lake Wakatipu)'
     style: content
@@ -493,6 +569,10 @@ sections:
     needs_images: true
     queries:
     - Sailing boat Lake Wakatipu mountains
+    selected_images:
+    - https://c8.alamy.com/comp/2C8JX7E/a-sailing-boat-on-lake-wakatipu-with-mountains-in-the-background-queenstown-new-zealand-2C8JX7E.jpg
+    - https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/5c/d3/64.jpg
+    - https://cdn-imgix.headout.com/media/images/9e61c211-01a8-42f0-aa5c-79c5e89905d4-1748600441361-280076.jpg?auto\u003dformat\u0026w\u003d900\u0026h\u003d562.5\u0026q\u003d90\u0026ar\u003d16%3A10\u0026crop\u003dfaces%2Ccenter\u0026fit\u003dcrop
   - id: cultural-experience
     title: '5.5 Cultural Experience: WanaHaka'
     style: content
@@ -508,6 +588,7 @@ sections:
       potato carbs). WanaHaka tours are often non-food based or can be catered privately.
 
       '
+    selected_images: []
   - id: scenic-flight
     title: '5.6 Scenic Flight: Milford Sound Fly-Cruise-Fly'
     style: content
@@ -527,6 +608,14 @@ sections:
     needs_images: true
     queries:
     - Milford Sound aerial Mitre Peak waterfall
+    selected_images:
+    - https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/10/3e/58/13.jpg
+    - https://www.mitrepeak.com/wp-content/uploads/sites/4600/2021/01/Mitre-Peak-Cruises-Cruising-Past-The-Bowen-Falls.jpg?w\u003d700\u0026h\u003d700\u0026zoom\u003d2
+    - https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/ab/77/a1/waterfall.jpg?w\u003d1200\u0026h\u003d-1\u0026s\u003d1
+  selected_images:
+  - https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/queenstownnz/Arrowtown_in_Autumn_3_234fec67-6506-48b0-997a-b6da532d00fe.jpg
+  - https://c8.alamy.com/comp/MPHG1E/autumn-colour-and-historic-cottages-arrowtown-near-queenstown-otago-south-island-new-zealand-MPHG1E.jpg
+  - https://newzealandwanderer.com/wp-content/uploads/Arrowtown-Pharmacy-autumn-L5.jpg
 - id: dietary-safety
   title: '6. Dietary Safety Dossier: The ''No Zucchini'' Protocol'
   level: 2
@@ -550,6 +639,7 @@ sections:
       of security if the staff knows it as Courgette.
 
       '
+    selected_images: []
   - id: sesame-risk
     title: 6.2 The Hidden Sesame Risk
     style: content
@@ -565,6 +655,7 @@ sections:
       dairy).
 
       '
+    selected_images: []
   - id: safe-dining
     title: 6.3 Safe Dining Establishments
     style: content
@@ -576,6 +667,8 @@ sections:
       their Allergen Matrix.
 
       '
+    selected_images: []
+  selected_images: []
 - id: media-cultural
   title: 7. Media and Cultural Recommendations
   level: 2
@@ -603,6 +696,7 @@ sections:
       content: Essential reading for the Victorian leg (Module 2). It captures the
         eerie, ancient power of the Australian bush and rock formations, similar to
         Mt Buffalo.
+    selected_images: []
   - id: cinema
     title: 7.2 Cinema
     style: cards
@@ -617,6 +711,11 @@ sections:
     - title: Out of the Blue (2006)
       content: A darker recommendation, but relevant to the Otago region's history.
         Based on true events near Dunedin.
+    selected_images: []
+  selected_images:
+  - https://www.visitmacedonranges.com/wp-content/uploads/2016/05/Hanging-Rock-1.jpg
+  - https://upload.wikimedia.org/wikipedia/commons/7/7c/HangingRock0005.jpg
+  - https://www.visitmacedonranges.com/wp-content/uploads/2022/03/Hanging-Rock-Sunset-1024x683.jpg
 - id: summary-table
   title: 8. Summary of Distances and Activity Intensity
   level: 2
@@ -705,73 +804,110 @@ sections:
       - Flight/Hike
       - 1 Hour Flight / 2mi Walk
       - Low
+  selected_images: []
 - id: conclusion
   title: 9. Conclusion
   level: 2
   style: footer
-  content: "This itinerary replaces the standard tourist loop with a precision-engineered\
-    \ athlete's expedition. By anchoring in **Bright** and **Arrowtown**, the client\
-    \ gains access to hundreds of miles of premier cycling infrastructure without\
-    \ the logistical drag of daily packing. The dietary protocol\u2014specifically\
-    \ the \"Courgette\" and \"Sesame\" awareness\u2014is woven into the fabric of\
-    \ the location choices, favoring self-catering luxury lodges and high-competency\
-    \ dining venues. This plan delivers the autonomy of a self-guided adventure with\
-    \ the safety net of comprehensive logistical support.\n"
+  content: 'This itinerary replaces the standard tourist loop with a precision-engineered
+    athlete''s expedition. By anchoring in **Bright** and **Arrowtown**, the client
+    gains access to hundreds of miles of premier cycling infrastructure without the
+    logistical drag of daily packing. The dietary protocol—specifically the "Courgette"
+    and "Sesame" awareness—is woven into the fabric of the location choices, favoring
+    self-catering luxury lodges and high-competency dining venues. This plan delivers
+    the autonomy of a self-guided adventure with the safety net of comprehensive logistical
+    support.
+
+    '
   needs_images: false
   queries: []
+  selected_images: []
 - id: references
   title: Works cited
   level: 2
   style: footer
-  content: "1. Delta's triple-play for Australia's premium travellers, accessed November\
-    \ 28, 2025, [https://www.executivetraveller.com/news/delta-triple-play-for-australian-premium-travellers](https://www.executivetraveller.com/news/delta-triple-play-for-australian-premium-travellers)\n\
-    2. Business class cabin | Qantas US, accessed November 28, 2025, [https://www.qantas.com/en-us/onboard/business](https://www.qantas.com/en-us/onboard/business)\n\
-    3. Qantas 737-800 Business Class Review (Wellington-Melbourne) - Australian Frequent\
-    \ Flyer, accessed November 28, 2025, [https://www.australianfrequentflyer.com.au/qantas-737-business-class-review/](https://www.australianfrequentflyer.com.au/qantas-737-business-class-review/)\n\
-    4. QANTAS, Business Class \u2013 Boeing B 737-800: Sydney to Melbourne - knightofmalta,\
-    \ accessed November 28, 2025, [https://knightofmalta.net/2022/07/14/qantas-business-class-boeing-b-737-800-sydney-to-melbourne/](https://knightofmalta.net/2022/07/14/qantas-business-class-boeing-b-737-800-sydney-to-melbourne/)\n\
-    5. Cancel for Work Reasons Travel Insurance - Insubuy, accessed November 28, 2025,\
-    \ [https://www.insubuy.com/cancel-for-work-reasons-travel-insurance/](https://www.insubuy.com/cancel-for-work-reasons-travel-insurance/)\n\
-    6. Travel insurance USA to Australia, Best travel insurance Australia from USA,\
-    \ Travel Medical Insurance Australia, Best travel health insurance for Australia\
-    \ cost - American Visitor Insurance, accessed November 28, 2025, [https://www.americanvisitorinsurance.com/travel-insurance/usa/travel-to-australia.asp](https://www.americanvisitorinsurance.com/travel-insurance/usa/travel-to-australia.asp)\n\
-    7. Best Cancel For Work Reason Insurance, accessed November 28, 2025, [https://www.americanvisitorinsurance.com/travel-insurance-benefits/best-cancel-for-work-reasons-insurance.asp](https://www.americanvisitorinsurance.com/travel-insurance-benefits/best-cancel-for-work-reasons-insurance.asp)\n\
-    8. Port Phillip Bay Hands-On Sailing Experience - 4 Hours, accessed November 28,\
-    \ 2025, [https://www.experienceoz.com.au/en/melbourne/experience-sailing-4-hours](https://www.experienceoz.com.au/en/melbourne/experience-sailing-4-hours)\n\
-    9. Training Centre | Alternative sailing - Yacht Training Victoria, accessed November\
-    \ 28, 2025, [https://www.alternativesailing.com.au/yacht-training-centre](https://www.alternativesailing.com.au/yacht-training-centre)\n\
-    10. Provenance Allergen Matrix, accessed November 28, 2025, [https://provenancebutcher.com/pages/allergen-matrix](https://provenancebutcher.com/pages/allergen-matrix)\n\
-    11. Koalas, Nature and wildlife, Victoria, Australia, accessed November 28, 2025,\
-    \ [https://www.visitvictoria.com/see-and-do/nature-and-wildlife/wildlife-and-zoos/koalas](https://www.visitvictoria.com/see-and-do/nature-and-wildlife/wildlife-and-zoos/koalas)\n\
-    12. Movies made by and filmed in Australia or New Zealand? : r/MovieSuggestions\
-    \ - Reddit, accessed November 28, 2025, [https://www.reddit.com/r/MovieSuggestions/comments/1nifdel/movies_made_by_and_filmed_in_australia_or_new/](https://www.reddit.com/r/MovieSuggestions/comments/1nifdel/movies_made_by_and_filmed_in_australia_or_new/)\n\
-    13. Cycling in Bright | Road, Rail and MTB Bright - Cyclepath, accessed November\
-    \ 28, 2025, [https://www.cyclepath.com.au/ride-bright/](https://www.cyclepath.com.au/ride-bright/)\n\
-    14. Tour de Vines - Victoria's High Country, accessed November 28, 2025, [https://www.victoriashighcountry.com.au/listing/tour-de-vines-beechworth/](https://www.victoriashighcountry.com.au/listing/tour-de-vines-beechworth/)\n\
-    15. Victoria Self Guided Cycling Trips | Australian Cycle Tours, accessed November\
-    \ 28, 2025, [https://www.australiancycletours.com.au/victoria](https://www.australiancycletours.com.au/victoria)\n\
-    16. Self-Guided Murray to Mountains Rail Trail | 10 Adventures, accessed November\
-    \ 28, 2025, [https://www.10adventures.com/tour/murray-mountains-rail-trail-tour/](https://www.10adventures.com/tour/murray-mountains-rail-trail-tour/)\n\
-    17. Cycling the gravel rides around Bright & Surrounds, accessed November 28,\
-    \ 2025, [https://www.visitbright.com.au/things-to-do/bike-riding/gravel-rides/](https://www.visitbright.com.au/things-to-do/bike-riding/gravel-rides/)\n\
-    18. Cycling - Visit Mount Buffalo, accessed November 28, 2025, [https://visitmountbuffalo.com.au/activities/cycling/](https://visitmountbuffalo.com.au/activities/cycling/)\n\
-    19. Mt. Buffalo | The Climbing Cyclist, accessed November 28, 2025, [https://theclimbingcyclist.com/climbs/mt-buffalo-national-park/mt-buffalo/](https://theclimbingcyclist.com/climbs/mt-buffalo-national-park/mt-buffalo/)\n\
-    20. KANGAROO LODGE - Alpine Valley Getaways, accessed November 28, 2025, [https://alpinevalleygetaways.com.au/properties/kangaroo-lodge/](https://alpinevalleygetaways.com.au/properties/kangaroo-lodge/)\n\
-    21. accessed November 28, 2025, [https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers#:~:text=What%20you%20need%20to%20know&text=Lake%20Dunstan%20Trail%20Transfers%3A%20We,from%20Clyde%20to%20Cromwell%20%2F%20Queenstown.](https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers#:~:text=What%20you%20need%20to%20know&text=Lake%20Dunstan%20Trail%20Transfers%3A%20We,from%20Clyde%20to%20Cromwell%20%2F%20Queenstown.)\n\
-    22. Sherpa Shuttle Service for Bikes and Cyclists - Queenstown Bike Hire, accessed\
-    \ November 28, 2025, [https://queenstownbikehire.co.nz/shuttles/](https://queenstownbikehire.co.nz/shuttles/)\n\
-    23. Arrow River Bridges Trail - Queenstown Trail, accessed November 28, 2025,\
-    \ [https://queenstowntrails.org.nz/maps-and-trails/all-trails/](https://queenstowntrails.org.nz/maps-and-trails/all-trails/)\n\
-    24. Amisfield - FAQs - Tock, accessed November 28, 2025, [https://www.exploretock.com/amisfield/faq](https://www.exploretock.com/amisfield/faq)\n\
-    25. Daily Lake Dunstan Trail Transfers | best value - SheBikesHeBikes, accessed\
-    \ November 28, 2025, [https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers](https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers)\n\
-    26. Queenstown Boat Charter - Million Dollar Cruise, accessed November 28, 2025,\
-    \ [https://milliondollarcruise.co.nz/queenstown-boat-charter-hire/](https://milliondollarcruise.co.nz/queenstown-boat-charter-hire/)\n\
-    27. Wakatipu Yacht Club - Yachting New Zealand, accessed November 28, 2025, [https://www.yachtingnz.org.nz/clubs/yacht-club/wakatipu-yacht-club](https://www.yachtingnz.org.nz/clubs/yacht-club/wakatipu-yacht-club)\n\
-    28. WanaHaka - New Zealand M\u0101ori Tourism, accessed November 28, 2025, [https://maoritourism.co.nz/land-whenua/wanahaka/](https://maoritourism.co.nz/land-whenua/wanahaka/)\n\
-    29. 10 of the Best New Zealand Books, accessed November 28, 2025, [https://newzealandtrails.com/news/new-zealand-books/](https://newzealandtrails.com/news/new-zealand-books/)\n\
-    30. 8 movies to watch before you travel to New Zealand | TravelEssence, accessed\
-    \ November 28, 2025, [https://www.travelessence.co.uk/blog/8-films-to-watch-before-you-travel-to-new-zealand](https://www.travelessence.co.uk/blog/8-films-to-watch-before-you-travel-to-new-zealand)\n\
-    31. Out of the Blue (2006 film) - Wikipedia, accessed November 28, 2025, [https://en.wikipedia.org/wiki/Out_of_the_Blue_(2006_film)](https://en.wikipedia.org/wiki/Out_of_the_Blue_(2006_film))\n"
+  content: '1. Delta''s triple-play for Australia''s premium travellers, accessed
+    November 28, 2025, [https://www.executivetraveller.com/news/delta-triple-play-for-australian-premium-travellers](https://www.executivetraveller.com/news/delta-triple-play-for-australian-premium-travellers)
+
+    2. Business class cabin | Qantas US, accessed November 28, 2025, [https://www.qantas.com/en-us/onboard/business](https://www.qantas.com/en-us/onboard/business)
+
+    3. Qantas 737-800 Business Class Review (Wellington-Melbourne) - Australian Frequent
+    Flyer, accessed November 28, 2025, [https://www.australianfrequentflyer.com.au/qantas-737-business-class-review/](https://www.australianfrequentflyer.com.au/qantas-737-business-class-review/)
+
+    4. QANTAS, Business Class – Boeing B 737-800: Sydney to Melbourne - knightofmalta,
+    accessed November 28, 2025, [https://knightofmalta.net/2022/07/14/qantas-business-class-boeing-b-737-800-sydney-to-melbourne/](https://knightofmalta.net/2022/07/14/qantas-business-class-boeing-b-737-800-sydney-to-melbourne/)
+
+    5. Cancel for Work Reasons Travel Insurance - Insubuy, accessed November 28, 2025,
+    [https://www.insubuy.com/cancel-for-work-reasons-travel-insurance/](https://www.insubuy.com/cancel-for-work-reasons-travel-insurance/)
+
+    6. Travel insurance USA to Australia, Best travel insurance Australia from USA,
+    Travel Medical Insurance Australia, Best travel health insurance for Australia
+    cost - American Visitor Insurance, accessed November 28, 2025, [https://www.americanvisitorinsurance.com/travel-insurance/usa/travel-to-australia.asp](https://www.americanvisitorinsurance.com/travel-insurance/usa/travel-to-australia.asp)
+
+    7. Best Cancel For Work Reason Insurance, accessed November 28, 2025, [https://www.americanvisitorinsurance.com/travel-insurance-benefits/best-cancel-for-work-reasons-insurance.asp](https://www.americanvisitorinsurance.com/travel-insurance-benefits/best-cancel-for-work-reasons-insurance.asp)
+
+    8. Port Phillip Bay Hands-On Sailing Experience - 4 Hours, accessed November 28,
+    2025, [https://www.experienceoz.com.au/en/melbourne/experience-sailing-4-hours](https://www.experienceoz.com.au/en/melbourne/experience-sailing-4-hours)
+
+    9. Training Centre | Alternative sailing - Yacht Training Victoria, accessed November
+    28, 2025, [https://www.alternativesailing.com.au/yacht-training-centre](https://www.alternativesailing.com.au/yacht-training-centre)
+
+    10. Provenance Allergen Matrix, accessed November 28, 2025, [https://provenancebutcher.com/pages/allergen-matrix](https://provenancebutcher.com/pages/allergen-matrix)
+
+    11. Koalas, Nature and wildlife, Victoria, Australia, accessed November 28, 2025,
+    [https://www.visitvictoria.com/see-and-do/nature-and-wildlife/wildlife-and-zoos/koalas](https://www.visitvictoria.com/see-and-do/nature-and-wildlife/wildlife-and-zoos/koalas)
+
+    12. Movies made by and filmed in Australia or New Zealand? : r/MovieSuggestions
+    - Reddit, accessed November 28, 2025, [https://www.reddit.com/r/MovieSuggestions/comments/1nifdel/movies_made_by_and_filmed_in_australia_or_new/](https://www.reddit.com/r/MovieSuggestions/comments/1nifdel/movies_made_by_and_filmed_in_australia_or_new/)
+
+    13. Cycling in Bright | Road, Rail and MTB Bright - Cyclepath, accessed November
+    28, 2025, [https://www.cyclepath.com.au/ride-bright/](https://www.cyclepath.com.au/ride-bright/)
+
+    14. Tour de Vines - Victoria''s High Country, accessed November 28, 2025, [https://www.victoriashighcountry.com.au/listing/tour-de-vines-beechworth/](https://www.victoriashighcountry.com.au/listing/tour-de-vines-beechworth/)
+
+    15. Victoria Self Guided Cycling Trips | Australian Cycle Tours, accessed November
+    28, 2025, [https://www.australiancycletours.com.au/victoria](https://www.australiancycletours.com.au/victoria)
+
+    16. Self-Guided Murray to Mountains Rail Trail | 10 Adventures, accessed November
+    28, 2025, [https://www.10adventures.com/tour/murray-mountains-rail-trail-tour/](https://www.10adventures.com/tour/murray-mountains-rail-trail-tour/)
+
+    17. Cycling the gravel rides around Bright & Surrounds, accessed November 28,
+    2025, [https://www.visitbright.com.au/things-to-do/bike-riding/gravel-rides/](https://www.visitbright.com.au/things-to-do/bike-riding/gravel-rides/)
+
+    18. Cycling - Visit Mount Buffalo, accessed November 28, 2025, [https://visitmountbuffalo.com.au/activities/cycling/](https://visitmountbuffalo.com.au/activities/cycling/)
+
+    19. Mt. Buffalo | The Climbing Cyclist, accessed November 28, 2025, [https://theclimbingcyclist.com/climbs/mt-buffalo-national-park/mt-buffalo/](https://theclimbingcyclist.com/climbs/mt-buffalo-national-park/mt-buffalo/)
+
+    20. KANGAROO LODGE - Alpine Valley Getaways, accessed November 28, 2025, [https://alpinevalleygetaways.com.au/properties/kangaroo-lodge/](https://alpinevalleygetaways.com.au/properties/kangaroo-lodge/)
+
+    21. accessed November 28, 2025, [https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers#:~:text=What%20you%20need%20to%20know&text=Lake%20Dunstan%20Trail%20Transfers%3A%20We,from%20Clyde%20to%20Cromwell%20%2F%20Queenstown.](https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers#:~:text=What%20you%20need%20to%20know&text=Lake%20Dunstan%20Trail%20Transfers%3A%20We,from%20Clyde%20to%20Cromwell%20%2F%20Queenstown.)
+
+    22. Sherpa Shuttle Service for Bikes and Cyclists - Queenstown Bike Hire, accessed
+    November 28, 2025, [https://queenstownbikehire.co.nz/shuttles/](https://queenstownbikehire.co.nz/shuttles/)
+
+    23. Arrow River Bridges Trail - Queenstown Trail, accessed November 28, 2025,
+    [https://queenstowntrails.org.nz/maps-and-trails/all-trails/](https://queenstowntrails.org.nz/maps-and-trails/all-trails/)
+
+    24. Amisfield - FAQs - Tock, accessed November 28, 2025, [https://www.exploretock.com/amisfield/faq](https://www.exploretock.com/amisfield/faq)
+
+    25. Daily Lake Dunstan Trail Transfers | best value - SheBikesHeBikes, accessed
+    November 28, 2025, [https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers](https://shebikeshebikes.co.nz/lake-dunstan-trail-transfers)
+
+    26. Queenstown Boat Charter - Million Dollar Cruise, accessed November 28, 2025,
+    [https://milliondollarcruise.co.nz/queenstown-boat-charter-hire/](https://milliondollarcruise.co.nz/queenstown-boat-charter-hire/)
+
+    27. Wakatipu Yacht Club - Yachting New Zealand, accessed November 28, 2025, [https://www.yachtingnz.org.nz/clubs/yacht-club/wakatipu-yacht-club](https://www.yachtingnz.org.nz/clubs/yacht-club/wakatipu-yacht-club)
+
+    28. WanaHaka - New Zealand Māori Tourism, accessed November 28, 2025, [https://maoritourism.co.nz/land-whenua/wanahaka/](https://maoritourism.co.nz/land-whenua/wanahaka/)
+
+    29. 10 of the Best New Zealand Books, accessed November 28, 2025, [https://newzealandtrails.com/news/new-zealand-books/](https://newzealandtrails.com/news/new-zealand-books/)
+
+    30. 8 movies to watch before you travel to New Zealand | TravelEssence, accessed
+    November 28, 2025, [https://www.travelessence.co.uk/blog/8-films-to-watch-before-you-travel-to-new-zealand](https://www.travelessence.co.uk/blog/8-films-to-watch-before-you-travel-to-new-zealand)
+
+    31. Out of the Blue (2006 film) - Wikipedia, accessed November 28, 2025, [https://en.wikipedia.org/wiki/Out_of_the_Blue_(2006_film)](https://en.wikipedia.org/wiki/Out_of_the_Blue_(2006_film))
+
+    '
   needs_images: false
   queries: []
+  selected_images: []

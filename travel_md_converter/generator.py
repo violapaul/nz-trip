@@ -46,13 +46,49 @@ def load_cache():
 
 
 def get_images_for_queries(queries, cache):
-    """Get image URLs for a list of queries from cache."""
+    """Get image URLs for a list of queries from cache, deduped.
+    
+    Supports both old format (urls list) and new format (images list with url/thumbnail).
+    """
     urls = []
+    seen = set()
     for query in queries:
         if query in cache:
-            query_urls = cache[query].get('urls', [])
-            urls.extend(query_urls)
+            # New format: images list with url/thumbnail
+            if 'images' in cache[query]:
+                for img in cache[query]['images']:
+                    url = img.get('url')
+                    if url and url not in seen:
+                        seen.add(url)
+                        urls.append(url)
+            # Old format: urls list
+            elif 'urls' in cache[query]:
+                for url in cache[query]['urls']:
+                    if url not in seen:
+                        seen.add(url)
+                        urls.append(url)
     return urls[:3]  # Max 3 images
+
+
+def get_section_images(section, cache):
+    """Get images for a section - prefers selected_images if available."""
+    # First check for AI-selected images
+    if 'selected_images' in section and section['selected_images']:
+        # Dedupe selected images (in case of duplicates)
+        seen = set()
+        unique = []
+        for url in section['selected_images']:
+            if url not in seen:
+                seen.add(url)
+                unique.append(url)
+        return unique[:3]
+    
+    # Fall back to query-based lookup
+    if section.get('needs_images', True):
+        queries = section.get('queries', [])
+        return get_images_for_queries(queries, cache)
+    
+    return []
 
 
 def render_section_from_yaml(section, cache, depth=0):
@@ -82,11 +118,8 @@ def render_section_from_yaml(section, cache, depth=0):
     table_data = section.get('table')
     meta = section.get('meta', {})
     
-    # Get images if needed
-    images = []
-    if section.get('needs_images', True):
-        queries = section.get('queries', [])
-        images = get_images_for_queries(queries, cache)
+    # Get images - prefers AI-selected if available
+    images = get_section_images(section, cache)
     
     # Build content string from various fields
     full_content = content or ''

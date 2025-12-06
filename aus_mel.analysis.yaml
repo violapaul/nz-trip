@@ -1,0 +1,1109 @@
+metadata:
+  title: Southern Stars & Secret Trails
+  subtitle: A Victoria Adventure for Two
+  destination: Victoria, Australia
+  duration: 10 Days
+  generated: '2023-10-27T10:00:00Z'
+sections:
+- id: intro
+  title: Southern Stars & Secret Trails
+  level: 1
+  style: hero
+  content: 'Imagine waking up to kookaburras and the sound of surf, walking under
+    eucalyptus trees full of wild koalas, sailing with locals on a sparkling bay,
+    and finishing the trip with easy bike rides through autumn-coloured valleys and
+    vineyards.
+
+
+    This trip is built around the things we both care about:
+
+    '
+  bullets:
+  - Real **national-park walks** and **bike routes**, not just sitting on buses
+  - '**History and zoology**: koalas, wallabies, penguins, shipwrecks and gold-rush
+    towns'
+  - '**Stars**: seeing the Southern Cross under dark skies'
+  - Meeting **local guides and hosts** who love their corner of Australia
+  - Time **on the water** and a **scenic flight** over dramatic coastline
+  meta:
+    hub: Melbourne
+  needs_images: true
+  queries:
+  - Great Ocean Road coastline Victoria Australia sunset
+  - Koala in eucalyptus tree wild Victoria
+  selected_images:
+  - https://greatoceanroadbrewhouse.b-cdn.net/wp-content/uploads/2022/02/12-apostles-sunset.jpeg
+  - https://i.redd.it/1dz7oqz7unw21.jpg
+  - https://cdn.sightseeingtoursaustralia.com.au/wp-content/uploads/2022/04/12-Apostles-Great-Ocean-Road-Sunset-2000.jpg
+- id: trip-snapshot
+  title: Trip Snapshot
+  level: 2
+  style: content
+  meta:
+    where: Victoria, Australia – Melbourne, Great Ocean Road & Great Otway National
+      Park, and the High Country (Beechworth–Bright–Harrietville)
+  content: '**What we’ll do:**
+
+    '
+  bullets:
+  - 3 days of the **Great Ocean Walk** through Great Otway National Park – cliffs,
+    rainforest, and wild koalas
+  - A day **sailing on Port Phillip** with local crews from a Melbourne yacht club
+  - 3 days of **cycling** the Murray to Mountains Rail Trail and Great Valley Trail
+    – sealed trails through vineyards, gum trees and river valleys
+  - A **short scenic flight** over the Twelve Apostles and the Shipwreck Coast
+  - Evenings in **Apollo Bay, Melbourne, Beechworth and Bright** – great food, wine,
+    and local stories
+  - Night walks to see the **Southern Cross** and the southern sky
+  needs_images: true
+  queries:
+  - Port Phillip Bay sailing yacht Melbourne skyline
+  - Murray to Mountains Rail Trail cyclists autumn
+  selected_images:
+  - https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/6f/6d/93.jpg
+  - https://c8.alamy.com/comp/BJY3G4/sailing-yacht-on-port-phillip-bay-with-large-ship-in-background-melbourne-BJY3G4.jpg
+  - https://l450v.alamy.com/450v/a7pb0m/melbourne-skyline-melbourne-viewed-from-across-the-port-phillip-bay-a7pb0m.jpg
+- id: part-1-ocean
+  title: Part 1 – Ocean, Koalas & Shipwreck Coast
+  level: 2
+  style: gallery
+  meta:
+    duration: 3 days (Great Ocean Walk)
+    base: Apollo Bay & Cape Otway area
+    theme: Coastal national park, wildlife, history
+  content: 'Instead of just driving the Great Ocean Road, we walk the best parts of
+    the **Great Ocean Walk** – a 100+ km track through **Great Otway National Park**.
+
+
+    We’ll use a **self-guided operator**: they book small lodges and B&Bs, move our
+    bags, and shuttle us to the trailheads. We just carry daypacks, enjoy the scenery,
+    and take photos.
+
+    '
+  subsections:
+  - id: what-well-see-ocean
+    title: What we’ll see
+    style: content
+    bullets:
+    - '**Eucalyptus forests full of koalas**: The Cape Otway area is famous for wild
+      koalas sleeping in the manna gums along the track.'
+    - '**Wallabies and kangaroos** browsing in open heath and at forest edges'
+    - 'Coastal **cliffs and surf beaches**: Station Beach, Aire River mouth, Johanna
+      and others'
+    - '**Cape Otway Lighthouse**, where guides tell stories of shipwrecks, lighthouse
+      keepers and the “Shipwreck Coast” history'
+    - Tide pools and rock platforms with sea stars and other intertidal creatures
+      (depending on tide)
+    selected_images: []
+  - id: typical-day-walk
+    title: A typical day on the Great Ocean Walk
+    style: content
+    bullets:
+    - Breakfast at our B&B, then a shuttle to the trailhead
+    - '**10–16 km (6–10 miles) of walking** on good tracks: forest, clifftops, occasional
+      beach sections'
+    - Picnic lunch at a lookout or beach
+    - Mid-afternoon arrival at our next accommodation
+    - Hot shower, relaxed dinner, and maybe a short **night walk to look for the Southern
+      Cross** if skies are clear
+    content: 'Great Otway National Park has relatively dark skies once you step away
+      from towns; in March, the **Southern Cross (Crux)** sits high in the southern
+      sky after dark, easy to spot with a simple star chart or app.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Great Ocean Walk cliffs Victoria
+  - Cape Otway Lighthouse aerial
+  - Wild koala Great Otway National Park
+  selected_images:
+  - https://i.natgeofe.com/n/6ebe6630-007d-4ecb-be22-1e605eef3cbf/australiaoceanwalk1resized.png
+  - https://www.switchbacktravel.com/sites/default/files/images/articles/Great%20Ocean%20Walk%20%28hiking%20along%20bluff%20above%20ocean%29.jpg
+  - https://www.wildwomenontop.com/app/uploads/2021/06/Website-Blog-Feature-Images-20.jpg
+- id: part-2-sailing
+  title: Part 2 – Sailing & Southern Stars
+  level: 2
+  style: content
+  meta:
+    location: Melbourne & Port Phillip Bay
+    base: Melbourne
+    theme: Local sailing culture, food, and urban nights under southern skies
+  content: 'After the coastal walk, we come back to Melbourne for a change of pace
+    and some city comforts.
+
+    '
+  subsections:
+  - id: sailing-day
+    title: Sailing day
+    style: content
+    content: 'We’ll spend a day on **Port Phillip Bay**, sailing from a local yacht
+      club such as **Sandringham** or **Royal Brighton**. These clubs run regular
+      keelboat racing and have crew registers where visiting sailors can join local
+      boats.
+
+
+      On the water we’ll:
+
+      '
+    bullets:
+    - Trim sails and work with a local crew
+    - Get views back to the **Melbourne skyline** from the bay
+    - Hear first-hand what it’s like to grow up sailing here and why locals love this
+      coastline
+    selected_images: []
+  - id: evenings-melbourne
+    title: Evenings in Melbourne
+    style: content
+    content: 'We’ll give ourselves a couple of proper dinners in the city – Melbourne
+      is known for:
+
+      '
+    bullets:
+    - '**Neighbourhood wine bars and bistros**'
+    - A big **Italian and Asian food scene**
+    - Café culture and laneway bars
+    content_after: 'This is also where we can do a **short star-walk** on a clear
+      night – even from city parks you can often spot the Southern Cross and bright
+      southern stars, and we’ll get darker skies again in the High Country.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Melbourne laneway dining night
+  - Sandringham Yacht Club sailing
+  selected_images:
+  - https://media.timeout.com/images/106208384/750/562/image.jpg
+  - https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ImIwZGUwYTNhLWE4NzktNDk2YS1hYTU2LTg0NzhjY2VhZjEyZiIsInB1ciI6ImJsb2JfaWQifX0=--d0b36369b7d2e03d53c3a4eb0c0fed5efa881c39/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlsxMDAwLDYwMF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--0d1dec94e96bf59e4e90ca4a7c11e516560ab297/14382a99-a8ef-438b-b361-91fdb5080d92.jpg
+  - https://woodards.sfo2.cdn.digitaloceanspaces.com/public/Uploads/the-history-behind-melbournes-laneways-1__FocusFillWzEwMjMsNzk2LCJ5IiwxMV0.jpg
+- id: part-3-vineyards
+  title: Part 3 – Vineyards, Valleys & Easy Bike Paths
+  level: 2
+  style: gallery
+  meta:
+    location: Murray to Mountains Rail Trail & Great Valley Trail
+    duration: 3 days
+    base: Beechworth, Myrtleford, Bright
+    theme: High Country landscapes, food and wine, gentle but satisfying riding
+  content: 'North-east of Melbourne, the **Murray to Mountains Rail Trail** is one
+    of Australia’s premier rail trails: 137 km of sealed path linking Wangaratta,
+    Beechworth, Myrtleford, Bright and more.
+
+
+    We’ll add the newer **Great Valley Trail**, a 27 km sealed path from **Bright
+    to Harrietville**, following the Ovens River beneath the Victorian Alps.
+
+
+    We can ride regular bikes or e-bikes, and use a local operator for luggage transfers
+    and shuttles.
+
+    '
+  subsections:
+  - id: what-well-see-cycle
+    title: What we’ll see
+    style: content
+    bullets:
+    - '**Long, car-free bike paths** lined with tall **river red gums and poplars**'
+    - Views across fields to **Mt Buffalo and Mt Feathertop**, often with snow-gums
+      and peaks visible in the distance
+    - '**Vineyards and cellar doors** right on the trail – this region is known for
+      wineries, farm gates, and small producers'
+    - Rivers and swimming spots where we can cool off after a ride
+    - Historic **gold-rush towns** like **Beechworth** and Bright, with preserved
+      streetscapes, museums and local history tours
+    selected_images: []
+  - id: cycling-days
+    title: Our likely riding days (flexible)
+    style: cards
+    content: 'Evenings in Beechworth and Bright give us time to talk with **winemakers,
+      café owners and guides** – people who love this region and are usually very
+      happy to share local stories and wildlife tips.
+
+      '
+    itinerary:
+    - day: 1
+      title: Wangaratta → Milawa → Beechworth
+      distance: ~60 km
+      content: Ride through farmland and wine country to Milawa, then climb gradually
+        on the rail trail to Beechworth – a satisfying “we earned dinner” day.
+      selected_images: []
+    - day: 2
+      title: Beechworth → Myrtleford → Bright
+      distance: ~70 km
+      content: 'Roll downhill to Everton, then follow the main trail through Myrtleford
+        to Bright: gum-tree-lined paths, old stations, and wineries right on the track.'
+      selected_images: []
+    - day: 3
+      title: Bright ↔ Harrietville (Great Valley Trail)
+      distance: 54 km return
+      content: A mostly flat, sealed path along the **Ovens River**, under the foothills
+        of the Victorian Alps. We can stop for lunch at a pub in Harrietville, then
+        coast gently back to Bright.
+      selected_images: []
+    selected_images: []
+  needs_images: true
+  queries:
+  - Murray to Mountains Rail Trail autumn trees cyclists
+  - Beechworth historic streetscape
+  - Mt Buffalo view from rail trail
+  selected_images:
+  - https://listings.rdp.tourismnortheast.com.au/wp-content/uploads/sites/6/RS36532_TNE-51-of-274-lpr.jpg
+  - https://www.australiancycletours.com.au/croppedImages/Australasia/Victoria/Murray-to-Mountains-Cycle-1064234-1100px.jpg
+  - https://offloadmedia.feverup.com/secretmelbourne.com/wp-content/uploads/2024/08/07163301/murray-to-mountains-rail-trail-feathertop-1024x683.jpg
+- id: part-4-stars-flight
+  title: Part 4 – Stars, Wildlife & a Scenic Flight
+  level: 2
+  style: cards
+  content: Details on the natural wonders and special activities included in the trip.
+  needs_images: true
+  queries:
+  - Southern Cross stars night sky Australia
+  - Twelve Apostles helicopter view
+  subsections:
+  - id: southern-sky
+    title: Southern sky & Southern Cross
+    style: card
+    content: 'On clear nights along the coast and especially in the High Country,
+      we’ll have access to relatively **dark skies** compared to home. In late summer/early
+      autumn:
+
+      * The **Southern Cross** is high in the south after dark
+
+      * The **Magellanic Clouds** (small satellite galaxies) can often be seen as
+      faint patches
+
+      * The Milky Way band arches across the sky away from city lights
+
+
+      We can bring a simple southern-sky star chart or app and do a few short **“star
+      walks”** after dinner.
+
+      '
+    selected_images: []
+  - id: wildlife-highlights
+    title: Wildlife highlights
+    style: card
+    content: 'Across the trip we have good chances to see:
+
+      * **Koalas** in the eucalypts around Cape Otway
+
+      * **Wallabies and kangaroos** in Otway heathlands and High Country paddocks
+
+      * **Birdlife**: black cockatoos, kookaburras, rosellas, wedge-tailed eagles
+      over the valleys
+
+      * Coastal species like **fur seals** and seabirds along the Great Ocean Walk,
+      and possibly **little penguins** if we add an evening penguin-viewing side trip
+      (e.g., near the Twelve Apostles or via a short extra excursion)
+
+      '
+    selected_images: []
+  - id: scenic-flight
+    title: Scenic flight over the coast
+    style: card
+    content: 'One day on the Great Ocean Road, we’ll add a **short scenic flight**
+      in a small plane or helicopter over:
+
+      * The **Twelve Apostles** and limestone stacks
+
+      * The **cliffs and arches** of the Shipwreck Coast
+
+      * The surrounding farmland and forest from the air
+
+
+      Local operators near the Twelve Apostles offer 15–30 minute flights that give
+      a completely different view of the coastline compared to the lookouts on foot.
+
+      '
+    selected_images: []
+  selected_images:
+  - https://www.abc.net.au/science/starhunt/images/slideshow/Southern-Cross/scross_02.jpg
+  - https://astrotourismwa.com.au/wp-content/uploads/2020/12/Southern-Cross-diagram.jpg
+  - https://www.abc.net.au/science/starhunt/images/slideshow/Southern-Cross/scross_04.jpg
+- id: part-5-people
+  title: Part 5 – Meeting People & Learning as We Go
+  level: 2
+  style: content
+  content: 'Throughout the trip, we’ll build in time to actually talk to people:
+
+    '
+  bullets:
+  - '**Lighthouse guides** at Cape Otway sharing shipwreck stories and lighthouse
+    history'
+  - '**Great Ocean Walk operators and hosts** explaining how they manage the track,
+    wildlife, and weather'
+  - '**Winemakers, brewers and café owners** in Beechworth, Myrtleford and Bright,
+    talking about climate, agriculture and life in the High Country'
+  - '**Sailors on Port Phillip**, who are usually delighted to talk about local winds,
+    sea life and Melbourne’s sailing culture'
+  content_after: 'We can easily add:
+
+    * A small **local history museum** in Beechworth (gold-rush and bushranger history)
+
+    * Short **nature talks or guided walks** if available on the dates we’re there
+    (many parks and visitor centres offer these seasonally)
+
+    '
+  needs_images: true
+  queries:
+  - Beechworth gold rush museum
+  - Talking to Australian winemaker
+  selected_images:
+  - https://www.explorebeechworth.com.au/wp-content/uploads/sites/33/atdw-AU0035184-673bcfe81290b4e2504fed59.jpg
+  - https://www.visitplacer.com/wp-content/uploads/2018/11/Gold-Rush-Museum-small.jpg
+  - https://live.staticflickr.com/961/27176964397_417de06d91_b.jpg
+- id: why-this-trip
+  title: Why This Trip Fits Us
+  level: 2
+  style: content
+  content: "* It’s **active** but not extreme: daily walks and rides are well within\
+    \ our comfort zone, with options to shorten or lengthen days.\n* We’re using **national-park\
+    \ trails and well-known bike routes**, not inventing our own logistics.\n* It\
+    \ hits the “wish list”:\n  * **Zoology** – koalas, wallabies, birds, marine life\n\
+    \  * **Southern stars** – Southern Cross and dark skies\n  * **Local connections**\
+    \ – lighthouse guides, yacht club crews, wine-region hosts\n  * **On the water**\
+    \ – a proper sailing day on the bay\n  * **In the air** – a scenic flight over\
+    \ dramatic coastline\n  * **On foot and on bikes** – Great Ocean Walk, Murray\
+    \ to Mountains and Great Valley Trail\n\nWe get a mix of coast, city and mountains,\
+    \ all within one state and one easy hub (Melbourne), with enough structure that\
+    \ the trip feels smooth – but enough freedom that we can stop for koalas, wine\
+    \ tastings or a really good patch of stars whenever we like.\n"
+  needs_images: false
+  queries: []
+  selected_images: []
+- id: itinerary-intro
+  title: 'Active Victoria: Day-by-Day Itinerary'
+  level: 1
+  style: content
+  content: 'Here’s a clean, editable **day-by-day itinerary** for the “no-Sydney,
+    more-active” Victoria trip, with:
+
+    * Transfers
+
+    * Walk/ride plans
+
+    * **Restaurant reservations** and other local recos
+
+
+    > **Assumptions:**
+
+    > Day 0 = depart home (13th)
+
+    > Day 1 = arrive Melbourne (~15th)
+
+    > Day 10 = fly home from MEL (24th)
+
+
+    Distances and times are approximate; you can slide exact dates as needed.
+
+    '
+  needs_images: false
+  queries: []
+  selected_images: []
+- id: day-0
+  title: Day 0 – Fly to Australia
+  level: 2
+  style: day-section
+  meta:
+    base: In transit
+  content: Long-haul flight from home → **Melbourne (MEL)**. Try to sleep as much
+    as possible on the plane.
+  needs_images: false
+  queries: []
+  selected_images: []
+- id: day-1
+  title: Day 1 – Arrive Melbourne, Stretch the Legs
+  level: 2
+  style: day-section
+  meta:
+    base: Melbourne CBD
+  itinerary:
+  - day: 1
+    title: Arrive Melbourne, Stretch the Legs
+    location: Melbourne CBD
+    activities:
+    - Arrive MEL (morning if possible)
+    - Taxi / rideshare / SkyBus → CBD hotel
+    - Wander the Yarra River paths and botanic gardens
+    - Short ride using a shared bike along the river (10–20 km flat loop)
+    content: '**Evening – Dinner (loosely booked)**
+
+      * **Option A – Etta (book if you’re up for a real meal):** Modern bistro/wine
+      bar in Brunswick East with inventive, vegetable-friendly plates and excellent
+      wine. Open Tue–Sat from 5pm; reservations recommended.
+
+      * **Option B – Embla (walk-in / light booking):** Central wine bar with serious
+      small plates; very easy first-night spot (no citation needed beyond general
+      Melbourne food scene).
+
+
+      **Night**
+
+      * Early bed to nuke jet lag.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Yarra River Melbourne botanical gardens
+  - Melbourne tram city street
+  selected_images:
+  - https://image-tc.galaxy.tf/wijpeg-d0frokgr8dwidfh61vec85gca/150795-56.jpg
+  - https://rbgv-prod-cdn-bpfbb4gthrfzb4ab.a03.azurefd.net/media/n4tnw5vu/20200418_110048.jpg
+  - https://c8.alamy.com/comp/2P942JB/yarra-river-at-botanic-garden-with-skyline-melbourne-victoria-australia-2P942JB.jpg
+- id: day-2
+  title: Day 2 – Melbourne → Apollo Bay & Great Ocean Road Warm-Up
+  level: 2
+  style: day-section
+  meta:
+    base: Apollo Bay
+  itinerary:
+  - day: 2
+    title: Melbourne → Apollo Bay
+    location: Apollo Bay
+    activities:
+    - Pick-up by Great Ocean Walk operator or self-drive hire car
+    - Drive Melbourne → Apollo Bay via Great Ocean Road (~3–3.5 h; very scenic)
+    - Check in with self-guided GOW operator (maps, safety notes, bag transfers)
+    - 'Warm-up Walk: Apollo Bay → Marengo and back, or shorter coastal + forest section
+      (8–12 km)'
+    content: '**Evening – Apollo Bay Dinner (BOOK)**
+
+      * **Graze, Apollo Bay**: Hidden-away modern Australian restaurant using local
+      seasonal ingredients; strong regional wine list. Open Tue–Sat evenings from
+      5:30pm; **book a table**.
+
+      * Alt: **La Bimba** (seafood-leaning, Great Ocean Road views).
+
+
+      **Night**
+
+      * Short post-dinner stroll on the foreshore; first chance to spot southern stars
+      if sky is clear.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Great Ocean Road scenic drive
+  - Apollo Bay foreshore
+  selected_images:
+  - https://greatoceanroadguide.com.au/wp-content/uploads/2020/05/Touring-The-Great-Ocean-Road.jpg
+  - https://roytellstales.com/wp-content/uploads/2020/04/slava-abramovitch-sWWWcIPLZyY-unsplash.jpg
+  - https://www.australia.com/content/australia/en_us/places/melbourne-and-surrounds/guide-to-the-great-ocean-road/jcr:content/image.adapt.800.HIGH.jpg
+- id: day-3
+  title: Day 3 – Blanket Bay → Cape Otway (Koalas & Lighthouse)
+  level: 2
+  style: day-section
+  meta:
+    base: Cape Otway / Aire River area
+  itinerary:
+  - day: 3
+    title: Great Ocean Walk – Day 1
+    location: Blanket Bay → Cape Otway Lighthouse
+    distance: ~10–12 km, 2.5–4 h, easy-medium
+    activities:
+    - Operator shuttle from Apollo Bay → Blanket Bay trailhead
+    - Walk through dry coastal shrub and forest opening to clifftop views
+    - Explore Secluded inlets and beaches
+    - Spot koalas in manna gums near Cape Otway
+    - Explore Cape Otway Lighthouse precinct
+    content: '**Highlights:** Increasing density of **manna gums with wild koalas**
+      as you approach Cape Otway; this stretch is widely recommended as one of the
+      best places in Australia to see koalas in the wild.
+
+
+      **Evening**
+
+      * Overnight at a lodge / B&B in the Cape Otway or Aire River area arranged by
+      your operator.
+
+      * Dinner usually **on-site or nearby** (limited options, but hosts are used
+      to walkers and good at feeding them).
+
+      * If skies are clear, short night walk to spot the **Southern Cross** and Milky
+      Way away from town lights.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Blanket Bay Great Ocean Walk
+  - Cape Otway manna gums koala
+  selected_images:
+  - https://vwi-prod-s301.s3.amazonaws.com/cg-images/poi/large/3969_15778.jpg
+  - https://www.wayandfarer.com/wp-content/uploads/2020/11/Guy-at-Crayfish-Bay-Great-Ocean-Walk.jpg
+  - https://goodtimestours.com.au/wp-content/uploads/2016/08/image-1-copy-5.jpeg
+- id: day-4
+  title: Day 4 – Cape Otway → Aire River + Scenic Flight → Melbourne
+  level: 2
+  style: day-section
+  meta:
+    base: Melbourne
+  itinerary:
+  - day: 4
+    title: Great Ocean Walk Day 2 & Flight
+    location: Cape Otway → Aire River → Melbourne
+    distance: 'Walk: ~10 km, 3–4 h, easy-medium'
+    activities:
+    - Walk Cape Otway → Aire River (Heathlands, coastal cliffs, wallabies)
+    - Shuttle or drive to the Twelve Apostles / Princetown helipad
+    - 15–20 minute scenic helicopter flight (12 Apostles Helicopters)
+    - Drive back to Melbourne (~3.5–4 h)
+    content: '**Optional extra kilometres:** If you’re feeling strong, you can add
+      Aire River → Castle Cove (~6 km more) and have your shuttle pick you up there
+      instead.
+
+
+      **Evening – Celebration Dinner (BOOK)**
+
+      * **Etta, Brunswick East**: One of Melbourne’s most talked-about neighbourhood
+      restaurants: low-key wine bar vibe, big flavours, and lots of vegetables and
+      seafood. Open Tue–Sat; **book ahead for this night**.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Aire River Great Ocean Walk
+  - Twelve Apostles helicopter scenic flight
+  selected_images:
+  - https://goodtimestours.com.au/wp-content/uploads/2018/10/IMG_5620.jpg
+  - https://www.greatoceanwalk.info/wp-content/uploads/2012/06/day3-Pt2-1.jpg
+  - https://goodtimestours.com.au/wp-content/uploads/2016/07/IMG_9978_GTT.jpg
+- id: day-5
+  title: Day 5 – Sailing on Port Phillip + Easy Spin
+  level: 2
+  style: day-section
+  meta:
+    base: Melbourne
+  itinerary:
+  - day: 5
+    title: Sailing on Port Phillip
+    location: Port Phillip Bay, Melbourne
+    activities:
+    - Head to Sandringham Yacht Club or Royal Brighton Yacht Club
+    - Crewed sailing day (~3–5 hours on the water)
+    - 'Optional: Short 10–25 km ride along the Bay Trail (Brighton, Sandringham, St
+      Kilda)'
+    content: '**Evening – Casual City Dinner**
+
+      * Keep this one flexible in case the day runs long.
+
+      * **Embla (CBD)** – great natural-leaning wines and share plates, easy to enjoy
+      without a big production.
+
+      * Or any nearby bistro/wine bar that catches your eye.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Brighton Bathing Boxes Melbourne
+  - Melbourne Bay Trail cycling
+  selected_images:
+  - https://upload.wikimedia.org/wikipedia/commons/9/91/Brighton_Beach_%28147363021%29.jpeg
+  - https://cdn.melbournecitytour.com.au/wp-content/uploads/2024/11/brighton-bathing-boxes-view-sunset.jpg
+  - https://www.melbourne.crowneplaza.com/wp-content/uploads/2024/12/brighton-bathing-boxes.png
+- id: day-6
+  title: Day 6 – Melbourne → Wangaratta → Beechworth (Rail Trail Day 1)
+  level: 2
+  style: day-section
+  meta:
+    base: Beechworth
+  itinerary:
+  - day: 6
+    title: 'Rail Trail: Wangaratta → Beechworth'
+    location: Wangaratta → Milawa → Beechworth
+    distance: ~60 km, easy-moderate
+    activities:
+    - Train Melbourne Southern Cross → Wangaratta (~2.5–3 h)
+    - Meet rail-trail tour operator (Bike fit, luggage transfer)
+    - Ride Wangaratta → Milawa (cheese/winery stop)
+    - Ride Milawa → Everton → Beechworth (steady gradient climb)
+    content: '**Afternoon / Early Evening – Beechworth**
+
+      * Check into accommodation in historic **Beechworth** – beautifully preserved
+      gold-rush town now known for food, wine and history.
+
+
+      **Dinner (BOOK)**
+
+      * **The Provenance, Beechworth**: Destination fine-dining in a grand old bank
+      building; Japanese-influenced menu using High Country produce; Good Food Guide
+      **two-hat** restaurant as of 2025. Reservations essential.
+
+      * **Backup / more casual:** **Bridge Road Brewers** – legendary local brewery
+      and pizzeria in a gold-rush coach house; excellent beer and very good pizza.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Beechworth town hall historic
+  - Bridge Road Brewers Beechworth
+  selected_images:
+  - https://victoriancollections.net.au/media/collectors/4f729f5297f83e0308601568/items/62871212f10805a5b8a36cad/item-media/62871249f10805a5b8a375b3/VictorianCollections-large.jpg
+  - https://ohta.org.au/images/Beechworth-Town-Hall-exterior.jpg
+  - https://ohta.org.au/images/BeechworthTH17.jpg
+- id: day-7
+  title: Day 7 – Beechworth → Myrtleford → Bright (Rail Trail Day 2)
+  level: 2
+  style: day-section
+  meta:
+    base: Bright
+  itinerary:
+  - day: 7
+    title: Big Valley Day
+    location: Beechworth → Myrtleford → Bright
+    distance: ~70–75 km
+    activities:
+    - Roll Beechworth → Everton on the rail-trail (fun long descent)
+    - 'Everton → Myrtleford (~26–30 km): sealed trail through farmland'
+    - 'Myrtleford → Bright (~30–35 km): scenic valley section with views up to Mt
+      Buffalo'
+    content: '**Afternoon – Arrive Bright**
+
+      * Check into accommodation in **Bright** – classic High Country town famous
+      for autumn colours, cycling, and river swims.
+
+
+      **Dinner (BOOK)**
+
+      * **Koji Bird (inside Reed & Co. Distillery)**: Contemporary Japanese-inspired
+      izakaya with local spirits and cocktails; widely recommended as *the* restaurant
+      to plan a night around in Bright. Dinner from 5pm; **book a table**.
+
+      * **Backup / casual:** **Tomahawks** – burgers and small plates, walk-in only,
+      fun atmosphere.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Bright Victoria autumn river
+  - Ovens River Bright cycling
+  selected_images:
+  - https://ozimage.com.au/wp-content/uploads/Bright-Victoria-River-Reflections-Marjie-Courtis.jpg
+  - https://www.visitbright.com.au/wp-content/uploads/sites/42/river-Bright-autumn-16_9.jpg
+  - https://www.ashleapaige.com/wp-content/uploads/2024/05/Autumn-tree-path-1440x2160.jpg
+- id: day-8
+  title: 'Day 8 – Great Valley Trail: Bright ↔ Harrietville'
+  level: 2
+  style: day-section
+  meta:
+    base: Bright
+  itinerary:
+  - day: 8
+    title: Great Valley Trail
+    location: Bright ↔ Harrietville
+    distance: ≈54 km return
+    activities:
+    - Ride Great Valley Trail along Ovens River
+    - Lunch at Harrietville Hotel Motel or Snowline Hotel
+    - Ride back to Bright (mostly very slight downhill)
+    - Optional river swim
+    content: '**Dinner:**
+
+      * Second night at **Koji Bird** if you love it, or
+
+      * Casual: Tomahawks, Bright Brewery, or another easy spot in town.
+
+
+      **Night – Stars**
+
+      * From Bright or a short drive outside town, do a dedicated **Southern Cross
+      stargazing session** – the High Country skies are darker than Melbourne’s suburbs,
+      and Crux plus the Magellanic Clouds are often visible on clear autumn nights.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Harrietville Victoria landscape
+  - Snowline Hotel Harrietville
+  selected_images:
+  - https://www.visitharrietville.com.au/wp-content/uploads/sites/27/street-harrietville-autumn-16_9.jpg
+  - https://www.visitharrietville.com.au/wp-content/uploads/sites/27/Harrietville-Town.jpg
+  - https://www.victoriashighcountry.com.au/wp-content/uploads/sites/65/atdw-AU1173498-64646021b45c23234afcc031.jpg
+- id: day-9
+  title: Day 9 – Bright → Melbourne (Return)
+  level: 2
+  style: day-section
+  meta:
+    base: Melbourne
+  itinerary:
+  - day: 9
+    title: Return to Melbourne
+    location: Bright → Wangaratta → Melbourne
+    activities:
+    - Lazy breakfast in Bright
+    - Optional short leg-loosening ride
+    - Shuttle with bike operator Bright → Wangaratta
+    - Train Wangaratta → Melbourne Southern Cross (~2.5–3 h)
+    content: '**Evening – Last-Night Dinner (optional booking)**
+
+      * If you didn’t hit it on Day 1: **Embla (CBD)** or another central wine bar.
+
+      * If you want one more “proper” meal and aren’t too tired: A second visit to
+      **Etta** or any new-opening that catches your eye.
+
+      '
+    selected_images: []
+  needs_images: true
+  queries:
+  - Melbourne Southern Cross station
+  - Melbourne city skyline night
+  selected_images:
+  - https://upload.wikimedia.org/wikipedia/commons/9/96/Southern_Cross_station_entrance_%2815_August_2024%29.jpg
+  - https://cdn.prod.website-files.com/6510dc6124ed3d9fb7d0d834/660b58a7b73db20bcf227f3c_SCS-hero.jpg
+  - https://www.railway-technology.com/wp-content/uploads/sites/13/2017/10/4-image-9.jpg
+- id: day-10
+  title: Day 10 – Fly Home from Melbourne
+  level: 2
+  style: day-section
+  meta:
+    base: In transit
+  content: '**Transfers**
+
+    * Hotel → MEL airport (SkyBus or taxi)
+
+    * Flight **MEL → home**
+
+
+    **Activity**
+
+    * Duty-free Tim Tams and “remember that koala over our heads” reminiscing on the
+    plane.
+
+    '
+  needs_images: false
+  queries: []
+  selected_images: []
+- id: booking-checklist
+  title: Quick “Book These Early” List
+  level: 2
+  style: highlight
+  content: "You can pull this out as a checklist:\n\n1. **Great Ocean Walk self-guided\
+    \ package** (incl. shuttles & lodging) – Days 2–4.\n2. **Scenic flight** over\
+    \ the Twelve Apostles – Day 4 afternoon with **12 Apostles Helicopters** or similar.\n\
+    3. **Sailing day** with Sandringham or Royal Brighton YC – Day 5 (coordinate via\
+    \ their crew/visitor programs).\n4. **Rail-trail package** (bikes + luggage +\
+    \ Bright/Wangaratta shuttles) – Days 6–9.\n5. **Restaurant bookings:**\n   * Graze,\
+    \ Apollo Bay – Day 2.\n   * Etta, Melbourne – Day 4 (and/or Day 1/9).\n   * The\
+    \ Provenance, Beechworth – Day 6.\n   * Koji Bird, Bright – Day 7 (and maybe Day\
+    \ 8).\n"
+  needs_images: false
+  queries: []
+  selected_images: []
+- id: contact-sheet
+  title: Key operators (walks, bikes, flights, wildlife, sailing)
+  level: 2
+  style: cards
+  content: Totally — and I’m glad you asked, because this is exactly the stuff that’s
+    annoying to look up by hand. Here’s a **copy-paste-able contact sheet**.
+  needs_images: false
+  queries: []
+  subsections:
+  - id: great-ocean-walk-op
+    title: Great Ocean Walk – self-guided
+    style: card
+    content: '**Walk91 – Great Ocean Walk specialists (Apollo Bay)**
+
+      * **Use for:** Custom 2–5 day Great Ocean Walk packages, bag transfers, shuttles,
+      accommodation.
+
+      * **Website:** https://walk91.com.au
+
+      * **Phone (Aus):** (03) 5237 1189
+
+      * **Phone (Int’l):** +61 3 5237 1189
+
+      * **Email:** info@walk91.com.au
+
+      * **Address:** 100 Great Ocean Road / 100 Collingwood St, Apollo Bay VIC 3233
+
+      '
+    selected_images: []
+  - id: scenic-flight-op
+    title: Scenic helicopter flight – 12 Apostles
+    style: card
+    content: '**12 Apostles Helicopters (Princetown)**
+
+      * **Use for:** 15–25 min scenic flights over the Twelve Apostles, Shipwreck
+      Coast, Cape Otway.
+
+      * **Website:** https://12apostleshelicopters.com.au
+
+      * **Phone (Aus):** (03) 5598 8283
+
+      * **Phone (Int’l):** +61 3 5598 8283
+
+      * **Address:** Corner Great Ocean Road & Booringa Road, Princetown VIC, Australia
+
+      '
+    selected_images: []
+  - id: cycling-op
+    title: Cycling – Murray to Mountains / Great Valley Trail
+    style: card
+    content: '**Tour de Vines – Cycling Tours** (Recommended)
+
+      * **Use for:** Self-guided or small-group Murray to Mountains packages with
+      bikes, luggage transfers, accommodation.
+
+      * **Website:** https://tourdevines.com.au
+
+      * **Email:** inquiry@tourdevines.com.au
+
+      * **Phone (Aus Freecall):** 1300 665 330
+
+      * **Phone (Int’l):** +61 3 7068 5000
+
+      * **Address:** 6 Riddell Parade, Elsternwick VIC 3185
+
+
+      **Australian Cycle Tours** (Alternative)
+
+      * **Website:** https://www.australiancycletours.com.au
+
+      * **Email:** info@australiancycletours.com.au
+
+      * **Phone (Aus Freecall):** 1300 114 966
+
+      * **Phone (Int’l):** +61 2 8270 8410
+
+      '
+    selected_images: []
+  - id: sailing-op
+    title: Sailing – Port Phillip
+    style: card
+    content: '**Sandringham Yacht Club**
+
+      * **Use for:** Racing / twilight sailing, visitor crew; beautiful bay location.
+
+      * **Website:** https://syc.com.au
+
+      * **Email (office):** office@syc.com.au
+
+      * **Phone:** +61 3 9599 0999
+
+      * **Address:** Jetty Road, Sandringham VIC 3191
+
+
+      **Royal Brighton Yacht Club**
+
+      * **Use for:** Saturday keelboat racing, dining with bay views, potential to
+      crew as visitors.
+
+      * **Website:** https://rbyc.org.au
+
+      * **Email (reception):** via contact form / reception on website
+
+      * **Phone:** +61 3 9592 3092
+
+      * **Address:** 253 Esplanade, Middle Brighton VIC 3186
+
+      '
+    selected_images: []
+  - id: penguins-op
+    title: Penguins – St Kilda
+    style: card
+    content: '**St Kilda Penguin Viewing Experience (Phillip Island Nature Parks /
+      Earthcare St Kilda)**
+
+      * **Use for:** Free, ticketed penguin viewing sessions at the end of St Kilda
+      Pier.
+
+      * **Info & booking:** Parks Victoria penguin page (linked from penguins.org.au
+      → St Kilda)
+
+      * **Bookings:** via Phillip Island Nature Parks website (https://www.penguins.org.au
+      → St Kilda Penguin Viewing Experience)
+
+      * **Local partner:** Earthcare St Kilda (volunteer group) – info@earthcarestkilda.org.au
+
+      '
+    selected_images: []
+  - id: restaurants-op
+    title: Restaurants
+    style: card
+    content: '**Etta Dining (Brunswick East)**
+
+      * **Style:** Modern neighbourhood restaurant, lots of vegetable/seafood-forward
+      dishes.
+
+      * **Website:** https://ettadining.com.au
+
+      * **Phone:** (03) 9448 8233
+
+      * **Email:** hello@ettadining.com.au
+
+      * **Address:** 60 Lygon Street, Brunswick East VIC 3057
+
+
+      **Graze Apollo Bay**
+
+      * **Style:** Modern Australian, regional produce, good wine list.
+
+      * **Website:** https://grazeapollobay.au
+
+      * **Phone:** (03) 5237 7303
+
+      * **Address:** 14 Pascoe Street, Apollo Bay VIC 3233
+
+
+      **The Provenance (Beechworth)**
+
+      * **Style:** Fine dining, Japanese-influenced, in historic bank building.
+
+      * **Website:** https://www.theprovenance.com.au
+
+      * **Phone:** (03) 5728 1786
+
+      * **Email:** info@theprovenance.com.au
+
+      * **Address:** 86 Ford Street, Beechworth VIC 3747
+
+
+      **Koji Bird @ Reed & Co Distillery (Bright)**
+
+      * **Style:** Japanese-inspired izakaya inside a gin distillery; tasting menu
+      and cocktails.
+
+      * **Website:** https://www.reedandcodistillery.com (Koji Bird section)
+
+      * **Phone:** +61 460 782 642
+
+      * **Email:** hello@reedandcodistillery.com
+
+      * **Address:** 15 Wills Street, Bright VIC 3741
+
+      '
+    selected_images: []
+  - id: accommodation-op
+    title: Accommodation (examples)
+    style: card
+    content: '**YHA Apollo Bay Eco**
+
+      * **Style:** Eco-hostel with private and multi-share rooms; good value and group-friendly.
+
+      * **Website:** https://www.yha.com.au/hostels/vic/great-ocean-road/apollo-bay
+
+      * **Phone:** (03) 5237 7899
+
+      * **Email:** stay@yha.com.au
+
+      * **Address:** 5 Pascoe Street, Apollo Bay VIC 3233
+
+
+      **Beechworth on Bridge Motel**
+
+      * **Style:** Comfortable, well-reviewed 4-star motel; good base for one night.
+
+      * **Website:** https://www.beechworthonbridge.com.au
+
+      * **Phone:** (03) 5728 2244 (Int’l: +61 3 5728 2244)
+
+      * **Address:** 38 Bridge Road, Beechworth VIC 3747
+
+
+      **Bright Velo**
+
+      * **Style:** Bike-friendly hotel in central Bright; heritage building, secure
+      bike storage.
+
+      * **Website:** https://www.brightvelo.com.au
+
+      * **Phone:** +61 3 5755 1074
+
+      * **Address:** 2 Ireland Street, Bright VIC 3741
+
+
+      **Melbourne**
+
+      * Examples: QT Melbourne, Lancemore Crossley Street, Adina Apartment Hotel on
+      Flinders.
+
+      '
+    selected_images: []
+  selected_images: []
+- id: how-to-book
+  title: How I’d actually book this (and sample emails)
+  level: 2
+  style: content
+  content: 'I can’t press the “book” button for you, but here’s the order I’d do things
+    plus templates you can paste-edit.
+
+
+    **Recommended booking order**
+
+    1. **International flights** (into/out of MEL).
+
+    2. **Walk91** – lock in your Great Ocean Walk dates & custom 3-day plan.
+
+    3. **Apollo Bay and Melbourne accommodation** (if not included in Walk91).
+
+    4. **12 Apostles helicopter flight** – pick the exact day you’ll be near the Apostles.
+
+    5. **Rail-trail operator** (Tour de Vines or equivalent) – dates, bikes, luggage
+    transfers.
+
+    6. **Beechworth & Bright accommodation** (often bundled by the cycling operator).
+
+    7. **Sailing day** – email Sandringham / Royal Brighton to ask about crewing.
+
+    8. **Penguin viewing session** at St Kilda (online booking via penguins.org.au).
+
+    9. **Restaurant reservations** – Graze, Etta, Provenance, Koji Bird on your targeted
+    nights.
+
+    '
+  needs_images: false
+  queries: []
+  selected_images: []
+- id: references
+  title: References
+  level: 2
+  style: footer
+  content: '[1]: https://walk91.com.au/contact-walk91/ "Contact Us"
+
+    [2]: https://12apostleshelicopters.com.au/ "Home - 12 Apostles Helicopters"
+
+    [3]: https://tourdevines.com.au/ "Tour de Vines"
+
+    [4]: https://www.australiancycletours.com.au/contact-us "Contact Us"
+
+    [5]: https://syc.com.au/ "Welcome to Sandringham Yacht Club"
+
+    [6]: https://rbyc.org.au/contact-us/ "Contact us – Royal Brighton Yacht Club"
+
+    [7]: https://www.parks.vic.gov.au/places-to-see/parks/st-kilda-pier-and-breakwater/attractions/little-penguins
+    "Little Penguins"
+
+    [8]: https://earthcarestkilda.org.au/calendar/ "Contact Us"
+
+    [9]: https://ettadining.com.au/contact "Contact"
+
+    [10]: https://grazeapollobay.au/contact "Contact — Graze Apollo bay"
+
+    [11]: https://www.theprovenance.com.au/contact "Contact Us - Provenance"
+
+    [12]: https://www.reedandcodistillery.com/koji-bird-restaurant "Koji Bird Restaurant
+    in Bright"
+
+    [13]: https://www.yha.com.au/hostels/vic/great-ocean-road/apollo-bay "YHA Apollo
+    Bay"
+
+    [14]: https://www.beechworthonbridge.com.au/contact-us/ "Contact Us – Beechworth
+    on Bridge Motel"
+
+    [15]: https://www.brightvelo.com.au/ "Bright Velo"
+
+    [16]: https://www.theworlds50best.com/discovery/Establishments/Australia/Melbourne/Etta.html
+    "Etta - Melbourne"
+
+    '
+  needs_images: false
+  queries: []
+  selected_images: []

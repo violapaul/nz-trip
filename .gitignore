@@ -27,7 +27,7 @@ env/
 aus_nz.html
 
 # Image cache (can be regenerated)
-# query_cache.yaml
+query_cache.yaml
 
 # Local images folder (scraped images)
 images/

@@ -17,12 +17,13 @@ Creates `your_trip.html` with beautiful styling and relevant images.
 ## How It Works
 
 ```
-Markdown → YAML → HTML
+Markdown → YAML → Thumbnails → AI Selection → HTML
 ```
 
 1. **Analyze**: AI reads markdown, creates structured YAML with styles and image queries
-2. **Scrape**: Fetches relevant images from Google (cached for reuse)
-3. **Generate**: Creates beautiful HTML from YAML
+2. **Scrape**: Fetches images from Google, downloads thumbnails locally
+3. **Select**: Gemini Vision evaluates thumbnails, picks best images for each section
+4. **Generate**: Creates beautiful HTML using AI-selected images
 
 ## Step by Step
 
@@ -30,10 +31,13 @@ Markdown → YAML → HTML
 # Step 1: Analyze markdown → YAML
 python travel_md_converter/analyze.py trip.md
 
-# Step 2: Scrape images
+# Step 2: Scrape images + download thumbnails
 python travel_md_converter/scraper.py trip.analysis.yaml
 
-# Step 3: Generate HTML
+# Step 3: AI selects best images
+python travel_md_converter/selector.py trip.analysis.yaml
+
+# Step 4: Generate HTML
 python travel_md_converter/generator.py trip.analysis.yaml
 ```
 
@@ -55,12 +59,16 @@ The AI automatically assigns styles:
 ```
 travel_md_converter/
 ├── analyze.py      # Markdown → YAML (AI)
-├── scraper.py      # Image fetching
+├── scraper.py      # Image fetching + thumbnails
+├── selector.py     # AI image selection (Gemini Vision)
 ├── generator.py    # YAML → HTML
 ├── styles.css      # All styling
 ├── styles.py       # Render functions
 ├── prompt.py       # AI prompt
 └── utils.py        # Utilities
+
+images/             # Downloaded thumbnails (for AI evaluation)
+query_cache.yaml    # Image URLs + thumbnail paths
 ```
 
 ## Requirements
